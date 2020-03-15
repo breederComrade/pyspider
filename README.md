@@ -1,9 +1,12 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # pyspider
 
 
 
 =======
+=======
+>>>>>>> Stashed changes
 # pyspider 
 python 爬虫学习
 
@@ -22,4 +25,7 @@ python 爬虫学习
 
 
 ### python 爬虫设计
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
