@@ -3,7 +3,7 @@ str1 = '自猝死'
 str2 = 'fuck'
 str3 = str1
 
-print(str1)
+# print(str1)
 # 查询
 # 格式ei
 # 使用这种方法格式化字符串 0，1,2需要有秩序 不能0，2，3这种
@@ -37,40 +37,49 @@ print(str1)
 # s1 = s.strip("a") # 可以指定内容去除 只去除头和尾
 # print(s1)
 # 首字母大写
-name = "alex"
-name1 = name.capitalize()
-print(name1)
+# name = "alex"
+# name1 = name.capitalize()
+# print(name1)
 # 每个单词首字母大写
 
-name = "jerry home"
-print(name.title())
+# name = "jerry home"
+# print(name.title())
 # 大小写反转
-name = "JerryHome"
-print(name.swapcase())
+# name = "JerryHome"
+# print(name.swapcase())
 
 # 填充居中---
-name = "jerry"
-print(name.center(30,"*"))
+# name = "jerry"
+# print(name.center(30,"*"))
 
 # 查找从左到右 只返回第一个
-name = "jerry"
-print(name.find("r"))
+# name = "jerry"
+# print(name.find("r"))
 # 输出 2 (代表第一个"r"的下标）
       
-print(name.find("t"))
+# print(name.find("t"))
 # 输出 -1 (find 查找不存在的返回 -1）
        
        
 # print(name.index("t"))
 # index 查找不存在的就报错
 
+# 查找替换
+#  find rfind lfind index rindex lindex replace
+# print('fuck'.index('f'))
+# print('fuck'.index('e')) :没有会报错
+# print('fuck'.lfind('f'))
+
 # 拼接
 # print("_".join(name)) 
-# s = "zzzzxxx222"
+s = "zzzzxxx222"
 # print(s.isalnum()) # 判断是不是字母,数字,中文
 # print(s.isalpha())  # 判断是不是字母,中文
 # print(s.isdigit())  # 判断字符串是不是全都是阿拉伯数字
 # print(s.isdecimal())  # 判断是否是十进制
+
+# 找出倒数第一个2
+print(s.rfind("2",2,8))
 
 # 切割
 # str.split(s, num)[n]
