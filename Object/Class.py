@@ -1,5 +1,5 @@
 # 
-class fuck:
+class testClass:
     # 属性
     name = ''
     age = ''
@@ -13,5 +13,5 @@ class fuck:
         print('self.name:{}'.format(self.name))
 
 
-obj = fuck('wang', 19)
+obj = testClass('wang', 19)
 obj.deBugPrint()
