@@ -103,6 +103,21 @@ class Txt(All_file):
     # 注意子类没有声明构造函数的时候 父类的构造函数会被调用
     # def __init__(self,name):
     #     pass
+    
+    # 只读属性 相当于get
+    @property
+    def f(self): 
+        print('property:f')
+        return self.name
+    
+    # setter
+    # 1. @f f指代property对应的只读属性
+    # 2.函数名字是可不和f同名的 
+    @f.setter
+    def f2(self,val):
+        self.name = val
+        print('setter')
+        
     def read(self):
         print('读取')
     def write(self):
@@ -110,9 +125,12 @@ class Txt(All_file):
 
 # 继承类构造函数传参子类没有满足的构造函数的话会被父类构造函数调用
 txt = Txt('你妈比')
+print(txt.f)
+txt.f2='fuck'
 print('naame',txt.name)
-txt.read()
-print('子类属性字典',txt.__dict__)
+# txt.read()
+
+# print('子类属性字典',txt.__dict__)
 
 # 混合
 
