@@ -2,10 +2,10 @@
 # 模块包
 import os
 
-v = 'ffff'
+v2 = 'ffff'
 
 
-class modulesFile:
+class modulesFile2:
     # 构造函数
     def __init__(self):
         self.name = 'fuck'
