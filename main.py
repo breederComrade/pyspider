@@ -48,7 +48,7 @@ app.debug = True
 
 
 @app.route('/api/<string:language>/',methods=['GET'])
-def index(Resource):
+def index(language):
     """
             方法名称：通过ID查询用户
             方法描述：通过输入ID调用此API查询用户
