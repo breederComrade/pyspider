@@ -14,9 +14,11 @@ dependencies:
   - ca-certificates=2020.4.5.1=hecc5488_0
   - certifi=2020.4.5.1=py37hc8dfbb8_0
   - click=7.1.2=py_0
+  - enum34=1.1.10=py37hc8dfbb8_1
   - flasgger=0.9.4=py_0
   - flask=1.1.2=py_0
   - flask-restplus=0.13.0=py37_0
+  - flask-restx=0.1.1=py_0
   - itsdangerous=1.1.0=py37_0
   - jinja2=2.11.2=py_0
   - jsonschema=2.6.0=py37_1002
@@ -38,7 +40,7 @@ dependencies:
   - six=1.15.0=pyh9f0ad1d_0
   - sqlite=3.31.1=h5c1f38d_1
   - tk=8.6.8=ha441bb4_0
-  - werkzeug=1.0.1=pyh9f0ad1d_0
+  - werkzeug=0.16.1=py_0
   - wheel=0.34.2=py37_0
   - xz=5.2.5=h1de35cc_0
   - yaml=0.2.4=h0b31af3_0
