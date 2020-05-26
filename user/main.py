@@ -12,7 +12,7 @@ def index():
 
 # TODO:用户列表需要权限控制
 
-@user.route('/list', methods=['post'])
+@user.route('/list', methods=['post','get'])
 def userList():
     return '用户列表'
 
