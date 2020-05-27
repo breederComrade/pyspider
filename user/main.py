@@ -1,8 +1,16 @@
 # 蓝图
 
-from flask import Blueprint,request
+from flask import Blueprint, request, jsonify
+
+# from db.db_user_model import User_Model
+
+
 # 定义蓝图
+# from app import User_Model
+from db.db_user_model import *
+
 user = Blueprint('user', __name__)
+
 
 # TODO: 视图函数在其他文件内如何导入
 @user.route('/')
@@ -12,8 +20,9 @@ def index():
 
 # TODO:用户列表需要权限控制
 
-@user.route('/list', methods=['post','get'])
+@user.route('/list', methods=['post', 'get'])
 def userList():
+  
     return '用户列表'
 
 
@@ -36,7 +45,7 @@ def userUpdate():
 
 # 用户登录
 # TODO:查询数据库
-@user.route('/login',methods=['POST','GET'])
+@user.route('/login', methods=['POST', 'GET'])
 def user_login():
     print(request.args)
     
@@ -55,22 +64,22 @@ def user_login():
     # formdata方式使用form获得数据
     # print(data1_account)
     # print(data1_password)
-
+    
     print(account)
-    if(account=='admin' and password=='123'):
+    if (account == 'admin' and password == '123'):
         return '登录成功'
     return '登录失败'
 
 
 # 用户注册
 # TODO:查询数据库
-@user.route('/register',methods=['POST'])
+@user.route('/register', methods=['POST'])
 def user_register():
     data = request.get_json()
     password = data['password']
     account = data['account']
     
-    print('dddd',data)
-    if(account=='admin' and password=='123'):
+    print('dddd', data)
+    if (account == 'admin' and password == '123'):
         return '注册成功'
     return '注册失败'
