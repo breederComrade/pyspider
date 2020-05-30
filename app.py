@@ -4,6 +4,8 @@
 from flask import Flask, Blueprint, blueprints, render_template, jsonify
 # s数据库抽象类y
 from flask_sqlalchemy import SQLAlchemy
+
+from api.main import api
 from db.db_config import db_config
 from goods.main import goods
 # 包中导入
@@ -32,11 +34,6 @@ class User_Model(db.Model):
     
     # 一对多
     orders= db.relationship('Order_model',backref ='user' ,lazy='dynamic')
-    
-
-    
-    
-    
     
     # 如果写init  那就要指定赋值
     # 否则会自动对应值
@@ -93,7 +90,7 @@ def index():
 app.register_blueprint(user, url_prefix='/user')
 app.register_blueprint(goods, url_prefix='/goods')
 app.register_blueprint(client, url_prefix='/client')
-
+app.register_blueprint(api, url_prefix='/api')
 if __name__ == '__main__':
     app.run(
         port=8999,
