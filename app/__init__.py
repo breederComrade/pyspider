@@ -1,9 +1,19 @@
+import logging
+from logging.handlers import RotatingFileHandler
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 from api.main import api
-from app.config import Config,config_map
+from app.config import Config, config_map
 from app.extension import init_ext
+
+# log配置
+logging.basicConfig(level=logging.DEBUG)
+file_log_handler = RotatingFileHandler('logs/log', maxBytes=1024 * 1024 * 100, backupCount=10)
+formatter = logging.Formatter('%(levelname)s %(filename)s :%(lineno)d %(message)s')
+file_log_handler.setFormatter(formatter)
+logging.getLogger().addHandler(file_log_handler)
 
 
 def create_app(config_name):
@@ -12,15 +22,17 @@ def create_app(config_name):
     # 设置
     config_class = config_map.get(config_name)
     app.config.from_object(config_class)
-   
+    
     # 404处理
     @app.errorhandler(404)
     def page_not_found(e):
         return 'page_not_found-404'
+    
     # 500处理
     @app.errorhandler(500)
     def server_no_respone(e):
         return '500,server_no_respone'
+    
     # 蓝图
     register_blueprints(app)
     # 初始化
