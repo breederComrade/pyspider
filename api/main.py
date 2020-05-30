@@ -1,17 +1,22 @@
 # api接口
 import json
 
-from flask import Flask, Blueprint, request
+from flask import Flask, Blueprint, request,current_app
 
 from app.extension import db
 from app.models import GoodsModel
 
 api = Blueprint('api', __name__)
 
+#
 
 # 文档首页
 @api.route('/')
 def index():
+    # current_app.logger.error('error')
+    # current_app.logger.warn('warn')
+    # current_app.logger.info('info')
+    # current_app.logger.debug('debug')
     return 'Swagger--api首页'
 
 

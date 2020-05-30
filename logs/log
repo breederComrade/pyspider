@@ -1,1 +1,15 @@
 INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122 127.0.0.1 - - [30/May/2020 23:39:49] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [30/May/2020 23:39:49] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [30/May/2020 23:40:10] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [30/May/2020 23:40:30] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [30/May/2020 23:41:43] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [30/May/2020 23:43:02] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [30/May/2020 23:43:56] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [30/May/2020 23:44:26] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR main.py :16 error
+WARNING main.py :17 warn
+INFO main.py :18 info
+DEBUG main.py :19 debug
+INFO _internal.py :122 127.0.0.1 - - [30/May/2020 23:44:33] "GET /api/ HTTP/1.1" 200 -
