@@ -14,7 +14,7 @@ class GoodsModel(BaseModel):
     __tablename = 'goods_table'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(45), unique=True, )
-    no = db.Column(db.String(45), unique=True)
+    code = db.Column(db.String(45), unique=True)
     num = db.Column(db.Integer, default=12, nullable=True)
     image = db.Column(db.String(256), unique=True)  # 商品图片 文件名唯一
     # good_tag = db.Column(db.String(128), db.ForeignKey('tag.name'))  # 商品所属分类
@@ -27,6 +27,7 @@ class GoodsModel(BaseModel):
     goods_info = db.Column(db.Text)  # 商品介绍
     share_link = db.Column(db.String(256))  # 分享链接
     state = db.Column(db.Integer, default=1)  # 商品是否上架 0表示未上架 1表示已经上架 默认直接上架商品
+    
     # 外键关联第二步
     
     def __repr__(self):
@@ -57,14 +58,14 @@ class OrderModel(BaseModel):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     remark = db.Column(db.String(512))  # 添加订单备注
     # user = db.Column(db.Integer, db.ForeignKey('user.id'))  # 绑定外键 对应哪个用户的订单
-    user_detail = db.relationship("Detail", backref='orders')  # 该订单对应的商品 外键关联
+    # user_detail = db.relationship("Detail", backref='orders')  # 该订单对应的商品 外键关联
     times = db.Column(db.BIGINT)
     pay = db.Column(db.Integer, default=0)  # 是否支付成功 0=待支付 1=支付成功
     cancel = db.Column(db.Integer, default=0)  # 订单是否取消 0=未取消 1=已经取消的订单
     alipay = db.Column(db.String(256))  # 支付宝支付后的订单号 用来验证是否收款
     pay_remark = db.Column(db.String(1024))  # 用户提交支付状态的时候的备注信息
 
-    
+
 # 订单货品详情
 class OrderGoodsModel(BaseModel):
     __tablename__ = 'order_goods_table'
@@ -97,10 +98,10 @@ class AddressModel(BaseModel):
     address = db.Column(db.String(512))  # 街道等详细位置
     phone = db.Column(db.String(20))  # 收货电话
     name = db.Column(db.String(128))  # 收货人姓名
-    remarks = db.Column(db.String(512)) # 备注
+    remarks = db.Column(db.String(512))  # 备注
     default_add = db.Column(db.Integer, default=1)  # 是否为默认地址 1表示默认地址 0表示非默认地址
     # 外键第二步
-    # users_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    users_id = db.Column(db.Integer, db.ForeignKey('user_table.id'))
 
 
 # 用户表
@@ -109,7 +110,7 @@ class UserModel(BaseModel):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(128), unique=True, index=True)
     password = db.Column(db.String(45), nullable=False)
-    mobile = db.Column(db.String(11), unique=True)
+    mobile = db.Column(db.String(120), unique=True)
     email = db.Column(db.String(64), unique=True, index=True)  # 邮箱
     birthday = db.Column(db.DATE)  # 出生日期
     sex = db.Column(db.String(32))  # 性别
@@ -122,18 +123,8 @@ class UserModel(BaseModel):
     info = db.Column(db.Text)  # 个性简介
     member_grade = db.Column(db.String(4), default="0")  # 会员等级
     account_point = db.Column(db.Integer, default=0)  # 会员积分
-    uuid = db.Column(db.String(1024))
-    # （设置外键的第二步）
-    # users_id = db.relationship('Address')  # 会员收货地址外键关系关联
-    # user_order = db.relationship('Orders')  # 订单信息外键关系关联
-    # comment_user = db.relationship('Comment', backref='user')  # 会员评论信息外键关系关联
-    # user_logs = db.relationship('UserLog', backref='user')  # 会员登陆日志信息外键关系关联
-    # user_message = db.relationship('Message', backref='user')  # 会员登陆日志信息外键关系关联
-    # user_car = db.relationship('BuyCar')  # 购物车外键关系关联
-    # detail_user = db.relationship('Detail')  # 订单商品购买人 外键关系关联
-    # col_user = db.relationship('Collect', backref='user')  # 收藏商品对应用户
     
-    # address = db.relationship('AddressModel',backref = 'UserModel')
+    address = db.relationship('AddressModel', backref='user_table', lazy="dynamic")
     
     def __repr__(self):
         return '用户:%r' % self.name
@@ -143,3 +134,5 @@ class UserModel(BaseModel):
 class ExpressModel(BaseModel):
     __tablename__ = 'express_table'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+
+

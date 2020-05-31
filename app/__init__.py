@@ -4,11 +4,13 @@ from logging.handlers import RotatingFileHandler
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-from api.main import api
+
 from app.config import Config, config_map
 from app.extension import init_ext
 
 # log配置
+from app.views import api
+
 logging.basicConfig(level=logging.DEBUG)
 file_log_handler = RotatingFileHandler('logs/log', maxBytes=1024 * 1024 * 100, backupCount=10)
 formatter = logging.Formatter('%(levelname)s %(filename)s :%(lineno)d %(message)s')
