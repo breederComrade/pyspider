@@ -4,7 +4,7 @@ import json
 from flask import Flask, Blueprint, request,current_app
 
 from app.extension import db
-from app.models import GoodsModel
+from app.models import GoodsModel,UseModel,AddressModel,CustomerModel,ExpressModel,OrderGoodsModel,OrderModel
 
 api = Blueprint('api', __name__)
 

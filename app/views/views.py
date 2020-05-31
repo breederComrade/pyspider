@@ -1,5 +1,9 @@
 
 #
+from flask import Blueprint
+blue = Blueprint('blue',__name__)
 
-def init_views():
-    pass
+@blue.route('/')
+def index():
+    print('xxx')
+    return 'xxxx'
