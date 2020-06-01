@@ -1,13 +1,14 @@
 import logging
 from logging.handlers import RotatingFileHandler
 
-from flask import Flask
+from flask import Flask as _Flask
 from flask_sqlalchemy import SQLAlchemy
-
 
 from app.config import Config, config_map
 from app.extension import init_ext
-
+from flask.json import JSONEncoder as _JSONEncoder
+from datetime import date
+import json
 # log配置
 from app.views import api
 
@@ -18,9 +19,26 @@ file_log_handler.setFormatter(formatter)
 logging.getLogger().addHandler(file_log_handler)
 
 
+#
+# 定义jsonNcoder
+class JSONEncoder(_JSONEncoder):
+    def default(self, o):
+        if (hasattr(o, 'keys') and hasattr(o, '__getitem__')):
+            # 有keys和getitem证明是model
+            return dict(o)
+        if isinstance(o, date):
+            return o.strftime('%Y-%m-%d %H:%M:%S')
+        return json.JSONEncoder.default((self, 0))
+
+class Flask(_Flask):  # 定义自己的Flask核心对象，继承原来的Flask核心对象
+    json_encoder = JSONEncoder # 替换原本的JSONEncoder
+
+
 def create_app(config_name):
     # app.app
     app = Flask(__name__)
+    # 修改jsonEncoder方法
+    app.json_encoder = JSONEncoder
     # 设置
     config_class = config_map.get(config_name)
     app.config.from_object(config_class)

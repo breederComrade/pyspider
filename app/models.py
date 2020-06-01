@@ -1,6 +1,8 @@
 # 模型
 from datetime import datetime
 
+from sqlalchemy import orm
+
 from app.extension import db
 
 
@@ -8,6 +10,23 @@ class BaseModel(db.Model):
     __abstract__ = True
     create_time = db.Column(db.DateTime, default=datetime.now)
     update_time = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)
+    
+    def __getitem__(self, item):
+        return getattr(self, item)
+    
+    def keys(self):
+        return self.fields
+    
+    #不需要返回的字段
+    def hide(self, *keys):
+        for key in keys:
+            self.fields.remove(key)
+        return self
+    #需要返回的字段
+    def append(self, *keys):
+        for key in keys:
+            self.fields.append(key)
+        return self
 
 
 class GoodsModel(BaseModel):
@@ -29,6 +48,14 @@ class GoodsModel(BaseModel):
     state = db.Column(db.Integer, default=1)  # 商品是否上架 0表示未上架 1表示已经上架 默认直接上架商品
     
     # 外键关联第二步
+
+    @orm.reconstructor
+    def __init__(self):
+        self.fields = ['id', 'name', 'code', 'num',
+                       'image',
+                       'price','old_price', 'start', 'discount',
+                       'skull_num',
+                       'sales','goods_info','share_link','state']
     
     def __repr__(self):
         return '<货品 %r>' % self.name
@@ -102,6 +129,12 @@ class AddressModel(BaseModel):
     default_add = db.Column(db.Integer, default=1)  # 是否为默认地址 1表示默认地址 0表示非默认地址
     # 外键第二步
     users_id = db.Column(db.Integer, db.ForeignKey('user_table.id'))
+    
+    def keys(self):
+        return ("id", "street", "province", "country", "zip", "address", "phone", "name", "phone", "name", "remarks",)
+    
+    def __getitem__(self, item):
+        return getattr(self, item)
 
 
 # 用户表
@@ -134,5 +167,3 @@ class UserModel(BaseModel):
 class ExpressModel(BaseModel):
     __tablename__ = 'express_table'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-
-

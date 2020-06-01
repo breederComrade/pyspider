@@ -1,5 +1,5 @@
 # 扩展
-
+from flask import Flask as _Flask
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -7,3 +7,4 @@ db = SQLAlchemy()
 def init_ext(app):
     # 初始化app
     db.init_app(app=app)
+

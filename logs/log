@@ -5568,3 +5568,886 @@ INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to qui
 INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 00:06:52] "GET /api/many/create HTTP/1.1" 200 -
 INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 00:07:17] "GET /api/many/create HTTP/1.1" 200 -
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT address_table.create_time AS address_table_create_time, address_table.update_time AS address_table_update_time, address_table.id AS address_table_id, address_table.street AS address_table_street, address_table.province AS address_table_province, address_table.country AS address_table_country, address_table.zip AS address_table_zip, address_table.city AS address_table_city, address_table.area AS address_table_area, address_table.address AS address_table_address, address_table.phone AS address_table_phone, address_table.name AS address_table_name, address_table.remarks AS address_table_remarks, address_table.default_add AS address_table_default_add, address_table.users_id AS address_table_users_id 
+FROM address_table 
+WHERE address_table.id = %(param_1)s
+INFO log.py :110 {'param_1': 52}
+INFO log.py :110 INSERT INTO user_table (create_time, update_time, username, password, mobile, email, birthday, sex, password_hash, avatar_hash, image, account_atatus, activate, ac_type, info, member_grade, account_point) VALUES (%(create_time)s, %(update_time)s, %(username)s, %(password)s, %(mobile)s, %(email)s, %(birthday)s, %(sex)s, %(password_hash)s, %(avatar_hash)s, %(image)s, %(account_atatus)s, %(activate)s, %(ac_type)s, %(info)s, %(member_grade)s, %(account_point)s)
+INFO log.py :110 {'create_time': datetime.datetime(2020, 6, 1, 21, 32, 16, 134482), 'update_time': datetime.datetime(2020, 6, 1, 21, 32, 16, 134496), 'username': '用户12', 'password': 123, 'mobile': '1359374521', 'email': None, 'birthday': None, 'sex': 0.013168618686275502, 'password_hash': None, 'avatar_hash': None, 'image': None, 'account_atatus': None, 'activate': '1', 'ac_type': '1', 'info': None, 'member_grade': '0', 'account_point': 0}
+INFO log.py :110 COMMIT
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:32:16] "GET /api/user/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:34:18] "GET /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:34:30] "GET /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:35:22] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:35:32] "GET /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:35:37] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:42:58] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:44:00] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:44:32] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:44:48] "GET /api/seri HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:44:59] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 21:46:48] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:09:11] "POST /api/serl HTTP/1.1" 405 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:09:23] "POST /api/serl HTTP/1.1" 405 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:09:29] "GET /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:09:52] "GET /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:10:13] "GET /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:10:27] "GET /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:10:41] "GET /api/serl?name=xxx HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:11:04] "GET /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:11:40] "GET /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:12:20] "GET /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:12:48] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:13:26] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:13:36] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:14:09] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:14:26] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:14:39] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:14:54] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:19:50] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:20:31] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:22:21] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:23:50] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:24:27] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:27:45] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:28:00] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:28:11] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:28:26] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:30:12] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:30:40] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 23:32:07] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:14:38] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:14:54] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:20:48] "POST /api/serl HTTP/1.1" 200 -
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:21:08] "GET /api/seri HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:21:08] "GET /api/seri?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:21:09] "GET /api/seri?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:21:09] "GET /api/seri?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:21:09] "GET /api/seri?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:21:09] "GET /api/seri?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:21:09] "GET /api/seri?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:34:56] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:43:11] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 168-168-658
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:47:43] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extension.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:54:27] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:55:09] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:55:28] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 200-230-869
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:55:58] "POST /api/serl HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 00:56:22] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:00:01] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:00:22] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:09:36] "POST /api/serl HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:09:38] "POST /api/serl HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:09:43] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:10:58] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:11:08] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:11:31] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(id_1)s 
+ LIMIT %(param_1)s
+INFO log.py :110 {'id_1': 6, 'param_1': 1}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:11:44] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s 
+ LIMIT %(param_1)s
+INFO log.py :110 {'id_1': 6, 'param_1': 1}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:11:53] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 01:12:07] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
