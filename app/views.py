@@ -6,8 +6,7 @@ import random
 from flask import Flask, Blueprint, request, current_app
 
 from app.extension import db
-from app.models import GoodsModel, UserModel, AddressModel, CustomerModel, ExpressModel, OrderGoodsModel, OrderModel, \
-    Student, Teacher
+from app.models import GoodsModel, UserModel, AddressModel, CustomerModel, ExpressModel, OrderGoodsModel, OrderModel
 
 api = Blueprint('api', __name__)
 

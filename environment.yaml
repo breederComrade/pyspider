@@ -1,11 +1,10 @@
 name: flask
 channels:
-  - https://mirrors.ustc.edu.cn/anaconda/pkgs/main
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-  - defaults
+  - http://mirrors.ustc.edu.cn/anaconda/pkgs/main
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 dependencies:
   - alembic=1.4.2=pyh9f0ad1d_0
   - aniso8601=8.0.0=py_0
