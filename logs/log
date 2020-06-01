@@ -5569,3 +5569,379 @@ INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 00:06:52] "GET /api/many/creat
 INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 00:07:17] "GET /api/many/create HTTP/1.1" 200 -
 ERROR __init__.py :97 Error: Directory migrations already exists and is not empty
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:00] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:01] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:08] "GET /goods/creates HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:08] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:10] "GET /goods/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:10] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:33] "GET /goods/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:34] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:35] "GET /goods/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:35] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 INSERT INTO goods_model (create_time, update_time, name, code, num, image, price, old_price, start, discount, skull_num, sales, goods_info, share_link, state) VALUES (%(create_time)s, %(update_time)s, %(name)s, %(code)s, %(num)s, %(image)s, %(price)s, %(old_price)s, %(start)s, %(discount)s, %(skull_num)s, %(sales)s, %(goods_info)s, %(share_link)s, %(state)s)
+INFO log.py :110 {'create_time': datetime.datetime(2020, 6, 1, 14, 18, 44, 31340), 'update_time': datetime.datetime(2020, 6, 1, 14, 18, 44, 31354), 'name': '货品292', 'code': '20200504630', 'num': 12, 'image': None, 'price': 500, 'old_price': 500, 'start': 5, 'discount': None, 'skull_num': 10, 'sales': 45, 'goods_info': None, 'share_link': None, 'state': 1}
+INFO log.py :110 COMMIT
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:44] "GET /api/goods/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:44] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 INSERT INTO goods_model (create_time, update_time, name, code, num, image, price, old_price, start, discount, skull_num, sales, goods_info, share_link, state) VALUES (%(create_time)s, %(update_time)s, %(name)s, %(code)s, %(num)s, %(image)s, %(price)s, %(old_price)s, %(start)s, %(discount)s, %(skull_num)s, %(sales)s, %(goods_info)s, %(share_link)s, %(state)s)
+INFO log.py :110 {'create_time': datetime.datetime(2020, 6, 1, 14, 18, 52, 57772), 'update_time': datetime.datetime(2020, 6, 1, 14, 18, 52, 57785), 'name': '货品425', 'code': '20200504853', 'num': 12, 'image': None, 'price': 500, 'old_price': 500, 'start': 5, 'discount': None, 'skull_num': 10, 'sales': 45, 'goods_info': None, 'share_link': None, 'state': 1}
+INFO log.py :110 COMMIT
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:52] "GET /api/goods/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:52] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 INSERT INTO goods_model (create_time, update_time, name, code, num, image, price, old_price, start, discount, skull_num, sales, goods_info, share_link, state) VALUES (%(create_time)s, %(update_time)s, %(name)s, %(code)s, %(num)s, %(image)s, %(price)s, %(old_price)s, %(start)s, %(discount)s, %(skull_num)s, %(sales)s, %(goods_info)s, %(share_link)s, %(state)s)
+INFO log.py :110 {'create_time': datetime.datetime(2020, 6, 1, 14, 18, 52, 786654), 'update_time': datetime.datetime(2020, 6, 1, 14, 18, 52, 786685), 'name': '货品584', 'code': '20200504113', 'num': 12, 'image': None, 'price': 500, 'old_price': 500, 'start': 5, 'discount': None, 'skull_num': 10, 'sales': 45, 'goods_info': None, 'share_link': None, 'state': 1}
+INFO log.py :110 COMMIT
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:52] "GET /api/goods/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:53] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 INSERT INTO goods_model (create_time, update_time, name, code, num, image, price, old_price, start, discount, skull_num, sales, goods_info, share_link, state) VALUES (%(create_time)s, %(update_time)s, %(name)s, %(code)s, %(num)s, %(image)s, %(price)s, %(old_price)s, %(start)s, %(discount)s, %(skull_num)s, %(sales)s, %(goods_info)s, %(share_link)s, %(state)s)
+INFO log.py :110 {'create_time': datetime.datetime(2020, 6, 1, 14, 18, 53, 293977), 'update_time': datetime.datetime(2020, 6, 1, 14, 18, 53, 293993), 'name': '货品372', 'code': '20200504522', 'num': 12, 'image': None, 'price': 500, 'old_price': 500, 'start': 5, 'discount': None, 'skull_num': 10, 'sales': 45, 'goods_info': None, 'share_link': None, 'state': 1}
+INFO log.py :110 COMMIT
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:53] "GET /api/goods/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:53] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 INSERT INTO goods_model (create_time, update_time, name, code, num, image, price, old_price, start, discount, skull_num, sales, goods_info, share_link, state) VALUES (%(create_time)s, %(update_time)s, %(name)s, %(code)s, %(num)s, %(image)s, %(price)s, %(old_price)s, %(start)s, %(discount)s, %(skull_num)s, %(sales)s, %(goods_info)s, %(share_link)s, %(state)s)
+INFO log.py :110 {'create_time': datetime.datetime(2020, 6, 1, 14, 18, 53, 707408), 'update_time': datetime.datetime(2020, 6, 1, 14, 18, 53, 707420), 'name': '货品739', 'code': '20200504618', 'num': 12, 'image': None, 'price': 500, 'old_price': 500, 'start': 5, 'discount': None, 'skull_num': 10, 'sales': 45, 'goods_info': None, 'share_link': None, 'state': 1}
+INFO log.py :110 COMMIT
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:53] "GET /api/goods/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:53] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 INSERT INTO goods_model (create_time, update_time, name, code, num, image, price, old_price, start, discount, skull_num, sales, goods_info, share_link, state) VALUES (%(create_time)s, %(update_time)s, %(name)s, %(code)s, %(num)s, %(image)s, %(price)s, %(old_price)s, %(start)s, %(discount)s, %(skull_num)s, %(sales)s, %(goods_info)s, %(share_link)s, %(state)s)
+INFO log.py :110 {'create_time': datetime.datetime(2020, 6, 1, 14, 18, 54, 11531), 'update_time': datetime.datetime(2020, 6, 1, 14, 18, 54, 11541), 'name': '货品105', 'code': '20200504500', 'num': 12, 'image': None, 'price': 500, 'old_price': 500, 'start': 5, 'discount': None, 'skull_num': 10, 'sales': 45, 'goods_info': None, 'share_link': None, 'state': 1}
+INFO log.py :110 COMMIT
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:54] "GET /api/goods/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:54] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 INSERT INTO goods_model (create_time, update_time, name, code, num, image, price, old_price, start, discount, skull_num, sales, goods_info, share_link, state) VALUES (%(create_time)s, %(update_time)s, %(name)s, %(code)s, %(num)s, %(image)s, %(price)s, %(old_price)s, %(start)s, %(discount)s, %(skull_num)s, %(sales)s, %(goods_info)s, %(share_link)s, %(state)s)
+INFO log.py :110 {'create_time': datetime.datetime(2020, 6, 1, 14, 18, 54, 439456), 'update_time': datetime.datetime(2020, 6, 1, 14, 18, 54, 439475), 'name': '货品615', 'code': '20200504448', 'num': 12, 'image': None, 'price': 500, 'old_price': 500, 'start': 5, 'discount': None, 'skull_num': 10, 'sales': 45, 'goods_info': None, 'share_link': None, 'state': 1}
+INFO log.py :110 COMMIT
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:54] "GET /api/goods/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:18:54] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:19:04] "GET /api/goods/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:19:04] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:19:07] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:19:07] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:20:18] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:20:19] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:20:22] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:20:22] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:20:27] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:20:27] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:13] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:13] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:51] "GET /api/goods HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:51] "GET /api/goods?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:51] "GET /api/goods?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:51] "GET /api/goods?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:51] "GET /api/goods?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:51] "GET /api/goods?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:51] "GET /api/goods?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:58] "GET /api/goods HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:58] "GET /api/goods?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:58] "GET /api/goods?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:58] "GET /api/goods?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:59] "GET /api/goods?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:59] "GET /api/goods?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:21:59] "GET /api/goods?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:23:12] "GET /api/goods HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:23:12] "GET /api/goods?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:23:12] "GET /api/goods?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:23:12] "GET /api/goods?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:23:13] "GET /api/goods?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:23:13] "GET /api/goods?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:23:13] "GET /api/goods?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:24:36] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:24:36] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:01] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:02] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:20] "GET /api/goods HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:20] "GET /api/goods?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:20] "GET /api/goods?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:20] "GET /api/goods?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:21] "GET /api/goods?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:21] "GET /api/goods?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:21] "GET /api/goods?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id < %(id_1)s
+INFO log.py :110 {'id_1': 5}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:33] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [01/Jun/2020 14:25:33] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264

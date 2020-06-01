@@ -3,7 +3,7 @@ import json
 
 import random
 
-from flask import Flask, Blueprint, request, current_app
+from flask import Flask, Blueprint, request, jsonify, current_app
 
 from app.extension import db
 from app.models import GoodsModel, UserModel, AddressModel, CustomerModel, ExpressModel, OrderGoodsModel, OrderModel
@@ -27,15 +27,39 @@ def index():
 @api.route('/goods')
 def get():
     # 序列化
+    goods = GoodsModel.query.filter(GoodsModel.id < 5).all()
+    _dict = {
+        "goods":[]
+    }
     
-    return '货品列表'
+    # 方式一：手动序列化
+    for index, i in enumerate(goods):
+        print(i.name)
+        _dict['goods'].append(  {
+            "name": i.name,
+            "code": i.code
+        })
+    print(_dict)
+    # ？:返回数据系列化
+    
+    
+    
+    
+    
+    # ？：全局返回对象格式
+    
+    
+    
+    return
 
 
 # 商品详情
 @api.route('/goods/<int:id>')
 def goods_get(id):
+    
     goods = GoodsModel.query.filter_by(id=id).first()
     print(goods.name)
+    # TODO：反序列化
     return '货品：goodsId'
 
 
@@ -148,7 +172,7 @@ def customer_delete(id):
 def user_list():
     # 正向查询：一查多
     user = UserModel.query.get(34)
-    print('user.address',user.address.first().address)
+    print('user.address', user.address.first().address)
     return '用户列表'
 
 
@@ -195,9 +219,9 @@ def user_delete(id):
 def address_list():
     # 查询
     address = AddressModel.query.get(41)
-    print('xxx',address.name)
+    print('xxx', address.name)
     # 反向查询（多查一）
-    print('user:',address.user_table.username)
+    print('user:', address.user_table.username)
     return '地址列表'
 
 
@@ -208,13 +232,13 @@ def address_get(id):
 
 @api.route('/address/create')
 def address_create():
-    addresss =  AddressModel(
+    addresss = AddressModel(
         city="上海",
         province='上海',
         country='中国',
         street='普陀区',
         zip='3330006',
-        address='地址地址地址:{}'.format(random.randint(1,1000)),
+        address='地址地址地址:{}'.format(random.randint(1, 1000)),
         # users_id=32
     )
     db.session.add(addresss)
