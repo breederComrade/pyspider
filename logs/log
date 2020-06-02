@@ -6451,3 +6451,986 @@ INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pysp
 INFO _internal.py :122  * Restarting with stat
 WARNING _internal.py :122  * Debugger is active!
 INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT address_table.create_time AS address_table_create_time, address_table.update_time AS address_table_update_time, address_table.id AS address_table_id, address_table.street AS address_table_street, address_table.province AS address_table_province, address_table.country AS address_table_country, address_table.zip AS address_table_zip, address_table.city AS address_table_city, address_table.area AS address_table_area, address_table.address AS address_table_address, address_table.phone AS address_table_phone, address_table.name AS address_table_name, address_table.remarks AS address_table_remarks, address_table.default_add AS address_table_default_add, address_table.users_id AS address_table_users_id 
+FROM address_table 
+WHERE address_table.id = %(param_1)s
+INFO log.py :110 {'param_1': 52}
+INFO log.py :110 INSERT INTO user_table (create_time, update_time, username, password, mobile, email, birthday, sex, password_hash, avatar_hash, image, account_atatus, activate, ac_type, info, member_grade, account_point) VALUES (%(create_time)s, %(update_time)s, %(username)s, %(password)s, %(mobile)s, %(email)s, %(birthday)s, %(sex)s, %(password_hash)s, %(avatar_hash)s, %(image)s, %(account_atatus)s, %(activate)s, %(ac_type)s, %(info)s, %(member_grade)s, %(account_point)s)
+INFO log.py :110 {'create_time': datetime.datetime(2020, 6, 2, 21, 43, 17, 105276), 'update_time': datetime.datetime(2020, 6, 2, 21, 43, 17, 105296), 'username': '用户373', 'password': 123, 'mobile': '1355014379', 'email': None, 'birthday': None, 'sex': 0.33527270076912374, 'password_hash': None, 'avatar_hash': None, 'image': None, 'account_atatus': None, 'activate': '1', 'ac_type': '1', 'info': None, 'member_grade': '0', 'account_point': 0}
+INFO log.py :110 COMMIT
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 21:43:17] "GET /api/user/create HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 22:59:07] "GET /api/seri HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 22:59:08] "GET /api/seri?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 22:59:08] "GET /api/seri?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 22:59:08] "GET /api/seri?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 22:59:08] "GET /api/seri?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 22:59:08] "GET /api/seri?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:19:54] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:22:48] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:23:07] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:34:12] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:34:59] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:43:23] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:43:58] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:44:11] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:47:04] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:56:59] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:57:00] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:57:01] "POST /api/serl HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:57:08] "POST /api/seri HTTP/1.1" 405 -
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:57:29] "GET /api/seri HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [02/Jun/2020 23:57:49] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:00:36] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:04:36] "GET /api/seri HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:04:36] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:05:21] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:05:33] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:06:36] "GET /api/seri HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:07:45] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:07:48] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:26:30] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:27:00] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:27:50] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:28:19] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:28:58] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:29:10] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:29:58] "GET /api/seri HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:30:28] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:30:35] "GET /api/seri HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:31:10] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:31:17] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:31:34] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/views.py", line 257, in seri
+    f = goods_schema.dump(goods).data
+AttributeError: 'list' object has no attribute 'data'
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:32:39] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/views.py", line 257, in seri
+    f = goods_schema.dump(goods).data
+AttributeError: 'list' object has no attribute 'data'
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:32:55] "GET /api/seri HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/views.py", line 257, in seri
+    f = goods_schema.dump(goods).data
+AttributeError: 'list' object has no attribute 'data'
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:33:19] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/views.py", line 257, in seri
+    f = goods_schema.dump(goods).data
+AttributeError: 'list' object has no attribute 'data'
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:33:25] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:33:50] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2131, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:34:32] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:35:28] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:52:09] "GET /api/seri HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/marshmallow/schema.py", line 1038, in _bind_field
+    field_obj._bind_to_schema(field_name, self)
+TypeError: _bind_to_schema() missing 1 required positional argument: 'schema'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/views.py", line 256, in seri
+    goods_schema = GoodsScheme(many=True)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/marshmallow_sqlalchemy/schema/load_instance_mixin.py", line 42, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/marshmallow/schema.py", line 397, in __init__
+    self._init_fields()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/marshmallow/schema.py", line 979, in _init_fields
+    self._bind_field(field_name, field_obj)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/marshmallow/schema.py", line 1049, in _bind_field
+    raise TypeError(msg) from error
+TypeError: Field for "id" must be declared as a Field instance, not a class. Did you mean "fields.String()"?
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:52:57] "GET /api/seri HTTP/1.1" 200 -

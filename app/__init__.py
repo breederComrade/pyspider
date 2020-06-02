@@ -2,6 +2,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 from flask import Flask as _Flask
+from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 
 from app.config import Config, config_map
@@ -10,6 +11,7 @@ from flask.json import JSONEncoder as _JSONEncoder
 from datetime import date
 import json
 # log配置
+# from app.schemas import init_marshmallow
 from app.views import api
 
 logging.basicConfig(level=logging.DEBUG)
@@ -31,7 +33,8 @@ class JSONEncoder(_JSONEncoder):
         return json.JSONEncoder.default((self, 0))
 
 class Flask(_Flask):  # 定义自己的Flask核心对象，继承原来的Flask核心对象
-    json_encoder = JSONEncoder # 替换原本的JSONEncoder
+    # json_encoder = JSONEncoder # 替换原本的JSONEncoder
+    pass
 
 
 def create_app(config_name):
@@ -57,11 +60,14 @@ def create_app(config_name):
     register_blueprints(app)
     # 初始化
     init_ext(app)
+    # init_marshmallow(app)
+
     return app
 
 
 #    注册蓝图
 def register_blueprints(app):
+    # todo:红图
     app.register_blueprint(api, url_prefix='/api')
 
 #     注册扩展
