@@ -3,7 +3,7 @@ import json
 
 import random
 
-from flask import Flask, Blueprint, request, current_app, jsonify
+from flask import Flask, Blueprint, request, current_app, jsonify, make_response, Response
 
 from app.extension import db
 from app.models import GoodsModel, UserModel, AddressModel, CustomerModel, ExpressModel, OrderGoodsModel, OrderModel
@@ -245,7 +245,7 @@ class GoodsSchemas(object):
     pass
 
 
-@api.route('/seri',)
+@api.route('/seri', )
 def seri():
     # 序列化
     #
@@ -260,3 +260,32 @@ def seri():
     return jsonify(f)
     # 方式三：插件：
     # return 'xxx'
+
+
+@api.route('/cookies', )
+def cookies():
+    rep = make_response()
+    rep.set_cookie('country', "china", max_age=3600)
+    # response是撒？
+    Response()
+    return rep
+
+
+@api.route('/getcookies')
+def get_cookies():
+    # 1.验证是否过期
+    #
+    #
+    #
+    #
+    
+    cookie = request.cookies.get('country')
+    
+    return cookie
+
+
+@api.route('/delCookie')
+def del_cookies():
+    resp  = Response('删除cookies')
+    resp.delete_cookie('country')
+    return resp
