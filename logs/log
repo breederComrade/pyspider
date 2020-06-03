@@ -7473,3 +7473,5 @@ Traceback (most recent call last):
 TypeError: Field for "id" must be declared as a Field instance, not a class. Did you mean "fields.String()"?
 INFO log.py :110 ROLLBACK
 INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 21:22:18] "GET /api/seri HTTP/1.1" 200 -
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
