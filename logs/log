@@ -5945,3 +5945,1231 @@ INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/
 INFO _internal.py :122  * Restarting with stat
 WARNING _internal.py :122  * Debugger is active!
 INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/extension.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:21:36] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:21:37] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:33:32] "GET /api/marchmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:33:33] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:33:55] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:33:55] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:33:55] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:33:55] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:33:56] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:33:56] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:33:56] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:14] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:15] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:24] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:24] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:42] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:42] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:42] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:42] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:42] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:42] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:34:42] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:35:29] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:35:29] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:35:29] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:35:29] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:35:30] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:35:30] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:35:30] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:35:46] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:35:46] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:38:37] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:38:37] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:38:58] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:38:58] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:39:08] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:39:08] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:39:08] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:39:08] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:39:08] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:39:08] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:39:08] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:39:37] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:39:37] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:40:40] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:40:40] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:47:38] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:47:38] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:47:38] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:47:38] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:47:39] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:47:39] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:47:39] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:06] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:06] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:06] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:06] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:06] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:06] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:06] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:29] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:29] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:41] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:48:41] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:49:56] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:49:56] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:50:22] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:50:23] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:51:09] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:51:09] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:15] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:15] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:15] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:15] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:15] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:15] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:15] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:49] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:49] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:49] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:49] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:49] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:49] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:53:49] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:08] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:08] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:08] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:08] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:09] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:09] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:09] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:35] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:35] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:35] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:35] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:35] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:35] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:36] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO log.py :110 ROLLBACK
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:37] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:37] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:37] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:37] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:37] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:37] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:54:37] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:31] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:31] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:41] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:41] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:41] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:41] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:42] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:42] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:42] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:48] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:48] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:56] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:55:56] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:56:02] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:56:02] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:56:10] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:56:10] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:56:31] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:56:31] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:56:49] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:56:49] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:17] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:18] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:23] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:23] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:25] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:25] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:35] "GET /api/marshmallow HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:36] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:36] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:36] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:36] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:36] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:57:36] "GET /api/marshmallow?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:58:02] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:58:03] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:58:29] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 14:58:29] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/views.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 15:02:00] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 15:02:00] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 15:03:30] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 15:03:31] "GET /favicon.ico HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 15:03:54] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 15:03:54] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO log.py :110 SHOW VARIABLES LIKE 'sql_mode'
+INFO log.py :110 {}
+INFO log.py :110 SHOW VARIABLES LIKE 'lower_case_table_names'
+INFO log.py :110 {}
+INFO log.py :110 SELECT DATABASE()
+INFO log.py :110 {}
+INFO log.py :110 show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+INFO log.py :110 {}
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id = %(param_1)s
+INFO log.py :110 {'param_1': 6}
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 15:04:15] "GET /api/marshmallow HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 15:04:15] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/schema.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264

@@ -1,12 +1,12 @@
 # api接口
 import json
-
 import random
 
 from flask import Flask, Blueprint, request, jsonify, current_app
 
 from app.extension import db
 from app.models import GoodsModel, UserModel, AddressModel, CustomerModel, ExpressModel, OrderGoodsModel, OrderModel
+from app.schema import GoodsSchema, goods_schema, good_schema
 
 api = Blueprint('api', __name__)
 
@@ -255,3 +255,21 @@ def address_update(id):
 @api.route('/address/delete/<int:id>')
 def address_delete(id):
     return '删除地址'
+
+
+# 序列化
+@api.route('/marshmallow')
+def flask_marshmallow():
+    goods = GoodsModel.query.filter(GoodsModel.id>6).all()
+    goods2 = GoodsModel.query.get(6)
+ 
+    # dump无法解析list
+    # list 数据可使用schema.jsonify
+    # dump 只能用于单个
+    return good_schema.dump(goods2)
+    
+    # 单个
+    # return good_schema.jsonify(goods2)
+    
+    # 多个
+    # return goods_schema.jsonify(goods)
