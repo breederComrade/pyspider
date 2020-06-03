@@ -3,15 +3,22 @@ import json
 
 import random
 
-from flask import Flask, Blueprint, request, current_app, jsonify, make_response, Response
+from flask import Flask, Blueprint, request, current_app, jsonify, make_response, Response, session
 
 from app.extension import db
+from app.libs.red_print import Redprint
 from app.models import GoodsModel, UserModel, AddressModel, CustomerModel, ExpressModel, OrderGoodsModel, OrderModel
 from app.schemas import GoodsScheme
 
+
+# 注册
+
 api = Blueprint('api', __name__)
-
-
+# 红图
+goods = Redprint('goods')
+order = Redprint('order')
+user = Redprint('user')
+customer = Redprint('customer')
 #
 
 # 文档首页
@@ -25,7 +32,7 @@ def index():
 
 
 # 商品
-@api.route('/goods')
+@goods.route('')
 def get():
     # 序列化
     
@@ -33,7 +40,7 @@ def get():
 
 
 # 商品详情
-@api.route('/goods/<int:id>')
+@goods.route('/<int:id>')
 def goods_get(id):
     goods = GoodsModel.query.filter_by(id=id).first()
     print(goods.name)
@@ -274,18 +281,32 @@ def cookies():
 @api.route('/getcookies')
 def get_cookies():
     # 1.验证是否过期
-    #
-    #
-    #
-    #
-    
     cookie = request.cookies.get('country')
-    
-    return cookie
+    return cookie if cookie is not None else '没有cookie'
 
 
 @api.route('/delCookie')
 def del_cookies():
-    resp  = Response('删除cookies')
+    resp = Response('删除cookies')
     resp.delete_cookie('country')
     return resp
+
+
+@api.route('/session')
+def sessions():
+    session.permanent = True  # 31天
+    session['name'] = 'fuck you '
+    return '设置session成功'
+
+
+@api.route('/getsession')
+def getsession():
+    username = session.get('name')
+    return Response(username) if username is not None else '未找到'
+
+
+@api.route('/delsession')
+def delsession():
+    session.pop('name')
+    # session.clear()
+    return '删除session成功'
