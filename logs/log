@@ -7434,3 +7434,42 @@ Traceback (most recent call last):
 TypeError: Field for "id" must be declared as a Field instance, not a class. Did you mean "fields.String()"?
 INFO log.py :110 ROLLBACK
 INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 00:52:57] "GET /api/seri HTTP/1.1" 200 -
+INFO log.py :110 BEGIN (implicit)
+INFO log.py :110 SELECT goods_model.create_time AS goods_model_create_time, goods_model.update_time AS goods_model_update_time, goods_model.id AS goods_model_id, goods_model.name AS goods_model_name, goods_model.code AS goods_model_code, goods_model.num AS goods_model_num, goods_model.image AS goods_model_image, goods_model.price AS goods_model_price, goods_model.old_price AS goods_model_old_price, goods_model.start AS goods_model_start, goods_model.discount AS goods_model_discount, goods_model.skull_num AS goods_model_skull_num, goods_model.sales AS goods_model_sales, goods_model.goods_info AS goods_model_goods_info, goods_model.share_link AS goods_model_share_link, goods_model.state AS goods_model_state 
+FROM goods_model 
+WHERE goods_model.id > %(id_1)s
+INFO log.py :110 {'id_1': 6}
+ERROR app.py :1892 Exception on /api/seri [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/marshmallow/schema.py", line 1038, in _bind_field
+    field_obj._bind_to_schema(field_name, self)
+TypeError: _bind_to_schema() missing 1 required positional argument: 'schema'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/views.py", line 256, in seri
+    goods_schema = GoodsScheme(many=True)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/marshmallow_sqlalchemy/schema/load_instance_mixin.py", line 42, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/marshmallow/schema.py", line 397, in __init__
+    self._init_fields()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/marshmallow/schema.py", line 979, in _init_fields
+    self._bind_field(field_name, field_obj)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/marshmallow/schema.py", line 1049, in _bind_field
+    raise TypeError(msg) from error
+TypeError: Field for "id" must be declared as a Field instance, not a class. Did you mean "fields.String()"?
+INFO log.py :110 ROLLBACK
+INFO _internal.py :122 127.0.0.1 - - [03/Jun/2020 21:22:18] "GET /api/seri HTTP/1.1" 200 -

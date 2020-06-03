@@ -7,4 +7,4 @@ class Rdeprint:
     
     # 注册
     def register(self, bp, url):
-        pass
+        self.bp = bp;

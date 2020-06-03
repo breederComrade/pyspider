@@ -10,8 +10,6 @@ class GoodsScheme(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = GoodsModel
         # fields = ("id","name","code")
-        
-   
 
 # 订单表
 
