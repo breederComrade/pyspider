@@ -5,6 +5,8 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:wangjun2013@localhost/flask'
     SQLALCHEMY_TRACK_MODIFICHATIONS = True
     SQLALCHEMY_ECHO = True
+    # session 验证码
+    SECRET_KEY = 'madeFuck'
 
     # redis配置
     # flask-session配置

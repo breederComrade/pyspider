@@ -12,7 +12,7 @@ from datetime import date
 import json
 # log配置
 # from app.schemas import init_marshmallow
-from app.views import api
+from app.views import api, goods, order, user, customer
 
 logging.basicConfig(level=logging.DEBUG)
 file_log_handler = RotatingFileHandler('logs/log', maxBytes=1024 * 1024 * 100, backupCount=10)
@@ -67,8 +67,14 @@ def create_app(config_name):
 
 #    注册蓝图
 def register_blueprints(app):
-    # todo:红图
+    goods.register(api, url_prefix='/goods')
+    order.register(api, url_prefix='/order')
+    user.register(api, url_prefix='/user')
+    customer.register(api, url_prefix='/customer')
+    
     app.register_blueprint(api, url_prefix='/api')
+
+    
 
 #     注册扩展
 
