@@ -7867,3 +7867,5 @@ INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:37] "GET /favicon.ico HT
 INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:39] "GET / HTTP/1.1" 302 -
 INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:39] "GET /api/ HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:39] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:46:20] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:46:20] "GET /favicon.ico HTTP/1.1" 200 -
