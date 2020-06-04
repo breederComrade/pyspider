@@ -7829,3 +7829,41 @@ WARNING _internal.py :122  * Debugger is active!
 INFO _internal.py :122  * Debugger PIN: 930-586-435
 WARNING _internal.py :122  * Debugger is active!
 INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 195-176-210
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:41:25] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:41:26] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:41:33] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:41:34] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/manage.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 195-176-210
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/manage.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 195-176-210
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/manage.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 195-176-210
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:28] "GET / HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:28] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:28] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:28] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:28] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:28] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:28] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/manage.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 195-176-210
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:36] "GET / HTTP/1.1" 302 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:36] "GET /api HTTP/1.1" 308 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:36] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:37] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:39] "GET / HTTP/1.1" 302 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:39] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:39] "GET /favicon.ico HTTP/1.1" 200 -

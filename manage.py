@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect
 from flask_script import Manager
 from flask_migrate import Migrate,MigrateCommand
 from app import create_app
@@ -6,6 +6,11 @@ from app.extension import db
 # 创建
 app = create_app('develop')
 manager = Manager(app=app)
+
+@app.route('/')
+def index():
+    return redirect('/api')
+
 
 '''
 实际操作顺序:
