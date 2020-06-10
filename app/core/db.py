@@ -17,7 +17,6 @@ from app.libs.error_code import NotFound, RepeatException
 from app.libs.enums import UrlFromEnum
 
 
-
 def on_update_time():
     now = datetime.now
     return int(round(now().timestamp()))
