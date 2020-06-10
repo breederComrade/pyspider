@@ -7869,3 +7869,32 @@ INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:39] "GET /api/ HTTP/1.1"
 INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:44:39] "GET /favicon.ico HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:46:20] "GET /api/goods HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [04/Jun/2020 09:46:20] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Running on http://127.0.0.1:8983/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122 127.0.0.1 - - [07/Jun/2020 08:30:19] "GET / HTTP/1.1" 302 -
+INFO _internal.py :122 127.0.0.1 - - [07/Jun/2020 08:30:19] "GET / HTTP/1.1" 302 -
+INFO _internal.py :122 127.0.0.1 - - [07/Jun/2020 08:30:19] "GET /api HTTP/1.1" 308 -
+INFO _internal.py :122 127.0.0.1 - - [07/Jun/2020 08:30:19] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [07/Jun/2020 08:30:19] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [07/Jun/2020 08:30:20] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [07/Jun/2020 08:30:20] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [07/Jun/2020 08:42:26] "GET /api/goods HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [07/Jun/2020 08:42:27] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8983/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Running on http://127.0.0.1:8983/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435
+INFO _internal.py :122  * Running on http://127.0.0.1:8983/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 930-586-435

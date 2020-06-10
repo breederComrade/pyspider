@@ -1,7 +1,7 @@
 import logging
 from logging.handlers import RotatingFileHandler
 
-from flask import Flask as _Flask
+from flask import Flask
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 
@@ -32,10 +32,6 @@ class JSONEncoder(_JSONEncoder):
             return o.strftime('%Y-%m-%d %H:%M:%S')
         return json.JSONEncoder.default((self, 0))
 
-class Flask(_Flask):  # 定义自己的Flask核心对象，继承原来的Flask核心对象
-    # json_encoder = JSONEncoder # 替换原本的JSONEncoder
-    pass
-
 
 def create_app(config_name):
     # app.app
@@ -46,22 +42,15 @@ def create_app(config_name):
     config_class = config_map.get(config_name)
     app.config.from_object(config_class)
     
-    # 404处理
-    @app.errorhandler(404)
-    def page_not_found(e):
-        return 'page_not_found-404'
-    
-    # 500处理
-    @app.errorhandler(500)
-    def server_no_respone(e):
-        return '500,server_no_respone'
-    
     # 蓝图
     register_blueprints(app)
+    # 扩展
+    register_plugin(app)
+
     # 初始化
     init_ext(app)
     # init_marshmallow(app)
-
+    
     return app
 
 
@@ -74,11 +63,36 @@ def register_blueprints(app):
     
     app.register_blueprint(api, url_prefix='/api')
 
-    
 
 #     注册扩展
+def register_plugin(app):
+    apply_json_encoder(app)  # JSON序列化
+    
+    # pass
+    # apply_json_encoder(app)  # JSON序列化
+    # apply_cors(app)  # 应用跨域扩展，使项目支持请求跨域
+    # connect_db(app)  # 连接数据库
+    # 统一处理异常
+    handler_error(app)
+    #
+    # # Debug模式(以下为非必选应用，且用户不可见)
+    # apply_default_view(app)  # 应用默认路由
+    # apply_orm_admin(app)  # 应用flask-admin, 可以进行简易的 ORM 管理
+    # apply_swagger(app)  # 应用flassger, 可以查阅Swagger风格的 API文档
+    # if app.config['DEBUG']:
+    #     apply_request_log(app)  # 打印请求日志
+
+
+#
+def apply_json_encoder(app):
+    app.json_encoder = JSONEncoder
+
 
 #     错误绑定
+def handler_error(app):
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return 'page_not_found-404'
 
 #      命令
 #      输出日志
