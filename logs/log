@@ -8161,3 +8161,38 @@ INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:43] "GET /apidocs/ HTTP/
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:54] "GET /v1/fuck HTTP/1.1" 404 -
 INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/manage.py', reloading
 INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8988/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:35:20] "GET /v1/fuck HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:45:30] "GET /v1/test HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:45:46] "GET /v1/user/test HTTP/1.1" 404 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8988/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:46:00] "GET /v1/user/test HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:46:31] "GET /v1/user HTTP/1.1" 404 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/config/setting.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8988/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models/user.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Running on http://127.0.0.1:8988/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:21] "GET /v1/user HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:54] "GET /v1/user/test HTTP/1.1" 200 -
