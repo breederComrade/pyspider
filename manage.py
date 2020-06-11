@@ -6,9 +6,6 @@ from app import create_app
 app = create_app('develop')
 manager = Manager(app=app)
 
-@app.route('/')
-def index():
-    return redirect('/api')
 
 
 '''

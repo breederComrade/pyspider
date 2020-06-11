@@ -3,17 +3,19 @@ import os
 from http.client import HTTPException
 from logging.handlers import RotatingFileHandler
 
-from flask import Flask as _Flask, request, _request_ctx_stack, g
+from flask import Flask, request, _request_ctx_stack, g, redirect, current_app, render_template
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 
 from app.core.db import db
 from app.core.error import APIException, ServerError
 from flask.json import JSONEncoder as _JSONEncoder
-from datetime import date, time
+from datetime import date
+import time
 import json
 # log配置
 # from app.schemas import init_marshmallow
+from app.core.redprint import RedprintAssigner, route_meta_infos
 
 logging.basicConfig(level=logging.DEBUG)
 file_log_handler = RotatingFileHandler('logs/log', maxBytes=1024 * 1024 * 100, backupCount=10)
@@ -34,14 +36,9 @@ class JSONEncoder(_JSONEncoder):
         return json.JSONEncoder.default((self, 0))
 
 
-class Flask(_Flask):  # 定义自己的Flask核心对象，继承原来的Flask核心对象
-    # json_encoder = JSONEncoder # 替换原本的JSONEncoder
-    pass
-
-
 def create_app(config_name):
     # app.app
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder="./static", template_folder="./templates")
     # 加载配置文件
     load_config(app)
     # 注册蓝图
@@ -67,8 +64,60 @@ def load_config(app):
 
 #    注册蓝图
 def register_blueprint(app):
-   pass
-   
+    # 1.加载文档配置
+    app.config.from_object('app.extensions.api_docs.config')
+    # 2.分配红图
+    assigner = RedprintAssigner(app=app,rp_api_list=app.config['ALL_RP_API_LIST'])
+    # 3.设置创建蓝图时候的回到
+    @assigner.handle_rp
+    def handle_swagger_tag(api):
+        # 用于探究tag
+        app.config['SWAGGER_TAGS'].append(api.tag)
+     # 4.创建蓝图并连接红图
+     # 返回蓝图对象
+    bp_list = assigner.create_bp_list()
+    # 5.注册蓝图
+    for url_prefix,bp in bp_list:
+        app.register_blueprint(bp,url_prefix=url_prefix)
+    #
+    mount_route_meta_to_endpoint(app)
+    #
+    load_endpint_infos(app)
+
+
+
+def load_endpint_infos(app):
+    """
+    返回权限管理中的所有视图函数的信息，包含它所属module
+    :return:
+    """
+    infos = {}
+    index = 0
+    for ep, meta in app.config['EP_META'].items():
+        index += 1
+        # 此处的id仅作为Vue的v-for使用，无实际意义
+        endpint_info = {'id': index, 'name': meta.name, 'module': meta.module}
+        module = infos.get(meta.module, None)
+        #  infos是否已经存在该module
+        if module:
+            module.append(endpint_info)
+        else:
+            infos[meta.module] = [endpint_info]
+        app.config['EP_INFO_LIST'].append(endpint_info)
+    app.config['EP_INFOS'] = infos
+    return infos
+
+
+def mount_route_meta_to_endpoint(app):
+    '''
+    将route_mate挂载到对应的endpoint上
+    :param app:
+    :return:
+    '''
+    for endpoint, func in app.view_functions.items():
+        info = route_meta_infos.get(func.__name__ + str(func.__hash__()), None)
+        if info:
+            app.config['EP_META'].setdefault(endpoint, info)
 
 
 def register_plugin(app):
@@ -109,6 +158,8 @@ def connect_db(app):
 def handle_error(app):
     @app.errorhandler(Exception)
     def framework_error(e):
+       
+        print('e',type(e))
         if isinstance(e, APIException):
             return e
         elif isinstance(e, HTTPException):
@@ -117,11 +168,26 @@ def handle_error(app):
             if not app.config['DEBUG']:
                 return ServerError()  # 未知错误(统一为服务端异常)
             else:
+                print('没找到')
                 raise e
 
 # 默认路由
 def apply_default_view(app):
-    pass
+    @app.route('/')
+    def index():
+        '''跳转到「首页」'''
+        url = {
+            'github': current_app.config['GITHUB_URL'],
+            'doc': current_app.config['DOC_URL'],
+        }
+        return render_template("index.html", url=url)
+    
+    @app.route('/doc')
+    def doc():
+        '''跳转到「api文档」'''
+        return redirect('/apidocs/#/')
+    
+    # apply_error_code_view(app)
 
 # admin
 def apply_orm_admin(app):
