@@ -2,7 +2,6 @@ from flask import Flask, redirect
 from flask_script import Manager
 from flask_migrate import Migrate,MigrateCommand
 from app import create_app
-from app.extension import db
 # 创建
 app = create_app('develop')
 manager = Manager(app=app)
@@ -25,7 +24,7 @@ def index():
 '''
 
 #
-Migrate(app,db)
+# Migrate(app,db)
 
 # 添加命令
 manager.add_command('db',MigrateCommand)

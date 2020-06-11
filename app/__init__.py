@@ -7,16 +7,13 @@ from flask import Flask as _Flask, request, _request_ctx_stack, g
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 
-from app.config import Config, config_map
 from app.core.db import db
 from app.core.error import APIException, ServerError
-from app.extension import init_ext
 from flask.json import JSONEncoder as _JSONEncoder
 from datetime import date, time
 import json
 # log配置
 # from app.schemas import init_marshmallow
-from app.views import api, goods, order, user, customer
 
 logging.basicConfig(level=logging.DEBUG)
 file_log_handler = RotatingFileHandler('logs/log', maxBytes=1024 * 1024 * 100, backupCount=10)
@@ -70,11 +67,8 @@ def load_config(app):
 
 #    注册蓝图
 def register_blueprint(app):
-    goods.register(api, url_prefix='/goods')
-    order.register(api, url_prefix='/order')
-    user.register(api, url_prefix='/user')
-    customer.register(api, url_prefix='/customer')
-    app.register_blueprint(api, url_prefix='/api')
+   pass
+   
 
 
 def register_plugin(app):
