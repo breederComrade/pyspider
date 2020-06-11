@@ -8150,3 +8150,14 @@ INFO _internal.py :122  * Debugger PIN: 543-278-264
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 17:57:31] "GET /v1/token HTTP/1.1" 405 -
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 17:57:31] "GET /favicon.ico HTTP/1.1" 404 -
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 17:57:54] "GET /v1/fasfsd HTTP/1.1" 404 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8988/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:27] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:27] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:28] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:43] "GET /apidocs/ HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:54] "GET /v1/fuck HTTP/1.1" 404 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/manage.py', reloading
+INFO _internal.py :122  * Restarting with stat
