@@ -4,3 +4,12 @@
   __author__ = 'wangjun'
 """
 
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship, backref
+
+from app.core.db import EntityModel as Base, db
+class Group(Base):
+    __tablename__ = 'group'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(60), unique=True, comment='权限组名称')
+    info = Column(String(255), comment='权限组描述')

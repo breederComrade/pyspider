@@ -2,14 +2,19 @@
 """
   Created by wangjun on 2020/06/10.
   __author__ = 'wangjun'
+  
 """
 
 from sqlalchemy import Column, Integer, String, ForeignKey
 from app.core.db import EntityModel as Base
-__author__ = 'Allen7D'
+
+"""
+ 地址跟随客户信息 客户可有多个地址
+"""
 
 
 class Address(Base):
+ 
     '''配送信息'''
     __tablename__ = 'address'
     id = Column(Integer, primary_key=True, autoincrement=True)

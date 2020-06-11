@@ -4,3 +4,9 @@
   __author__ = 'wangjun'
 """
 
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship, backref
+
+from app.core.db import EntityModel as Base, db
+class file(Base):
+    pass

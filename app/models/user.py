@@ -26,6 +26,8 @@ class User(Base):
     order = relationship('Order', backref=backref('user'))
     # 所属公司
     commpany_id = Column(Integer, ForeignKey('commany.id'), nullable=False, comment='外键公司id')  # 下单用户ID
+    # 管理员id
+    commpany_admin_id = Column(Integer, ForeignKey('commany.id'), nullable=False, comment='外键公司管理员id')  # 下单用户ID
     
     def __repr__(self):
         return 'id:{} ====  账号:{}====昵称:{}'.format(self.id,self.account,self.nickname)
