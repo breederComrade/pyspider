@@ -1,12 +1,15 @@
 from flask import Flask, redirect
+
+from werkzeug.middleware.proxy_fix import ProxyFix
+
+
 from flask_script import Manager
 from flask_migrate import Migrate,MigrateCommand
 from app import create_app
 # 创建
-app = create_app('develop')
+app = create_app()
+app.wsgi_app = ProxyFix(app.wsgi_app)
 manager = Manager(app=app)
-
-
 
 '''
 实际操作顺序:

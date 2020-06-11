@@ -36,7 +36,7 @@ class JSONEncoder(_JSONEncoder):
         return json.JSONEncoder.default((self, 0))
 
 
-def create_app(config_name):
+def create_app():
     # app.app
     app = Flask(__name__, static_folder="./static", template_folder="./templates")
     # 加载配置文件
@@ -155,20 +155,28 @@ def connect_db(app):
 
 
 # 绑定错误
+
 def handle_error(app):
+
+    # flask的错误绑定装饰器
     @app.errorhandler(Exception)
     def framework_error(e):
-       
-        print('e',type(e))
+        print(type(e))
+        print(isinstance(e, HTTPException))
         if isinstance(e, APIException):
             return e
+        # TODO:为什么无法和参考代码一样触发HttpException异常
         elif isinstance(e, HTTPException):
             return APIException(code=e.code, error_code=1007, msg=e.description)
         else:
+            return APIException(code=e.code, error_code=1007, msg=e.description)
+            # return ServerError()
+            # 非测试模式
             if not app.config['DEBUG']:
+                # TODO：记录异常
+                # 统一服务器错误
                 return ServerError()  # 未知错误(统一为服务端异常)
             else:
-                print('没找到')
                 raise e
 
 # 默认路由
