@@ -8150,27 +8150,49 @@ INFO _internal.py :122  * Debugger PIN: 543-278-264
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 17:57:31] "GET /v1/token HTTP/1.1" 405 -
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 17:57:31] "GET /favicon.ico HTTP/1.1" 404 -
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 17:57:54] "GET /v1/fasfsd HTTP/1.1" 404 -
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:05:56] "GET /v1/address HTTP/1.1" 404 -
-INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Running on http://127.0.0.1:8988/ (Press CTRL+C to quit)
 INFO _internal.py :122  * Restarting with stat
 WARNING _internal.py :122  * Debugger is active!
-INFO _internal.py :122  * Debugger PIN: 543-278-264
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:06:10] "GET /v1/address/all HTTP/1.1" 404 -
-INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:27] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:27] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:28] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:43] "GET /apidocs/ HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 21:28:54] "GET /v1/fuck HTTP/1.1" 404 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/manage.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8988/ (Press CTRL+C to quit)
 INFO _internal.py :122  * Restarting with stat
 WARNING _internal.py :122  * Debugger is active!
-INFO _internal.py :122  * Debugger PIN: 543-278-264
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:06:37] "GET /v1/address/all HTTP/1.1" 404 -
-INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:35:20] "GET /v1/fuck HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:45:30] "GET /v1/test HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:45:46] "GET /v1/user/test HTTP/1.1" 404 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8988/ (Press CTRL+C to quit)
 INFO _internal.py :122  * Restarting with stat
 WARNING _internal.py :122  * Debugger is active!
-INFO _internal.py :122  * Debugger PIN: 543-278-264
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:07:11] "GET /v1/address/all HTTP/1.1" 404 -
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:07:22] "GET /v1/token HTTP/1.1" 405 -
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:07:30] "POST /v1/token HTTP/1.1" 200 -
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:07:53] "GET /v1/token HTTP/1.1" 405 -
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:08:00] "GET /v1/address/all HTTP/1.1" 404 -
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:08:26] "GET /v1/address/all HTTP/1.1" 404 -
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:08:53] "POST /v1/token HTTP/1.1" 200 -
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:08:58] "POST /v1/address HTTP/1.1" 404 -
-INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:09:12] "POST /v1/address/all HTTP/1.1" 404 -
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:46:00] "GET /v1/user/test HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:46:31] "GET /v1/user HTTP/1.1" 404 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/config/setting.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8988/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models/user.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Running on http://127.0.0.1:8988/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:21] "GET /v1/user HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:54] "GET /v1/user/test HTTP/1.1" 200 -

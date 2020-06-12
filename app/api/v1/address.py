@@ -6,10 +6,10 @@
   description: 
   
 """
-from app.core.error import Success
 from app.extensions.api_docs.redprint import Redprint
-from app.extensions.api_docs.v1 import address as api_doc
-from app.models.address import Address
+from app.extensions.api_docs.v1 import user as api_doc
+
+api = Redprint(name='address', description='地址', )
 
 api = Redprint(name='address',description='配送地址',api_doc = api_doc)
 

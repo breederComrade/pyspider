@@ -10,11 +10,7 @@
   __author__ = 'wangjun'
 """
 
-
-
-
 from app.libs.enums import ClientTypeEnum
-
 
 '''
 应用于Swagger的URL，会自动添加协议前缀(http://或者https://)，因为会切换协议前缀
@@ -25,11 +21,8 @@ SERVER_URL = 'server.mini-shop.ivinetrue.com'  # 外部（云服务器）地址
 API_PATH = 'app.api'
 # all api by module(version)
 # 可以控制Swagger API文档的显示顺序
-ALL_RP_API_LIST = \
-     ['v1.token']
-# + \
-    # ['v1.user', 'v1.address',
-    #  'v1.banner', 'v1.theme', 'v1.category', 'v1.product', 'v1.order', 'v1.pay']
+ALL_RP_API_LIST = ['v1.token','v1.user', 'v1.address',
+                   'v1.category', 'v1.product', 'v1.order', 'v1.pay']
 
 # 所有endpoint的meta信息
 EP_META = {}
@@ -47,6 +40,3 @@ DOC_URL = 'http://doc.mini-shop.ivinetrue.com'
 
 # 登录类型(站内)
 CLINET_INNER_TYPES = (ClientTypeEnum.USERNAME, ClientTypeEnum.EMAIL, ClientTypeEnum.MOBILE)
-
-
-
