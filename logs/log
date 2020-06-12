@@ -8196,3 +8196,23 @@ INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debu
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:22] "GET /v1/user?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 23:52:54] "GET /v1/user/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/user.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/user.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
