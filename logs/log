@@ -8150,3 +8150,27 @@ INFO _internal.py :122  * Debugger PIN: 543-278-264
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 17:57:31] "GET /v1/token HTTP/1.1" 405 -
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 17:57:31] "GET /favicon.ico HTTP/1.1" 404 -
 INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 17:57:54] "GET /v1/fasfsd HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:05:56] "GET /v1/address HTTP/1.1" 404 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:06:10] "GET /v1/address/all HTTP/1.1" 404 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:06:37] "GET /v1/address/all HTTP/1.1" 404 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:07:11] "GET /v1/address/all HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:07:22] "GET /v1/token HTTP/1.1" 405 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:07:30] "POST /v1/token HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:07:53] "GET /v1/token HTTP/1.1" 405 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:08:00] "GET /v1/address/all HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:08:26] "GET /v1/address/all HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:08:53] "POST /v1/token HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:08:58] "POST /v1/address HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [11/Jun/2020 18:09:12] "POST /v1/address/all HTTP/1.1" 404 -
