@@ -3,7 +3,7 @@ import json
 
 import random
 
-from flask import Flask, Blueprint, request, current_app, jsonify, make_response, Response, session
+from flask import Flask, Blueprint, request, current_app, jsonify, make_response, Response, session, g
 
 from app.extension import db
 from app.libs.red_print import Redprint
@@ -29,6 +29,7 @@ def index():
     # current_app.logger.info('info')
     # current_app.logger.debug('debug')
     return 'Swagger--api首页'
+
 
 
 # 商品
@@ -310,3 +311,18 @@ def delsession():
     session.pop('name')
     # session.clear()
     return '删除session成功'
+
+@api.route('/g')
+def g_test():
+    g.username = 'fuck'
+    print(g.username)
+    p()
+    return 'g'
+
+@api.route('/f')
+def gusername_test():
+    print(g.username)
+    return 'gusername'
+
+def p():
+    print(g.username)

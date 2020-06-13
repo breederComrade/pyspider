@@ -7,9 +7,6 @@ from app.extension import db
 app = create_app('develop')
 manager = Manager(app=app)
 
-@app.route('/')
-def index():
-    return redirect('/api')
 
 
 '''
