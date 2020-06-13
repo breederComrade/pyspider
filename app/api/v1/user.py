@@ -17,13 +17,15 @@ from app.models.user import User
 api = Redprint(name='user', description='用户', )
 
 
+#
 @api.route('', methods=['GET'])
 def get_user():
     # get是我们自定义的方法本意是调用了fliterby
     user = User.get(id=g.user.id)
     return Success(user)
 
-
+#
 @api.route('/test', )
+@api.doc()
 def test_user():
     return '测试用户'

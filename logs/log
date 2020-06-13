@@ -8216,3 +8216,278 @@ INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to qui
 INFO _internal.py :122  * Restarting with stat
 WARNING _internal.py :122  * Debugger is active!
 INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:38:20] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:38:20] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:38:21] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:38:23] "GET /apidocs/ HTTP/1.1" 404 -
+ERROR app.py :1892 Exception on /v1/user [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py", line 23, in get_user
+    user = User.get(id=g.user.id)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "/Users/wangjun/code/localhost/pyspider/app/__init__.py", line 172, in framework_error
+    return APIException(code=e.code, error_code=1007, msg=e.description)
+AttributeError: 'AttributeError' object has no attribute 'code'
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:38:40] "GET /v1/user HTTP/1.1" 500 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py :1892 Exception on /v1/user [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py", line 23, in get_user
+    user = User.get(id=g.user.id)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "/Users/wangjun/code/localhost/pyspider/app/__init__.py", line 172, in framework_error
+    return APIException(code=e.code, error_code=1007, msg=e.description)
+AttributeError: 'AttributeError' object has no attribute 'code'
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:40:55] "GET /v1/user HTTP/1.1" 500 -
+ERROR app.py :1892 Exception on /v1/user [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py", line 23, in get_user
+    user = User.get(id=g.user.id)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "/Users/wangjun/code/localhost/pyspider/app/__init__.py", line 172, in framework_error
+    return APIException(code=e.code or 1007, error_code=1007, msg=e.description)
+AttributeError: 'AttributeError' object has no attribute 'code'
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:41:34] "GET /v1/user HTTP/1.1" 500 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py :1892 Exception on /v1/user [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py", line 23, in get_user
+    user = User.get(id=g.user.id)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "/Users/wangjun/code/localhost/pyspider/app/__init__.py", line 172, in framework_error
+    return APIException(code=1007, error_code=1007, msg=e.description)
+AttributeError: 'AttributeError' object has no attribute 'description'
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:41:55] "GET /v1/user HTTP/1.1" 1007 -
+ERROR app.py :1892 Exception on /v1/user [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py", line 23, in get_user
+    user = User.get(id=g.user.id)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "/Users/wangjun/code/localhost/pyspider/app/__init__.py", line 172, in framework_error
+    # TODO:处理404请求无法监控到HTTPException的问题
+AttributeError: 'AttributeError' object has no attribute 'description'
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:42:34] "GET /v1/user HTTP/1.1" 1007 -
+ERROR app.py :1892 Exception on /v1/user [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py", line 23, in get_user
+    user = User.get(id=g.user.id)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "/Users/wangjun/code/localhost/pyspider/app/__init__.py", line 172, in framework_error
+    # TODO:处理404请求无法监控到HTTPException的问题
+AttributeError: 'AttributeError' object has no attribute 'description'
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:43:04] "GET /v1/user HTTP/1.1" 1007 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py :1892 Exception on /v1/user [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py", line 23, in get_user
+    user = User.get(id=g.user.id)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "/Users/wangjun/code/localhost/pyspider/app/__init__.py", line 175, in framework_error
+    return APIException(code=404, error_code=4042, msg=e.description)
+AttributeError: 'AttributeError' object has no attribute 'description'
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:43:12] "GET /v1/user HTTP/1.1" 404 -
+ERROR app.py :1892 Exception on /v1/user [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py", line 23, in get_user
+    user = User.get(id=g.user.id)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "/Users/wangjun/code/localhost/pyspider/app/__init__.py", line 175, in framework_error
+    return APIException(code=404, error_code=42042, msg=e.description)
+AttributeError: 'AttributeError' object has no attribute 'description'
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:43:21] "GET /v1/user HTTP/1.1" 404 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py :1892 Exception on /v1/user [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py", line 23, in get_user
+    user = User.get(id=g.user.id)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "/Users/wangjun/code/localhost/pyspider/app/__init__.py", line 175, in framework_error
+    return APIException(code=404, error_code=42042, msg=e.description)
+AttributeError: 'AttributeError' object has no attribute 'description'
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:43:35] "GET /v1/user HTTP/1.1" 404 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py :1892 Exception on /v1/user [GET]
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py", line 23, in get_user
+    user = User.get(id=g.user.id)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangjun/miniconda3/envs/flask/lib/python3.7/site-packages/flask/app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "/Users/wangjun/code/localhost/pyspider/app/__init__.py", line 175, in framework_error
+    return APIException(code=404, error_code=42042, msg=e.description)
+AttributeError: 'AttributeError' object has no attribute 'description'
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:45:15] "GET /v1/user HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:45:48] "GET /v1/user/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:51:05] "GET /v1/user/test HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:51:12] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 21:51:14] "GET /apidocs/ HTTP/1.1" 404 -
+INFO _internal.py :122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 22:07:49] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 22:07:51] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 22:07:51] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 22:07:51] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 22:07:51] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 22:07:51] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 22:07:51] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [13/Jun/2020 22:07:52] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -

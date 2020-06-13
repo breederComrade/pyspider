@@ -127,16 +127,13 @@ def register_plugin(app):
     # TODO:xxxxxx
     connect_db(app)  # 连接数据库
     handle_error(app)  # 统一处理异常
-    
-    # Debug模式(以下为非必选应用，且用户不可见)
-    apply_default_view(app)  # 应用默认路由
-    apply_orm_admin(app)  # 应用flask-admin, 可以进行简易的 ORM 管理
-    
-    # TODO:xxxxxx
-    apply_swagger(app)  # 应用flassger, 可以查阅Swagger风格的 API文档
-    
     if app.config['DEBUG']:
+        # Debug模式(以下为非必选应用，且用户不可见)
+        apply_default_view(app)  # 应用默认路由
+        apply_orm_admin(app)  # 应用flask-admin, 可以进行简易的 ORM 管理
         apply_request_log(app)  # 打印请求日志
+        apply_swagger(app)  # 应用flassger, 可以查阅Swagger风格的 API文档
+
 
 
 # 替换flask原序列化
@@ -169,7 +166,10 @@ def handle_error(app):
         elif isinstance(e, HTTPException):
             return APIException(code=e.code, error_code=1007, msg=e.description)
         else:
-            return APIException(code=e.code, error_code=1007, msg=e.description)
+            # TODO:处理404请求无法监控到HTTPException的问题
+            # code: 状态码
+            # error_code = 返回给前端状态码
+            return APIException(code=404, error_code=42042, msg=e.description)
             # return ServerError()
             # 非测试模式
             if not app.config['DEBUG']:
@@ -203,8 +203,12 @@ def apply_orm_admin(app):
 
 # swagger
 def apply_swagger(app):
-    pass
-
+    from flasgger import Swagger
+    #
+    # tags
+    # 初始化设置
+    swagger = Swagger(template={'tags':app.config['SWAGGER_TAGS']})
+    swagger.init_app(app)
 # 打印日志
 
 def apply_request_log(app):

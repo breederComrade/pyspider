@@ -23,6 +23,8 @@ API接口分为cms版本和v1版本，大部分接口需要token权限才能访�
 外部（云服务器）支持 https 和 http 协议
 '''
 SWAGGER_TAGS = []  # 在'/app/__init__.py'的register_blueprint函数中设置
+# swagger插件初始化时会读取app.config中的swagger配置
+# 在这里可以设置swagger的配置 入tags 引用
 SWAGGER = {
     'swagger_version': '2.0',
     'info': {
