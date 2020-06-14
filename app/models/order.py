@@ -17,7 +17,7 @@ class Order(Base):
     order_status = Column(SmallInteger,default=1,comment='订单状态')
     remark = Column(Text,comment='订单备注')
     total_count = Column(Integer,comment='订单货总个数')
-    total_price = Column(Float, coomment='订单总价')
+    total_price = Column(Float, comment='订单总价')
     prepay_id = Column(String(100), unique=True, comment='预付款id')
     
     def keys(self):
