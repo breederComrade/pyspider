@@ -5,6 +5,7 @@ from logging.handlers import RotatingFileHandler
 
 from flask import Flask, request, _request_ctx_stack, g, redirect, current_app, render_template
 from flask_marshmallow import Marshmallow
+from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
 from app.core.db import db
@@ -128,6 +129,7 @@ def register_plugin(app):
     # TODO:xxxxxx
     connect_db(app)  # 连接数据库
     handle_error(app)  # 统一处理异常
+
     if app.config['DEBUG']:
         # Debug模式(以下为非必选应用，且用户不可见)
         apply_default_view(app)  # 应用默认路由
@@ -144,7 +146,11 @@ def apply_json_encoder(app):
 
 # 连接数据库
 def connect_db(app):
+
     db.init_app(app)
+    # 迁移数据库
+    migrate = Migrate(app,db)
+    migrate.init_app(app)
     #  初始化使用
     # TODO：app_context使用方法
     # with app.app_context():  # 手动将app推入栈

@@ -8621,3 +8621,4 @@ WARNING _internal.py :122  * Debugger is active!
 INFO _internal.py :122  * Debugger PIN: 932-386-096
 INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/api/v1/order.py', reloading
 INFO _internal.py :122  * Restarting with stat
+ERROR __init__.py :97 Error: Directory migrations already exists and is not empty

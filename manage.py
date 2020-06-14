@@ -1,18 +1,16 @@
-
 # coding=utf-8
 from flask import Flask, redirect
 
 from werkzeug.middleware.proxy_fix import ProxyFix
 
-
 from flask_script import Manager
-from flask_migrate import Migrate,MigrateCommand
+from flask_migrate import Migrate, MigrateCommand
 from app import create_app, db
 
 # 创建
 
 app = create_app()
-app.wsgi_app = ProxyFix(app.wsgi_app)
+# app.wsgi_app = ProxyFix(app.wsgi_app)
 manager = Manager(app=app)
 
 '''
@@ -28,10 +26,10 @@ manager = Manager(app=app)
 '''
 
 #
-Migrate(app,db)
+
 
 # 添加命令
-manager.add_command('db',MigrateCommand)
+manager.add_command('db', MigrateCommand)
 
 if __name__ == '__main__':
     manager.run()

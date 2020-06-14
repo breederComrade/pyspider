@@ -13,7 +13,7 @@ from app.models.order import Order
 
 api = Redprint(name='order', description='订单', )
 
-@api.route()
+@api.route('',methods=['GET'])
 @api.doc()
 def get_order():
     order = Order.get_or_404(id=1)
