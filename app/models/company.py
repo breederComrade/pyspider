@@ -21,6 +21,7 @@ class Company(Base):
     # admin = Column(String(24),comment='管理员id')
     # 关联用户 企业成员
     users = relationship('User',backref = backref('company',lazy='dynamic'))
+    customer = relationship('Customer',backref='customer.id')
     # # 管理员
     # admins = relationship('User',backref=backref('company_admin',lazy = 'dynamic'))
 

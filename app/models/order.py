@@ -13,6 +13,9 @@ class Order(Base):
     id = Column(Integer,primary_key=True,autoincrement=True)
     order_no = Column(String(20), unique=True,comment='订单号')
     user_id = Column(Integer,ForeignKey('user.id'), nullable=False, comment = "外键 下单用户id" )
+    # 商品id
+    products = relationship('OrderProduct',backref = 'order')
+    
     #
     order_status = Column(SmallInteger,default=1,comment='订单状态')
     remark = Column(Text,comment='订单备注')

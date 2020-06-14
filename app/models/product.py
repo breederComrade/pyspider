@@ -22,7 +22,6 @@ class Product(Base):
     # _images = relationship('Image', secondary='product_image', order_by=Product2Image.order.asc(), backref=backref('product', lazy='dynamic'))
     remark = Column(String(50), comment='摘要')
     
-    
     def keys(self):
         self.hide('_main_img_url', '_from').append('main_image', 'images')
         return self.fields

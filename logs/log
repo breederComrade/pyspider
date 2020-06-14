@@ -8622,3 +8622,77 @@ INFO _internal.py :122  * Debugger PIN: 932-386-096
 INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/api/v1/order.py', reloading
 INFO _internal.py :122  * Restarting with stat
 ERROR __init__.py :97 Error: Directory migrations already exists and is not empty
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 16:56:43] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 16:56:47] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 16:56:47] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 16:57:27] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 16:57:30] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 16:57:30] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models/user.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models/category.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 19:08:23] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 19:08:23] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 19:08:23] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 19:08:24] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 19:08:24] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/api/v1/token.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 19:09:23] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 19:09:24] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 19:09:24] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 19:09:29] "GET /v1/user/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models/category.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models/category.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models/order.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models/order.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models/product.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+ERROR __init__.py :97 Error: Directory migrations already exists and is not empty
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/models/category.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/api/v1/order.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 21:49:58] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [14/Jun/2020 21:49:58] "GET /apispec_1.json HTTP/1.1" 200 -

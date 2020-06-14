@@ -25,7 +25,7 @@ class User(Base):
     # 订单
     order = relationship('Order', backref=backref('user'))
     # 所属公司
-    company_id = Column(Integer, ForeignKey('company.id'), nullable=False, comment='外键公司id')  # 下单用户ID
+    # company_id = Column(Integer, ForeignKey('company.id'), nullable=False, comment='外键公司id')  # 下单用户ID
     # 管理员id
     # company_admin_id = Column(Integer, ForeignKey('company.id'), nullable=False, comment='外键公司管理员id')  # 下单用户ID
     

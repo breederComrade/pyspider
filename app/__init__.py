@@ -17,6 +17,7 @@ import json
 # log配置
 # from app.schemas import init_marshmallow
 from app.core.redprint import RedprintAssigner, route_meta_infos
+from app.extensions.api_docs.swagger import apply_swagger
 
 logging.basicConfig(level=logging.DEBUG)
 file_log_handler = RotatingFileHandler('logs/log', maxBytes=1024 * 1024 * 100, backupCount=10)
@@ -209,14 +210,6 @@ def apply_orm_admin(app):
     pass
 
 
-# swagger
-def apply_swagger(app):
-    from flasgger import Swagger
-    #
-    # tags
-    # 初始化设置
-    swagger = Swagger(template={'tags': app.config['SWAGGER_TAGS']})
-    swagger.init_app(app)
 
 
 # 打印日志

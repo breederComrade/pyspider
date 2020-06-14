@@ -29,3 +29,10 @@ def get_user():
 @api.doc(auth=True)
 def test_user():
     return '测试用户'
+
+# post
+
+
+# get
+
+# body
