@@ -26,6 +26,6 @@ def get_user():
 
 #
 @api.route('/test', )
-@api.doc()
+@api.doc(auth=True)
 def test_user():
     return '测试用户'

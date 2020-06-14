@@ -67,23 +67,24 @@ def register_blueprint(app):
     # 1.加载文档配置
     app.config.from_object('app.extensions.api_docs.config')
     # 2.分配红图
-    assigner = RedprintAssigner(app=app,rp_api_list=app.config['ALL_RP_API_LIST'])
+    assigner = RedprintAssigner(app=app, rp_api_list=app.config['ALL_RP_API_LIST'])
+    
     # 3.设置创建蓝图时候的回到
     @assigner.handle_rp
     def handle_swagger_tag(api):
         # 用于探究tag
         app.config['SWAGGER_TAGS'].append(api.tag)
-     # 4.创建蓝图并连接红图
-     # 返回蓝图对象
+    
+    # 4.创建蓝图并连接红图
+    # 返回蓝图对象
     bp_list = assigner.create_bp_list()
     # 5.注册蓝图
-    for url_prefix,bp in bp_list:
-        app.register_blueprint(bp,url_prefix=url_prefix)
+    for url_prefix, bp in bp_list:
+        app.register_blueprint(bp, url_prefix=url_prefix)
     #
     mount_route_meta_to_endpoint(app)
     #
     load_endpint_infos(app)
-
 
 
 def load_endpint_infos(app):
@@ -135,7 +136,6 @@ def register_plugin(app):
         apply_swagger(app)  # 应用flassger, 可以查阅Swagger风格的 API文档
 
 
-
 # 替换flask原序列化
 def apply_json_encoder(app):
     from app.core.json_encoder import JSONEncoder
@@ -147,14 +147,13 @@ def connect_db(app):
     db.init_app(app)
     #  初始化使用
     # TODO：app_context使用方法
-    with app.app_context():  # 手动将app推入栈
-        db.create_all()  # 首次模型映射(ORM ==> SQL),若无则建表
+    # with app.app_context():  # 手动将app推入栈
+    #     db.create_all()  # 首次模型映射(ORM ==> SQL),若无则建表
 
 
 # 绑定错误
 
 def handle_error(app):
-
     # flask的错误绑定装饰器
     @app.errorhandler(Exception)
     def framework_error(e):
@@ -179,6 +178,7 @@ def handle_error(app):
             else:
                 raise e
 
+
 # 默认路由
 def apply_default_view(app):
     @app.route('/')
@@ -197,9 +197,11 @@ def apply_default_view(app):
     
     # apply_error_code_view(app)
 
+
 # admin
 def apply_orm_admin(app):
     pass
+
 
 # swagger
 def apply_swagger(app):
@@ -207,8 +209,10 @@ def apply_swagger(app):
     #
     # tags
     # 初始化设置
-    swagger = Swagger(template={'tags':app.config['SWAGGER_TAGS']})
+    swagger = Swagger(template={'tags': app.config['SWAGGER_TAGS']})
     swagger.init_app(app)
+
+
 # 打印日志
 
 def apply_request_log(app):

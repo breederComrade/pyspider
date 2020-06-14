@@ -11,6 +11,7 @@ from app.core.db import EntityModel as Base, db
 
 
 class Express(Base):
+    __tablename__ = 'express'
     id = Column(Integer, primary_key=True, autoincrement=True)
     info =Column(String(124),comment='物流信息')
     # 关联订单 一对一

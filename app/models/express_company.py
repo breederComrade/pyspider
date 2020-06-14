@@ -14,6 +14,7 @@ from app.core.db import EntityModel as Base, db
 
 
 class ExpressCompany(Base):
+    __tablename__ = 'expressCompany'
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(124),comment='快递公司名字')
     mobile = Column(Integer,comment='联系电话')

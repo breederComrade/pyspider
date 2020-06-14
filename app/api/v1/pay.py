@@ -11,3 +11,8 @@ from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import user as api_doc
 
 api = Redprint(name='pay', description='支付', )
+
+@api.route('')
+@api.doc()
+def get_pay():
+    return 'pay'

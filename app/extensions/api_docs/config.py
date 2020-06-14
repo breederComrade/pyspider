@@ -42,7 +42,7 @@ SWAGGER = {
     'host': '',
     'basePath': '/',  # base bash for blueprint registration
     'tags': SWAGGER_TAGS, # 接口在文档中的类别和顺序
-    'schemes': ['http,https'], # 通信协议: http或https或多个，默认http
+    'schemes': ['http'], # 通信协议: http或https或多个，默认http
     'operationId': 'getmyData',
     # token
     'securityDefinitions': {

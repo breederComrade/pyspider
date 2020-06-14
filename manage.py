@@ -1,3 +1,5 @@
+
+# coding=utf-8
 from flask import Flask, redirect
 
 from werkzeug.middleware.proxy_fix import ProxyFix

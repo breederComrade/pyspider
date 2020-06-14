@@ -27,7 +27,7 @@ class User(Base):
     # 所属公司
     company_id = Column(Integer, ForeignKey('company.id'), nullable=False, comment='外键公司id')  # 下单用户ID
     # 管理员id
-    company_admin_id = Column(Integer, ForeignKey('company.id'), nullable=False, comment='外键公司管理员id')  # 下单用户ID
+    # company_admin_id = Column(Integer, ForeignKey('company.id'), nullable=False, comment='外键公司管理员id')  # 下单用户ID
     
     def __repr__(self):
         return 'id:{} ====  账号:{}====昵称:{}'.format(self.id,self.account,self.nickname)
