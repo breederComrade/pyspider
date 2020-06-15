@@ -50,6 +50,19 @@ SWAGGER = {
             'description': 'Authorization format: \n &nbsp; Username: &nbsp;{token} \n &nbsp; Password: &nbsp; {非空即可}',
             'type': 'basic'
         }
-    }
+    },
+    # "securityDefinitions": {
+    #     "Bearer": {
+    #         "name": "xxx",
+    #         "in": "header",
+    #         "type": "apiKey",
+    #         "description": "Bearer JWT"
+    #     }
+    # },
+    # "security": [
+    #     {
+    #         "Bearer2": []
+    #     }
+    # ],
 }
 

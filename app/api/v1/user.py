@@ -24,15 +24,27 @@ def get_user():
     user = User.get(id=g.user.id)
     return Success(user)
 
-#
-@api.route('/test', )
-@api.doc(auth=True)
-def test_user():
-    return '测试用户'
+# get
+# @api.route('/get',methods=['GET'])
+# @api.doc()
+# def call_user():
+#     return '获取用户'
 
 # post
+# 创建用户
+@api.route('/create',methods = ['POST'])
+@api.doc(args=['g.body.username', 'g.body.email', 'g.body.mobile', 'g.body.nickname',
+               'g.body.password', 'g.body.confirm_password'])
+def create_user():
+    return '创建用户'
+# 删除用户
+@api.route('/delete',methods = ['DELETE'])
+@api.doc()
+def del_user():
+    return '删除用户'
 
-
-# get
-
-# body
+# 修改用户
+@api.route('/update',methods=['POST'])
+@api.doc()
+def update_user():
+    return '修改用户'
