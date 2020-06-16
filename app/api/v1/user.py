@@ -14,7 +14,8 @@ from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import user as api_doc
 from app.models.user import User
 
-api = Redprint(name='user', description='用户', )
+api = Redprint(name='user', description='用户', api_doc=api_doc)
+
 
 #
 @api.route('', methods=['GET'])
@@ -29,7 +30,7 @@ def get_user():
 # 更改密码
 @api.route('/password', methods=['GET'])
 @api.doc()
-def password():
+def update_password():
     '''更改密码'''
     return '密码'
 
@@ -44,7 +45,7 @@ def user_list():
 # post
 # 创建用户
 @api.route('/create', methods=['POST'])
-@api.doc()
+@api.doc(args=['account', 'password'])
 def create_user():
     '''创建用户'''
     return '创建用户'

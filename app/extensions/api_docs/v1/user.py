@@ -3,7 +3,7 @@
   project:有单生意
   date: 2020/6/11
   author: wangjun
-  description: 
+  description: 用于自定义用户列表
   
 """
 

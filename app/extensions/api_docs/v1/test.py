@@ -11,4 +11,3 @@
 from app.core.swagger_filed import BodyField
 
 type = BodyField(name='type', type='integer', description='登录方式', enum=[101])
-q = QueryField()
