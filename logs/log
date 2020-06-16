@@ -9154,3 +9154,68 @@ INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 14:24:56] "GET /apispec_1.json
 INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 14:24:56] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 14:28:53] "POST /v1/order/delete HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 14:29:04] "POST /v1/address/delete HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:20:44] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:20:45] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:20:45] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/config/setting.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:23:16] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:23:17] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:23:17] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:23:21] "DELETE /v1/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:33:23] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:33:24] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:33:29] "GET /apidocs HTTP/1.1" 308 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:33:29] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:33:29] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:44:36] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:44:37] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:44:37] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/extensions/api_docs/redprint.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/extensions/api_docs/redprint.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:49:21] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:49:21] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:49:29] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:49:29] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:49:52] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 15:49:53] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/core/swagger_filed.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/extensions/api_docs/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat

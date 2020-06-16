@@ -22,10 +22,8 @@ class Redprint(_Redprint):
 
     def doc(self, args: list = [], auth: bool = False, body_desc: str = None):
         '''应该对args分批处理, path, query, body'''
-        print('doc')
         def decorator(f):
             if hasattr(self.api_doc, f.__name__):
-                print('fuck')
                 # 若swagger备注用函数名
                 specs = getattr(self.api_doc, f.__name__)
                 if not isinstance(specs, dict):

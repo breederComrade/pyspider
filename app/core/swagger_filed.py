@@ -287,8 +287,8 @@ class WholeArg():
         '''
         :return: args_module: 参数的模块(global_args or self.api_doc)
         '''
-        # from app.extensions.api_docs import global_args as global_args_module
-        # return global_args_module if self.is_global else self.api_doc
+        from app.extensions.api_docs import global_args as global_args_module
+        return global_args_module if self.is_global else self.api_doc
     
     @property
     def data(self):
