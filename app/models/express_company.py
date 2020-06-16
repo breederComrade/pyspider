@@ -12,7 +12,6 @@ from sqlalchemy.orm import relationship, backref
 
 from app.core.db import EntityModel as Base, db
 
-
 class ExpressCompany(Base):
     __tablename__ = 'expressCompany'
     id = Column(Integer, primary_key=True, autoincrement=True)

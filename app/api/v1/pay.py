@@ -15,4 +15,5 @@ api = Redprint(name='pay', description='支付', )
 @api.route('')
 @api.doc()
 def get_pay():
+    '''支付'''
     return 'pay'

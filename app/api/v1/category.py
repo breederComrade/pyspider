@@ -16,5 +16,38 @@ api = Redprint(name='category', description='分类', )
 @api.route('',methods=['GET'])
 @api.doc()
 def get_category():
+    '''获取分类'''
     category = Category.get_or_404(id =1)
     return Success(error_code=2)
+
+# 创建分类
+@api.route('/create',methods=['GET'])
+@api.doc()
+def create():
+    '''创建分类'''
+    category = Category.get_or_404(id =1)
+    return Success(error_code=2)
+
+
+@api.route('/list',methods=['GET'])
+@api.doc()
+def list():
+    '''分类列表'''
+    category = Category.get_or_404(id =1)
+    return Success(error_code=2)
+
+@api.route('/list',methods=['GET'])
+@api.doc()
+def delete():
+    '''删除分类'''
+    category = Category.get_or_404(id =1)
+    return '删除分类'
+
+
+@api.route('/list',methods=['GET'])
+@api.doc()
+def update():
+    '''修改分类信息'''
+    category = Category.get_or_404(id =1)
+    return '修改分类信息'
+

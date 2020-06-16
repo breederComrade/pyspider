@@ -5,7 +5,7 @@
   
 """
 
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
 from app.core.db import EntityModel as Base
 
 """
@@ -19,6 +19,7 @@ class Address(Base):
     __tablename__ = 'address'
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey('user.id'), nullable=False, comment='外键: 下单的用户id')
+    default = Column(Boolean,default=False,comment='是否默认地址')
     name = Column(String(30), nullable=False, comment='收货人姓名')
     mobile = Column(String(20), nullable=False, comment='手机')
     province = Column(String(20), comment='省份')

@@ -147,15 +147,13 @@ def apply_json_encoder(app):
 
 # 连接数据库
 def connect_db(app):
-
     db.init_app(app)
     # 迁移数据库
     migrate = Migrate(app,db)
     migrate.init_app(app)
     #  初始化使用
-    # TODO：app_context使用方法
-    # with app.app_context():  # 手动将app推入栈
-    #     db.create_all()  # 首次模型映射(ORM ==> SQL),若无则建表
+    with app.app_context():  # 手动将app推入栈
+        db.create_all()  # 首次模型映射(ORM ==> SQL),若无则建表
 
 
 # 绑定错误

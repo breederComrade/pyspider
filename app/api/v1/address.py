@@ -6,17 +6,54 @@
   description: 
   
 """
+from app.core.error import Success
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import user as api_doc
+from app.models.address import Address
 
-api = Redprint(name='address', description='地址', )
+api = Redprint(name='address', description='配送地址', api_doc=api_doc)
 
-api = Redprint(name='address',description='配送地址',api_doc = api_doc)
 
-@api.route('/all', methods=['GET'])
-# @api.doc(auth=True)
+@api.route('', methods=['GET'])
+@api.doc()
+def get_address():
+    ''' 获取单个地址 '''
+    address = Address.get_or_404(id=1)
+    
+    return 'diz '
+
+
+@api.route('/list', methods=['GET'])
+@api.doc()
 def get_all_address():
-    return  'xxx'
     '''查询所有「配送信息」'''
     address_list = Address.query.filter_by(user_id=g.user.id).all_by_wrap()
     return Success(address_list)
+
+
+@api.route('/update', methods=['POST'])
+@api.doc()
+def update_address():
+    '''修改地址'''
+    return '修改地址'
+
+
+@api.route('/setDefault', methods=['POST'])
+@api.doc()
+def set_default():
+    '''设置默认地址'''
+    return '设置默认地址'
+
+
+@api.route('/delete', methods=['POST'])
+@api.doc()
+def delete_address():
+    '''删除地址'''
+    return '删除地址'
+
+
+@api.route('/create', methods=['POST'])
+@api.doc()
+def create():
+    '''创建地址'''
+    return '创建成功'

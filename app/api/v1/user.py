@@ -16,35 +16,67 @@ from app.models.user import User
 
 api = Redprint(name='user', description='用户', )
 
-
 #
 @api.route('', methods=['GET'])
+@api.doc()
 def get_user():
+    '''查询单个用户信息'''
     # get是我们自定义的方法本意是调用了fliterby
     user = User.get(id=g.user.id)
     return Success(user)
 
-# get
-# @api.route('/get',methods=['GET'])
-# @api.doc()
-# def call_user():
-#     return '获取用户'
+
+# 更改密码
+@api.route('/password', methods=['GET'])
+@api.doc()
+def password():
+    '''更改密码'''
+    return '密码'
+
+
+@api.route('/list', methods=['GET'])
+@api.doc()
+def user_list():
+    '''用户列表'''
+    return '用户列表'
+
 
 # post
 # 创建用户
-@api.route('/create',methods = ['POST'])
-@api.doc(args=['g.body.username', 'g.body.email', 'g.body.mobile', 'g.body.nickname',
-               'g.body.password', 'g.body.confirm_password'])
+@api.route('/create', methods=['POST'])
+@api.doc()
 def create_user():
+    '''创建用户'''
     return '创建用户'
+
+
 # 删除用户
-@api.route('/delete',methods = ['DELETE'])
+@api.route('/delete', methods=['DELETE'])
 @api.doc()
 def del_user():
+    '''删除用户'''
     return '删除用户'
 
+
 # 修改用户
-@api.route('/update',methods=['POST'])
+@api.route('/update', methods=['POST'])
 @api.doc()
 def update_user():
+    '''更新用户信息'''
     return '修改用户'
+
+
+# 更新用户头像
+@api.route('/avatar', methods=['GET'])
+@api.doc()
+def update_avatar():
+    '''更新头像'''
+    return '更新用户头像'
+
+
+# 解绑账号
+@api.route('/unbind', methods=['unbind'])
+@api.doc()
+def unbind():
+    '''解绑账号'''
+    return '解绑帐号'
