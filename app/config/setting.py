@@ -21,8 +21,9 @@ SERVER_URL = 'server.mini-shop.ivinetrue.com'  # 外部（云服务器）地址
 API_PATH = 'app.api'
 # all api by module(version)
 # 可以控制Swagger API文档的显示顺序
-ALL_RP_API_LIST = ['v1.token','v1.user', 'v1.address','v1.company','v1.customer','v1.express_company',
-                   'v1.category', 'v1.product', 'v1.order', 'v1.pay']
+# TODO:更具版本号来设置目录
+ALL_RP_API_LIST = ['v1.token', 'v1.user', 'v1.group', 'v1.product', 'v1.order', 'v1.address', 'v1.company',
+                   'v1.customer', 'v1.express_company', 'v1.express', 'v1.category', 'v1.pay']
 
 # 所有endpoint的meta信息
 EP_META = {}
