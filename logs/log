@@ -9245,3 +9245,160 @@ INFO _internal.py :122  * Debugger PIN: 543-278-264
 INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 17:32:58] "GET /apidocs/ HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 17:32:59] "GET /apispec_1.json HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 17:33:13] "POST /v1/user/create HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:28:09] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:28:13] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:28:13] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:28:13] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:28:13] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:28:13] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:28:14] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:28:14] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/v1/user.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:46:59] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:47:00] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:47:29] "GET /flasgger_static/swagger-ui-bundle.js.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:47:29] "GET /flasgger_static/swagger-ui-standalone-preset.js.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:47:29] "GET /flasgger_static/swagger-ui.css.map HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/api/v1/user.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:49:30] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:49:31] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:50:50] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:50:52] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:51:11] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:51:12] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:51:32] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:51:33] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:52:29] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:52:30] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:52:53] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:52:54] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:53:19] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:53:20] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:58:55] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:58:56] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 22:59:14] "GET /v1/user?userId=1 HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/extensions/api_docs/global_args.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:02:35] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:02:36] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:05:55] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:05:57] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/core/swagger_filed.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/core/swagger_filed.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/core/swagger_filed.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/core/swagger_filed.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:07:11] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:07:12] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:07:27] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/core/swagger_filed.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:07:58] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:08:09] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:08:11] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/core/swagger_filed.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/core/swagger_filed.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:10:35] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:10:36] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/wangjun/code/localhost/pyspider/app/core/swagger_filed.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 23:11:01] "GET /v1/user?userId=23 HTTP/1.1" 500 -

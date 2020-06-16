@@ -6,15 +6,10 @@
   description: 
   
 """
-# _*_ coding: utf-8 _*_
-"""
-  Created by Allen7D on 2020/3/13.
-"""
 from app.core.swagger_filed import IntegerQueryFiled, IntegerPathFiled, \
     StringPathFiled, StringQueryFiled, ArrayQueryField, \
     BodyField
 
-__author__ = 'Allen7D'
 # test
 test_in_body = BodyField(name='test', type='string', description='test', enum=['t', 'v'])
 
@@ -60,16 +55,6 @@ category_id_in_path = IntegerPathFiled(
 category_id_in_query = IntegerQueryFiled(
     name='category_id', description="类别 ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
 
-theme_id_in_path = IntegerPathFiled(
-    name='id', description="主题ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
-theme_id_in_query = IntegerQueryFiled(
-    name='theme_id', description="主题ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
-
-banner_id_in_path = IntegerPathFiled(
-    name='id', description="轮播图ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
-banner_id_in_query = IntegerQueryFiled(
-    name='banner_id', description="轮播图ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
-
 order_id_in_path = IntegerPathFiled(
     name='id', description="订单ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
 order_id_in_query = IntegerQueryFiled(
@@ -106,6 +91,8 @@ username_in_body = BodyField(name='username', type='string', description='用户
 email_in_body = BodyField(name='email', type='string', description='邮箱', enum=['462870781@qq.com'])
 mobile_in_body = BodyField(name='mobile', type='string', description='手机', enum=['13758787058'])
 avatar_in_body = BodyField(name='avatar', type='string', description='头像url', enum=['http://abc/xzy.jpg'])
+userId_in_query= StringQueryFiled(name='userId', description='用户id',  default='1',required=True)
+
 
 # Address
 address_id_in_path = IntegerPathFiled(
@@ -129,9 +116,3 @@ parent_id_in_query = IntegerQueryFiled(
 filename_in_query = StringQueryFiled(name='filename', description='文件名',
                                      enum=['virtualmachine1.png', 'cellphone.png', '新建文件夹', '新建文件夹2'],
                                      required=True)
-
-# Article
-article_id_in_path = IntegerPathFiled(
-    name='id', description="文章ID", enum=[1, 2, 3, 4, 5, 10, 100], default=1)
-article_id_in_query = IntegerQueryFiled(
-    name='article_id', description="文章ID", enum=[1, 2, 3, 4, 5, 10, 100], default=1)

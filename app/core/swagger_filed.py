@@ -17,15 +17,21 @@ class ParamFiled:
     
     @property
     def data(self):
-        return {
+        _dict = {
             "name": self.name,
             "in": self.site,
             "type": self.type,
             "description": self.description,
-            "enum": self.enum,
+    
             "required": self.required,
             "default": self.default
         }
+        # 有输入选才选择
+        if self.enum:
+            _dict['enum'] = self.enum
+       
+       
+        return _dict
 
 
 class IntegerQueryFiled(ParamFiled):
