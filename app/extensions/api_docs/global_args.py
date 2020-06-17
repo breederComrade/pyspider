@@ -13,6 +13,10 @@ from app.core.swagger_filed import IntegerQueryFiled, IntegerPathFiled, \
 # test
 test_in_body = BodyField(name='test', type='string', description='test', enum=['t', 'v'])
 
+# 通用
+id_in_body = BodyField(name='id',type='integer' ,description='id')
+name_in_body = BodyField(name='id',type='string',description='名称')
+
 # Token登录相关
 token_in_body = BodyField(name='token', type='string', description='Token', enum=[
     'eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4NjM2ODEzMCwiZXhwIjoxNTg4OTYwMTMwfQ.eyJ1aWQiOjEsInR5cGUiOjEwMCwic2NvcGUiOiLns7vnu5_nrqHnkIblkZgifQ.ovFuc5Ti5zGm5B7JS7AGOBBmrYHGCRsVk9OFAWb88LhY7v9Ubw4c_3xGik7K8Emd6_fz4Ho6Hk3GI1_fjcSIww'])
@@ -51,9 +55,9 @@ dest_order_in_body = BodyField(
     name='dest_order', type='integer', description="新顺序", enum=[1, 2, 3, 4, 5, 10, 15, 20])
 
 category_id_in_path = IntegerPathFiled(
-    name='id', description="类别 ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
+    name='id', description="类别 ID",  required=True)
 category_id_in_query = IntegerQueryFiled(
-    name='category_id', description="类别 ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
+    name='category_id', description="类别 ID",  required=True)
 
 order_id_in_path = IntegerPathFiled(
     name='id', description="订单ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
@@ -96,7 +100,11 @@ userId_in_query= StringQueryFiled(name='userId', description='用户id',  defaul
 
 # Address
 address_id_in_path = IntegerPathFiled(
-    name='id', description="地址ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
+    name='id', description="地址ID", required=True)
+
+
+
+
 
 # File
 file_id_in_path = IntegerPathFiled(

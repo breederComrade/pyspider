@@ -19,7 +19,7 @@ api = Redprint(name='user', description='用户', api_doc=api_doc)
 
 #
 @api.route('', methods=['GET'])
-@api.doc(args=['g.query.userId'])
+@api.doc()
 def get_user():
     '''查询单个用户信息'''
     # get是我们自定义的方法本意是调用了fliterby

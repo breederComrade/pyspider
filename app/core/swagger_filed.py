@@ -127,7 +127,7 @@ class BodyField():
         self.type = type  # type的类型: string、integer、boolean, array
         self.description = description
         self.enum = enum
-        self.default = default if default else enum[0]
+        self.default = default
     
     @property
     def data(self):
