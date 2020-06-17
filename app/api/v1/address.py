@@ -6,6 +6,7 @@
   description: 
   
 """
+from flask import g
 from app.core.error import Success
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import address as api_doc
@@ -15,7 +16,7 @@ api = Redprint(name='address', description='配送地址', api_doc=api_doc)
 
 
 @api.route('', methods=['GET'])
-@api.doc(args=['g.path.address_id'])
+@api.doc(args=['g.query.address_id'])
 def get_address():
     ''' 获取单个地址 '''
     address = Address.get_or_404(id=1)

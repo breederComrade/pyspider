@@ -103,6 +103,10 @@ address_id_in_path = IntegerPathFiled(
     name='id', description="地址ID", required=True)
 
 
+address_id_in_query = IntegerPathFiled(
+    name='id', description="地址ID", required=True)
+
+
 
 
 
