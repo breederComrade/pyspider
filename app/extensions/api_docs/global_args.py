@@ -70,15 +70,16 @@ order_no_in_query = StringQueryFiled(
 
 # 权限组
 group_id_in_path = IntegerPathFiled(
-    name='id', description="权限组ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
+    name='id', description="权限组ID", required=True)
 group_id_in_query = IntegerQueryFiled(
-    name='group_id', description="权限组ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
+    name='group_id', description="权限组ID", required=True)
 group_id_in_body = BodyField(
-    name='group_id', type='integer', description="权限组ID", enum=[1, 2, 3, 4, 5, 10, 15, 20])
+    name='group_id', type='integer', description="权限组ID")
+
 src_id_in_body = BodyField(
-    name='src_id', type='integer', description="源权限组ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100])
+    name='src_id', type='integer', description="源权限组ID")
 dest_id_in_body = BodyField(
-    name='dest_id', type='integer', description="目标权限组ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100])
+    name='dest_id', type='integer', description="目标权限组ID")
 
 # 权限
 auth_ids_in_body = BodyField(name='auth_ids', type='array', description='权限ID列表',   enum=[[6, 7, 8], [12, 13, 14]])

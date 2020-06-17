@@ -7,33 +7,34 @@
   
 """
 from app.extensions.api_docs.redprint import Redprint
+from app.extensions.api_docs.v1 import group as api_doc
 
-api = Redprint(name='group', description='权限组管理', alias='group')
+api = Redprint(name='group', description='权限组管理', alias='group',api_doc=api_doc)
 
 
 @api.route('', methods=['POST'])
-@api.doc()
+@api.doc(args=['name','info'])
 def create():
     '''新建权限组'''
     return '新增权限'
 
 
 @api.route('', methods=['GET'])
-@api.doc()
+@api.doc(args=['g.query.group_id'])
 def get():
     '''获取中权限组权限'''
     return '获取中权限组权限'
 
 
 @api.route('', methods=['PUT'])
-@api.doc()
+@api.doc(args=['g.query.group_id','name','info'])
 def update():
     '''更新权限组'''
     return '更新权限组'
 
 
 @api.route('', methods=['DELETE'])
-@api.doc()
+@api.doc(args=['g.body.group_id'])
 def delete():
     '''删除权限组'''
     return '删除权限组'

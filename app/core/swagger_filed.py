@@ -139,7 +139,6 @@ class BodyField():
             "default": self.default
         }
         if self.type in ('array'):
-            data_dict['type'] = 'list'
             data_dict['items'] = self.default
         return data_dict
 
