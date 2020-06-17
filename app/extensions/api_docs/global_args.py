@@ -43,11 +43,11 @@ uid_in_body = BodyField(
     name='uid_id', type='integer', description="用户ID", enum=[1, 2, 3, 4, 5, 10, 15, 20])
 
 product_id_in_path = IntegerPathFiled(
-    name='id', description="商品ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
+    name='id', description="商品ID",  required=True)
 product_id_in_query = IntegerQueryFiled(
-    name='product_id', description="商品ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
+    name='product_id', description="商品ID", required=True)
 product_id_in_body = BodyField(
-    name='product_id', type='integer', description="商品ID", enum=[1, 2, 3, 4, 5, 10, 15, 20])
+    name='product_id', type='integer', description="商品ID")
 
 # 重新排序
 src_order_in_body = BodyField(
