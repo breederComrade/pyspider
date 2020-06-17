@@ -9245,3 +9245,4 @@ INFO _internal.py :122  * Debugger PIN: 543-278-264
 INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 17:32:58] "GET /apidocs/ HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 17:32:59] "GET /apispec_1.json HTTP/1.1" 200 -
 INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 17:33:13] "POST /v1/user/create HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [16/Jun/2020 17:34:21] "PUT /v1/test HTTP/1.1" 200 -
