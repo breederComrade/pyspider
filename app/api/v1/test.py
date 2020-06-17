@@ -13,7 +13,7 @@ api = Redprint(name='test', description='测试用', api_doc=api_doc)
 
 
 @api.route('', methods=['GET'])
-@api.doc(args=['body.type'])
+@api.doc()
 def get():
     '''获取'''
     return '获取'
