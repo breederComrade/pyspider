@@ -14,8 +14,8 @@ from app.core.swagger_filed import IntegerQueryFiled, IntegerPathFiled, \
 test_in_body = BodyField(name='test', type='string', description='test', enum=['t', 'v'])
 
 # 通用
-id_in_body = BodyField(name='id',type='integer' ,description='id')
-name_in_body = BodyField(name='id',type='string',description='名称')
+id_in_body = BodyField(name='id', type='integer', description='id')
+name_in_body = BodyField(name='id', type='string', description='名称')
 
 # Token登录相关
 token_in_body = BodyField(name='token', type='string', description='Token', enum=[
@@ -55,9 +55,9 @@ dest_order_in_body = BodyField(
     name='dest_order', type='integer', description="新顺序", enum=[1, 2, 3, 4, 5, 10, 15, 20])
 
 category_id_in_path = IntegerPathFiled(
-    name='id', description="类别 ID",  required=True)
+    name='id', description="类别 ID", required=True)
 category_id_in_query = IntegerQueryFiled(
-    name='category_id', description="类别 ID",  required=True)
+    name='category_id', description="类别 ID", required=True)
 
 order_id_in_path = IntegerPathFiled(
     name='id', description="订单ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100], required=True)
@@ -80,31 +80,55 @@ dest_id_in_body = BodyField(
     name='dest_id', type='integer', description="目标权限组ID", enum=[1, 2, 3, 4, 5, 10, 15, 20, 100])
 
 # 权限
-auth_ids_in_body = BodyField(name='auth_ids', type='array', description='权限ID列表',
-                             enum=[[6, 7, 8], [12, 13, 14]])
+auth_ids_in_body = BodyField(name='auth_ids', type='array', description='权限ID列表',   enum=[[6, 7, 8], [12, 13, 14]])
 
 # Password
-password_in_body = BodyField(name='password', type='string', description='密码', enum=['123456'])
-old_password_in_body = BodyField(name='old_password', type='string', description='密码', enum=['123456'])
-new_password_in_body = BodyField(name='new_password', type='string', description='密码', enum=['123456'])
-confirm_password_in_body = BodyField(name='confirm_password', type='string', description='密码', enum=['123456'])
+password_in_body = BodyField(name='password', type='string', description='密码', )
+old_password_in_body = BodyField(name='old_password', type='string', description='密码', )
+new_password_in_body = BodyField(name='new_password', type='string', description='密码', )
+confirm_password_in_body = BodyField(name='confirm_password', type='string', description='密码', )
 
 # User
-nickname_in_body = BodyField(name='nickname', type='string', description='昵称', enum=['Allen7D'])
-username_in_body = BodyField(name='username', type='string', description='用户名', enum=['Allen7D'])
-email_in_body = BodyField(name='email', type='string', description='邮箱', enum=['462870781@qq.com'])
-mobile_in_body = BodyField(name='mobile', type='string', description='手机', enum=['13758787058'])
-avatar_in_body = BodyField(name='avatar', type='string', description='头像url', enum=['http://abc/xzy.jpg'])
-userId_in_query= StringQueryFiled(name='userId', description='用户id',  default='1',required=True)
-
+nickname_in_body = BodyField(name='nickname', type='string', description='昵称', )
+username_in_body = BodyField(name='username', type='string', description='用户名', )
+email_in_body = BodyField(name='email', type='string', description='邮箱',)
+mobile_in_body = BodyField(name='mobile', type='string', description='手机', )
+avatar_in_body = BodyField(name='avatar', type='string', description='头像url', )
+userId_in_query = StringQueryFiled(name='userId', description='用户id', default='1', required=True)
 
 # Address
 address_id_in_path = IntegerPathFiled(
     name='id', description="地址ID", required=True)
 
-
 address_id_in_query = IntegerPathFiled(
     name='id', description="地址ID", required=True)
+
+# customer
+customer_id_in_query= IntegerQueryFiled(
+    name='id', description='客户id', required=True
+)
+customer_id_in_body= BodyField(
+    name='id',type='integer',description='客户id'
+)
+
+customer_name_in_body=BodyField(
+    name='nickname',type='string',description='客户名称',
+)
+
+customer_avatar_in_body=BodyField(
+    name='avatar',type='string',description='头像'
+)
+
+customer_mobile_in_body=BodyField(
+    name='mobile',type='string',description='手机号'
+)
+
+wechat_in_body=BodyField(
+    name='wechat',type='string',description='微信号'
+)
+customer_company_id_in_body = BodyField(
+    name='company_id',type='integer',description='企业id'
+)
 
 
 
