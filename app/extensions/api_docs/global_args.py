@@ -15,6 +15,7 @@ test_in_body = BodyField(name='test', type='string', description='test', enum=['
 
 # 通用
 id_in_body = BodyField(name='id', type='integer', description='id')
+id_in_query = IntegerQueryFiled(name='id',description='id')
 name_in_body = BodyField(name='id', type='string', description='名称')
 
 # Token登录相关
