@@ -97,6 +97,10 @@ mobile_in_body = BodyField(name='mobile', type='string', description='手机', )
 avatar_in_body = BodyField(name='avatar', type='string', description='头像url', )
 userId_in_query = StringQueryFiled(name='userId', description='用户id', default='1', required=True)
 
+user_ids_in_body = BodyField(name='user_ids', type='array', description='用户id集合')
+
+auth_ids_in_body = BodyField(name='auth_ids', type='array', description='权限ID列表',   enum=[[6, 7, 8], [12, 13, 14]])
+
 # Address
 address_id_in_path = IntegerPathFiled(
     name='id', description="地址ID", required=True)
