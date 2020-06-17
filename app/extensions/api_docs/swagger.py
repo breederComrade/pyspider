@@ -29,8 +29,12 @@ def apply_swagger(app):
         if ',' in host:
             return host.split(',')[-1]
         return host
-
+     
+    # _cofnig = Swagger.DEFAULT_CONFIG.copy()
+    # _cofnig['specs_route'] = '/api/'
     swagger = Swagger(
+        # specs_route
+        # config=_cofnig,
         decorators=[before_access],
         template={
             'host': LazyString(on_host),  # Swagger请求的服务端地址

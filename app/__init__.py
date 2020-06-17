@@ -1,12 +1,12 @@
 import logging
 import os
-from http.client import HTTPException
 from logging.handlers import RotatingFileHandler
 
 from flask import Flask, request, _request_ctx_stack, g, redirect, current_app, render_template
 from flask_marshmallow import Marshmallow
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+from werkzeug.exceptions import HTTPException
 
 from app.core.db import db
 from app.core.error import APIException, ServerError
@@ -162,19 +162,11 @@ def handle_error(app):
     # flask的错误绑定装饰器
     @app.errorhandler(Exception)
     def framework_error(e):
-        print(type(e))
-        print(isinstance(e, HTTPException))
         if isinstance(e, APIException):
             return e
-        # TODO:为什么无法和参考代码一样触发HttpException异常
         elif isinstance(e, HTTPException):
             return APIException(code=e.code, error_code=1007, msg=e.description)
         else:
-            # TODO:处理404请求无法监控到HTTPException的问题
-            # code: 状态码
-            # error_code = 返回给前端状态码
-            return APIException(code=404, error_code=42042, msg=e.description)
-            # return ServerError()
             # 非测试模式
             if not app.config['DEBUG']:
                 # TODO：记录异常

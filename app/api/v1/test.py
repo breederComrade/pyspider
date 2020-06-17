@@ -6,6 +6,7 @@
   description: 测试用
   
 """
+from app.core.error import Success, Failed
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import test as api_doc
 
@@ -37,7 +38,7 @@ def update():
 @api.doc()
 def delete():
     '''删除'''
-    return '删除'
+    return Failed()
 
 
 @api.route('/list', methods=['GET'])

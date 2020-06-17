@@ -9866,3 +9866,110 @@ INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/
 INFO _internal.py :122  * Restarting with stat
 WARNING _internal.py :122  * Debugger is active!
 INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/extensions/api_docs/swagger.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/extensions/api_docs/swagger.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/extensions/api_docs/swagger.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:31:56] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:31:56] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:31:59] "GET /apidocs/ HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:32:05] "GET /api HTTP/1.1" 308 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:32:05] "GET /api/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:32:05] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:32:13] "GET /apidocs/ HTTP/1.1" 404 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/extensions/api_docs/swagger.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/extensions/api_docs/swagger.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:54:11] "DELETE /v1/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:56:28] "DELETE /v1/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:57:17] "DELETE /v1/test HTTP/1.1" 400 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:08] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:09] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:12] "DELETE /v1/test HTTP/1.1" 400 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:18] "PUT /v1/test HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:26] "DELETE /v1/order HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:35] "GET /v1/order/list HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:41] "GET /fuck HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:41] "GET /fuck?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:41] "GET /fuck?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:41] "GET /fuck?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:42] "GET /fuck?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:42] "GET /fuck?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:58:42] "GET /fuck?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 16:59:08] "GET /fuck HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:03:42] "GET /fff HTTP/1.1" 404 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:04:52] "GET /fff HTTP/1.1" 404 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:06:25] "GET /fff HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:06:38] "GET /fff HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:06:38] "GET /fff?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:06:38] "GET /fff?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:06:38] "GET /fff?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:06:38] "GET /fff?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:06:38] "GET /fff?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:06:38] "GET /fff?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/__init__.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:07:57] "GET /fff HTTP/1.1" 404 -
