@@ -10,6 +10,7 @@ from flask import request
 
 from app.core.db import db
 from app.core.error import Success, Failed
+from app.dao.test import TestDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import test as api_doc
 from app.models.test import Test
@@ -18,10 +19,10 @@ api = Redprint(name='test', description='测试用', api_doc=api_doc)
 
 
 @api.route('', methods=['GET'])
-@api.doc()
+@api.doc(args=['id'])
 def get():
     '''获取'''
-    test = Test.get_or_404(id = 1)
+    test = Test.get_or_404(id=1)
     return '获取'
 
 
@@ -30,23 +31,28 @@ def get():
 def create():
     '''新增'''
     name = request.json.get('name')
-    with db.auto_commit():
-        test = Test.create( commit=False,name='ni hao ma')
-    return '新增'
+    Test.create(name)
+    return Success(error_code=1)
 
 
 @api.route('', methods=['PUT'])
-@api.doc()
+@api.doc(args=['id','name'])
 def update():
     '''更新'''
-    return '更新'
+    id = request.json.get('id')
+    name = request.json.get('name')
+    TestDao.update(id, name)
+    return Success(error_code=1)
 
 
 @api.route('', methods=['DELETE'])
-@api.doc()
+@api.doc(args=['id'])
 def delete():
     '''删除'''
-    return Failed()
+    #
+    id = request.json.get('id')
+    TestDao.delete(id)
+    return Success(error_code=2)
 
 
 @api.route('/list', methods=['GET'])
