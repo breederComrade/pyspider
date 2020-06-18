@@ -1,0 +1,30 @@
+∑∑INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+ΩΩINFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:44:13] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:44:13] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:44:13] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:44:13] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:44:14] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:44:15] "GET /flasgger_static/swagger-ui-bundle.js.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:44:15] "GET /flasgger_static/swagger-ui-standalone-preset.js.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:44:15] "GET /flasgger_static/swagger-ui.css.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:44:16] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:44:16] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8083/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 932-386-096
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 20:45:20] "GET /v1/test/list HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 22:26:09] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 22:26:09] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 22:26:09] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 22:26:10] "GET /flasgger_static/swagger-ui.css.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 22:26:10] "GET /flasgger_static/swagger-ui-bundle.js.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 22:26:11] "GET /flasgger_static/swagger-ui-standalone-preset.js.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 22:26:11] "GET /apispec_1.json HTTP/1.1" 200 -
