@@ -9973,3 +9973,237 @@ INFO _internal.py :122  * Restarting with stat
 WARNING _internal.py :122  * Debugger is active!
 INFO _internal.py :122  * Debugger PIN: 543-278-264
 INFO _internal.py :122 127.0.0.1 - - [17/Jun/2020 17:07:57] "GET /fff HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:19:58] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:20:12] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:20:12] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 304 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:20:12] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 304 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:20:12] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 304 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:20:12] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 304 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:20:13] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:51:51] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:51:52] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:51:52] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 304 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 09:51:56] "POST /v1/test?id=2323 HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:21:24] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:21:24] "GET / HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:21:26] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:21:48] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:21:49] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:23:05] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:23:05] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/extensions/api_docs/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:27:16] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:27:16] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:27:58] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:27:59] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 10:56:38] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:00:03] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:00:04] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:00:11] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:00:24] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:00:39] "POST /v1/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:00:55] "POST /v1/test HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:01:11] "GET /flasgger_static/swagger-ui-bundle.js.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:01:11] "GET /flasgger_static/swagger-ui-standalone-preset.js.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:01:11] "GET /flasgger_static/swagger-ui.css.map HTTP/1.1" 304 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:01:16] "POST /v1/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:01:54] "POST /v1/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:02:07] "POST /v1/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:02:20] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:04:05] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 11:04:10] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:28:30] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:30:28] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:32:48] "POST /v1/test HTTP/1.1" 200 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:33:21] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:33:21] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:33:32] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:33:39] "GET /apidocs/ HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:33:39] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:33:40] "GET /flasgger_static/swagger-ui.css.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:33:40] "GET /flasgger_static/swagger-ui-bundle.js.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:33:40] "GET /flasgger_static/swagger-ui-standalone-preset.js.map HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:33:40] "GET /apispec_1.json HTTP/1.1" 200 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:33:49] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:34:09] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:36:28] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:36:29] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/api/v1/test.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:40:11] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/customer.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:41:57] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Running on http://127.0.0.1:8389/ (Press CTRL+C to quit)
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:42:11] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/user.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:42:39] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:42:39] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/order.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:43:20] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/order.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:43:53] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/company.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:44:09] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/customer.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:44:23] "POST /v1/test HTTP/1.1" 500 -
+INFO _internal.py :122  * Detected change in '/Users/apple/code/github/pyspider/app/models/category.py', reloading
+INFO _internal.py :122  * Restarting with stat
+WARNING _internal.py :122  * Debugger is active!
+INFO _internal.py :122  * Debugger PIN: 543-278-264
+INFO _internal.py :122 127.0.0.1 - - [18/Jun/2020 13:44:43] "POST /v1/test HTTP/1.1" 200 -
