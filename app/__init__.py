@@ -25,19 +25,6 @@ formatter = logging.Formatter('%(levelname)s %(filename)s :%(lineno)d %(message)
 file_log_handler.setFormatter(formatter)
 logging.getLogger().addHandler(file_log_handler)
 
-
-#
-# 定义jsonNcoder
-class JSONEncoder(_JSONEncoder):
-    def default(self, o):
-        if (hasattr(o, 'keys') and hasattr(o, '__getitem__')):
-            # 有keys和getitem证明是model
-            return dict(o)
-        if isinstance(o, date):
-            return o.strftime('%Y-%m-%d %H:%M:%S')
-        return json.JSONEncoder.default((self, 0))
-
-
 def create_app():
     # app.app
     app = Flask(__name__, static_folder="./static", template_folder="./templates")
@@ -125,9 +112,7 @@ def mount_route_meta_to_endpoint(app):
 
 def register_plugin(app):
     apply_json_encoder(app)  # JSON序列化
-    
     # apply_cors(app)  # 应用跨域扩展，使项目支持请求跨域
-    # TODO:xxxxxx
     connect_db(app)  # 连接数据库
     handle_error(app)  # 统一处理异常
 

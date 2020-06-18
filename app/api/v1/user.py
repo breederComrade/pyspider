@@ -10,9 +10,11 @@
 from flask import g
 
 from app.core.error import Success
+from app.dao.user import UserDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import user as api_doc
 from app.models.user import User
+from app.validators.forms import CreateUserValidator
 
 api = Redprint(name='user', description='用户', api_doc=api_doc)
 
@@ -49,9 +51,9 @@ def user_list():
                'g.body.confirm_password'])
 def create_user():
     '''创建用户'''
-    return '创建用户'
-
-
+    form = CreateUserValidator().nt_data
+    UserDao.create_user(form)
+    return Success(error_code=1)
 # 删除用户
 @api.route('/batchDel', methods=['DELETE'])
 @api.doc(args=['g.body.id'])
