@@ -20,7 +20,7 @@ class Category(Base):
     name = Column(String(50), nullable=False, comment='名称')
     desc = Column(String(100), comment='描述')
     # topic_img_id = Column(Integer, ForeignKey('image.id'), comment='外键,关联image表 ')
-    image = relationship('Image', backref=backref('category', lazy='dynamic'))
+    # image = relationship('Image', backref=backref('category', lazy='dynamic'))
     
     def keys(self):
         return self.fields

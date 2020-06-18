@@ -21,9 +21,9 @@ class User(Base):
     group_id = Column(Integer, comment='用户所属的权限组id',
                       default=0)
     # 一对多 客户信息
-    customer = relationship('Customer', backref=backref('user'))
+    # customer = relationship('Customer', backref=backref('user'))
     # 订单
-    order = relationship('Order', backref=backref('user'))
+    # order = relationship('Order', backref=backref('user'))
     # 所属公司
     # company_id = Column(Integer, ForeignKey('company.id'), nullable=False, comment='外键公司id')  # 下单用户ID
     # 管理员id

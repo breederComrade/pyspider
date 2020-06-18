@@ -10,4 +10,6 @@
 # 函数方法
 from app.core.swagger_filed import BodyField
 
-type = BodyField(name='type', type='integer', description='登录方式', enum=[101])
+name = BodyField(name = 'name',type='string',description='名称')
+id= BodyField(name='id',type='integer',description='id')
+
