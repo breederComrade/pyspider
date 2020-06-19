@@ -21,7 +21,7 @@ class UserDao():
         with db.auto_commit():
             user = User.create(
                 commit=False,
-                nickname='fuck'
+                nickname=getattr(form, 'nickname', None)
             )
         
         #  检测是否存在

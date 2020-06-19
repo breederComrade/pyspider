@@ -10,12 +10,9 @@ from sqlalchemy import Column, Integer, String
 
 from app.core.db import EntityModel as Base
 
-
 class Test(Base):
     id = Column(Integer, autoincrement=True, primary_key=True)
     name = Column(String(45), comment='名称')
-    
-
     
     def __repr__(self):
         return 'Text:{}'.format(self.name)

@@ -6,7 +6,7 @@
   description:  关联表
   
 """
-from sqlalchemy import Integer
+from sqlalchemy import Integer, Column, ForeignKey
 
 from app.core.db import BaseModel as Base, db
 
@@ -32,3 +32,14 @@ class OrderProduct(Base):
         self.order_id = order_id
         self.product_id = product_id
         self.count = count
+
+
+
+# 用户企业关联
+user_company = db.Table(
+    'user_company',
+    Column('user_id', Integer, ForeignKey('user.id'), primary_key=True, comment='用户外键'),
+    Column('company_id', Integer, ForeignKey('company.id'), primary_key=True, comment='企业外键'),
+    Column('fuck',Integer,comment='ces ')
+)
+

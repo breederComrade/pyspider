@@ -136,7 +136,7 @@ def connect_db(app):
     # 迁移数据库
     migrate = Migrate(app,db)
     migrate.init_app(app)
-    #  初始化使用
+    # #  初始化使用
     with app.app_context():  # 手动将app推入栈
         db.create_all()  # 首次模型映射(ORM ==> SQL),若无则建表
 
