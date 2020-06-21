@@ -21,6 +21,9 @@ class User(Base):
     auth_id = Column(Integer, comment='权限id')
     group_id = Column(Integer, comment='用户所属的权限组id',
                       default=0)
+    # 一对一
+    # 增加 userlist = False
+    order = relationship('Order', backref=backref('user', uselist=False))
     # 一对多 客户信息
     customer = relationship('Customer', backref=backref('user'))
     

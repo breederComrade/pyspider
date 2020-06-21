@@ -133,7 +133,7 @@ def apply_json_encoder(app):
 # 连接数据库
 def connect_db(app):
     db.init_app(app)
-    # 迁移数据库
+    # 迁移数据库≤
     migrate = Migrate(app,db)
     migrate.init_app(app)
     # #  初始化使用

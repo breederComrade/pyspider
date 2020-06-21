@@ -18,6 +18,7 @@ from app.models.company import Company
 from app.models.customer import Customer
 # from app.models.m2m import user_company
 from app.models.m2m import user_company
+from app.models.order import Order
 from app.models.test import Test
 from app.models.user import User
 
@@ -86,3 +87,22 @@ def delete():
 def list():
     '''列表'''
     return 'list'
+
+
+@api.route('/oneToone', methods=['GET'])
+@api.doc()
+def oneToone():
+    # 1. 一对一
+    user = User.get_or_404(id=3)
+    # order = Order()
+    # order.order_no = 'pro'
+    # order.order_status=1
+    # db.session.add(order)
+    # user.order.append(order)
+    # db.session.commit()
+    # 2. 正向查询
+    print(json.dumps(user.order))
+    # 3.反向查询
+    order = Order.get_or_404(id=15)
+    print(json.dumps(order.user))
+    return 'xxx'
