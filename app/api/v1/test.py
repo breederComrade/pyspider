@@ -83,10 +83,19 @@ def delete():
 
 
 @api.route('/list', methods=['GET'])
-@api.doc()
+@api.doc(args=['g.query.page', 'g.query.size'])
 def list():
-    '''列表'''
-    return 'list'
+    '''列表 分页处理'''
+    # 获取
+    page = request.args.get('page')
+    size = request.args.get('size')
+    paginator = User.query.filter(User.nickname.startswith('user')).order_by(User.create_time.desc()).paginate(page=int(page), per_page=int(size), error_out=True)
+    paginator.hide('account')
+    return {
+        'total': paginator.total,
+        'current_page': paginator.page,
+        'items': paginator.items
+    }
 
 
 @api.route('/oneToone', methods=['GET'])

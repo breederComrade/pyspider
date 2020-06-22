@@ -6,6 +6,8 @@
   description: 
   
 """
+from flask import g
+
 from app.core.error import Success
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import user as api_doc
@@ -26,7 +28,7 @@ def get_customer():
 @api.doc()
 def get_all_customer():
     '''查询所有「客户信息」'''
-    customer_list = Customer.query.filter_by(user_id=g.user.id).all_by_wrap()
+    customer_list = Customer.query.all(user_id=g.user.id).all_by_wrap()
     return Success(customer_list)
 
 
