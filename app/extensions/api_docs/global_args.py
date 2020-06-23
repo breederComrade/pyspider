@@ -85,16 +85,16 @@ dest_id_in_body = BodyField(
 auth_ids_in_body = BodyField(name='auth_ids', type='array', description='权限ID列表',   enum=[[6, 7, 8], [12, 13, 14]])
 
 # Password
-password_in_body = BodyField(name='password', type='string', description='密码', )
-old_password_in_body = BodyField(name='old_password', type='string', description='密码', )
-new_password_in_body = BodyField(name='new_password', type='string', description='密码', )
-confirm_password_in_body = BodyField(name='confirm_password', type='string', description='密码', )
+password_in_body = BodyField(name='password', type='string', description='密码', default='123456' )
+old_password_in_body = BodyField(name='old_password', type='string', description='密码', default='123456' )
+new_password_in_body = BodyField(name='new_password', type='string', description='密码',  default='123456')
+confirm_password_in_body = BodyField(name='confirm_password', type='string', description='密码',  default='123456')
 
 # User
 nickname_in_body = BodyField(name='nickname', type='string', description='昵称', )
-username_in_body = BodyField(name='username', type='string', description='用户名', )
-email_in_body = BodyField(name='email', type='string', description='邮箱',)
-mobile_in_body = BodyField(name='mobile', type='string', description='手机', )
+username_in_body = BodyField(name='username', type='string', description='用户名', default='user')
+email_in_body = BodyField(name='email', type='string', description='邮箱', default='123@qq.com')
+mobile_in_body = BodyField(name='mobile', type='string', description='手机',  default='182')
 avatar_in_body = BodyField(name='avatar', type='string', description='头像url', )
 userId_in_query = StringQueryFiled(name='userId', description='用户id', default='1', required=True)
 
