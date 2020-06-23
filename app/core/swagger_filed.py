@@ -171,7 +171,7 @@ class SwaggerSpecs():
     @property
     def security(self):
         if self.auth:
-            return [{"basicAuth": []}]
+            return [{"Bearer": []}]
         return []
     
     @property

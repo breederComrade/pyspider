@@ -11,14 +11,19 @@ from sqlalchemy import Column, Integer, String, SmallInteger, ForeignKey, Table
 from sqlalchemy.orm import relationship, backref
 
 from app.core.db import EntityModel as Base, db
+from app.libs.enums import ScopeEnum
+from app.models.group import Group
 
 
 class User(Base):
     __tablename__ = 'user'
     id = Column(Integer, primary_key=True, autoincrement=True)
+    # 用于判断是否是超管
+    auth = Column(SmallInteger, default=ScopeEnum.COMMON.value, comment='权限')
     nickname = Column(String(24), comment='昵称')
     account = Column(String(45), comment='账号')
     auth_id = Column(Integer, comment='权限id')
+    #
     group_id = Column(Integer, comment='用户所属的权限组id',
                       default=0)
     # 一对一
@@ -68,10 +73,15 @@ class User(Base):
     @property
     def is_admin(self):
         #
-        return True
+        return ScopeEnum(self.auth) == ScopeEnum.ADMIN
     
     # 当前用户
     @classmethod
     def get_current_user(cls):
         '''获取当前用户'''
         return g.user
+    
+    @property
+    def auth_scope(self):
+        return db.session.query(Group.name) \
+            .filter(Group.id == self.group_id).scalar()

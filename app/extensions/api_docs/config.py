@@ -45,24 +45,24 @@ SWAGGER = {
     'schemes': ['http','https'], # 通信协议: http或https或多个，默认http
     'operationId': 'getmyData',
     # token
-    'securityDefinitions': {
-        'basicAuth': {
-            'description': 'Authorization format: \n &nbsp; Username: &nbsp;{token} \n &nbsp; Password: &nbsp; {非空即可}',
-            'type': 'basic'
-        }
-    },
-    # "securityDefinitions": {
-    #     "Bearer": {
-    #         "name": "xxx",
-    #         "in": "header",
-    #         "type": "apiKey",
-    #         "description": "Bearer JWT"
+    # 'securityDefinitions': {
+    #     'basicAuth': {
+    #         'description': 'Authorization format: \n &nbsp; Username: &nbsp;{token} \n &nbsp; Password: &nbsp; {非空即可}',
+    #         'type': 'basic'
     #     }
     # },
-    # "security": [
-    #     {
-    #         "Bearer2": []
-    #     }
-    # ],
+    "securityDefinitions": {
+        "Bearer": {
+            "name": "authorization",
+            "in": "header",
+            "type": "apiKey",
+            "description": "Bearer JWT"
+        }
+    },
+    "security": [
+        {
+            "Bearer": []
+        }
+    ],
 }
 

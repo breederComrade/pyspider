@@ -10,6 +10,7 @@ from flask import request, json
 
 from app.core.db import db
 from app.core.error import Success, Failed
+from app.core.token_auth import auth
 from app.dao.test import TestDao
 from app.dao.user import UserDao
 from app.extensions.api_docs.redprint import Redprint
@@ -83,7 +84,8 @@ def delete():
 
 
 @api.route('/list', methods=['GET'])
-@api.doc(args=['g.query.page', 'g.query.size'])
+@api.doc(args=['g.query.page', 'g.query.size'],auth=True)
+@auth.login_required
 def list():
     '''列表 分页处理'''
     # 获取

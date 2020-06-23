@@ -9,6 +9,7 @@
 from flask import g
 
 from app.core.error import Success
+from app.core.token_auth import auth
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import order as api_doc
 from app.models.m2m import OrderProduct
@@ -19,6 +20,7 @@ api = Redprint(name='order', description='订单', api_doc=api_doc)
 
 @api.route('', methods=['GET'])
 @api.doc(args=['query.order_id'])
+@auth.login_required
 def get():
     ''' 获取单个订单 '''
     company = Order.get_or_404(id=1)

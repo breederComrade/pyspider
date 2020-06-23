@@ -6,6 +6,7 @@
   description: 权限组
   
 """
+from app.core.token_auth import auth
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import group as api_doc
 
@@ -14,6 +15,7 @@ api = Redprint(name='group', description='权限组管理', alias='group',api_do
 
 @api.route('', methods=['POST'])
 @api.doc(args=['name','info'])
+@auth.admin_required
 def create():
     '''新建权限组'''
     return '新增权限'
