@@ -123,8 +123,10 @@ class AbortMixin(object):
 
     @classmethod
     def abort_repeat(cls, e: Exception = None, error_code: int = None, msg: str = None, **kwargs):
+        # 查找提一条符合的数据
         instance = cls.query.filter_by(**kwargs).first()
         if instance:
+            # 如果数据存在 默认抛出重复异常
             raise e if e else RepeatException(error_code=error_code, msg=msg)
 
 
