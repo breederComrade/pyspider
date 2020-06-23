@@ -54,6 +54,11 @@ def create_user():
     form = CreateUserValidator().nt_data
     UserDao.create_user(form)
     return Success(error_code=1)
+
+
+
+
+
 # 删除用户
 @api.route('/batchDel', methods=['DELETE'])
 @api.doc(args=['g.body.id'])

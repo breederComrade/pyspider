@@ -89,7 +89,8 @@ def list():
     # 获取
     page = request.args.get('page')
     size = request.args.get('size')
-    paginator = User.query.filter(User.nickname.startswith('user')).order_by(User.create_time.desc()).paginate(page=int(page), per_page=int(size), error_out=True)
+    paginator = User.query.filter(User.nickname.startswith('user')).order_by(User.create_time.desc()).paginate(
+        page=int(page), per_page=int(size), error_out=True)
     paginator.hide('account')
     return {
         'total': paginator.total,
@@ -101,6 +102,7 @@ def list():
 @api.route('/oneToone', methods=['GET'])
 @api.doc()
 def oneToone():
+    '''一对一表'''
     # 1. 一对一
     user = User.get_or_404(id=3)
     # order = Order()
@@ -115,3 +117,17 @@ def oneToone():
     order = Order.get_or_404(id=15)
     print(json.dumps(order.user))
     return 'xxx'
+
+
+@api.route('/login', methods=['POST'])
+@api.doc()
+def login():
+    '''测试登录'''
+    return Success(error_code=1, msg='登录成功')
+
+
+@api.route('/register', methods=['POST'])
+@api.doc()
+def register():
+    '''测试注册'''
+    Success(error_code=1,msg='注册成功')
