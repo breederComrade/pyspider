@@ -20,7 +20,7 @@ api = Redprint(name='address', description='配送地址', api_doc=api_doc)
 def get_address():
     ''' 获取单个地址 '''
     address = Address.get_or_404(id=1)
-    return 'diz '
+    return Success(address)
 
 
 @api.route('/list', methods=['GET'])

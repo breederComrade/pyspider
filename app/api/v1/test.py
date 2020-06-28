@@ -6,7 +6,7 @@
   description: 测试用
   
 """
-from flask import request, json
+from flask import request, json, g
 
 from app.core.db import db
 from app.core.error import Success, Failed
@@ -122,13 +122,16 @@ def oneToone():
     return 'xxx'
 
 
-@api.route('/login', methods=['POST'])
-@api.doc(auth=True)
-@auth.login_required()
-def login():
-    '''测试登录'''
-    return Success(error_code=1, msg='登录成功')
-
+# @api.route('/login', methods=['POST'])
+# # @api.doc(auth=True)
+# # @auth.login_required()
+# def login():
+#     '''测试登录'''
+#     # 1.通过id获取本地信息
+#     x = User.get_or_404(id=41)
+#
+#     return Success(x)
+#
 
 @api.route('/register', methods=['POST'])
 @api.doc()

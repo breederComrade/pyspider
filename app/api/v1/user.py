@@ -26,7 +26,8 @@ def get_user():
     '''查询单个用户信息'''
     # get是我们自定义的方法本意是调用了fliterby
     user = User.get(id=g.user.id)
-    return Success(user)
+    
+    return Success()
 
 
 # 更改密码

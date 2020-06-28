@@ -136,7 +136,9 @@ class CRUDMixin(object):
     @classmethod
     def get(cls, **kwargs):
         '''查询'''
-        return cls.query.filter_by(**kwargs).first()
+        print(kwargs)
+        u =cls.query.filter_by(**kwargs)
+        return u.first()
 
     @classmethod
     def get_or_404(cls, e: Exception = None, error_code: int = None, msg: str = None, **kwargs):

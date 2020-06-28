@@ -24,6 +24,7 @@ api = Redprint(name='token', description='登录令牌')
 def get_token():
     '''获取token'''
     form = ClientValidator().nt_data
+    # 验证用户是否存在
     token = LoginVerifyService.get_token(
         account = form.account,secret = form.secret,type = form.type
     )
