@@ -10,6 +10,7 @@
 from flask import g
 
 from app.core.error import Success
+from app.core.token_auth import auth
 from app.dao.user import UserDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import user as api_doc
@@ -22,6 +23,7 @@ api = Redprint(name='user', description='用户', api_doc=api_doc)
 #
 @api.route('', methods=['GET'])
 @api.doc(args=['g.query.id'])
+@auth.login_required
 def get_user():
     '''查询单个用户信息'''
     # get是我们自定义的方法本意是调用了fliterby

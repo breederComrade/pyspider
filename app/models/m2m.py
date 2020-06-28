@@ -10,6 +10,7 @@ from sqlalchemy import Integer, Column, ForeignKey
 
 from app.core.db import BaseModel as Base, db
 
+
 # # 客户与用户关联
 # customer_user = db.Table('customer_user',
 #                          db.Column('customer_id', db.Integer, db.ForeignKey('customer.id')),
@@ -28,11 +29,11 @@ class OrderProduct(Base):
     order_id = db.Column(Integer, primary_key=True, comment='联合外键,订单id')
     product_id = db.Column(Integer, primary_key=True, comment='联合外键,商品id')
     count = db.Column(Integer, nullable=False, comment='商品数量')
+    
     def __init__(self, order_id=None, product_id=None, count=None):
         self.order_id = order_id
         self.product_id = product_id
         self.count = count
-
 
 
 # 用户企业关联
@@ -40,6 +41,33 @@ user_company = db.Table(
     'user_company',
     Column('user_id', Integer, ForeignKey('user.id'), primary_key=True, comment='用户外键'),
     Column('company_id', Integer, ForeignKey('company.id'), primary_key=True, comment='企业外键'),
-    Column('fuck',Integer,comment='ces ')
+    Column('fuck', Integer, comment='ces ')
 )
 
+# 用户组表
+user_group = db.Table(
+    'user_group',
+    Column('user_id', Integer, ForeignKey('user.id'), primary_key=True, comment='用户外键'),
+    Column('group_id', Integer, ForeignKey('group.id'), primary_key=True, comment='组外键')
+)
+
+# 用户角色表
+user_role = db.Table(
+    'user_role',
+    Column('user_id', Integer, ForeignKey('user.id'), primary_key=True, comment='用户外键'),
+    Column('role_id', Integer, ForeignKey('role.id'), primary_key=True, comment='角色外键')
+)
+
+# 用户权限表
+user_role = db.Table(
+    'user_role',
+    Column('user_id', Integer, ForeignKey('user.id'), primary_key=True, comment='用户外键'),
+    Column('role_id', Integer, ForeignKey('role.id'), primary_key=True, comment='角色外键')
+)
+# 组权限表
+group_power = db.Table(
+    'user_role',
+    Column('group_id', Integer, ForeignKey('group.id'), primary_key=True, comment='组外键'),
+    Column('power_id', Integer, ForeignKey('power.id'), primary_key=True, comment='权限外键')
+)
+#
