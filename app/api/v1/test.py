@@ -123,7 +123,8 @@ def oneToone():
 
 
 @api.route('/login', methods=['POST'])
-@api.doc()
+@api.doc(auth=True)
+@auth.login_required()
 def login():
     '''测试登录'''
     return Success(error_code=1, msg='登录成功')

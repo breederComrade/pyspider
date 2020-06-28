@@ -404,11 +404,11 @@ class TestVAlidator(WTForm2):
         # view_args = _request_ctx_stack.top.request.view_args  # path中，获取view中(path路径里)的args
         args = request.args.to_dict()  # query中
         
-        print('data:',data)
+        print('data:',type(data))
         print('args:',args)
         super(TestVAlidator, self).__init__(data=data, **args)
     
-    id = IntegerField(validators=[DataRequired()])
+    id = IntegerField(label='id',validators=[DataRequired()])
     name = StringField(validators=[DataRequired(), ])
     
     # def validate_name(form, field):

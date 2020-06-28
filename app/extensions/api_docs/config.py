@@ -53,7 +53,7 @@ SWAGGER = {
     # },
     "securityDefinitions": {
         "Bearer": {
-            "name": "authorization",
+            "name": "Authorization",
             "in": "header",
             "type": "apiKey",
             "description": "Bearer JWT"
