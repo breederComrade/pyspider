@@ -22,6 +22,7 @@ from app.models.m2m import user_company
 from app.models.order import Order
 from app.models.test import Test
 from app.models.user import User
+from app.validators.forms import TestVAlidator
 
 api = Redprint(name='test', description='测试用', api_doc=api_doc)
 
@@ -133,3 +134,19 @@ def login():
 def register():
     '''测试注册'''
     Success(error_code=1,msg='注册成功')
+
+
+# 测试wtform表单
+@api.route('/c',methods=['POST'])
+@api.doc(args=['name','id'])
+def test_form():
+    '''表单验证'''
+    form = TestVAlidator()
+    form.validate_for_api()
+    
+    print(form.id.data)
+    
+    return '验证'
+
+
+

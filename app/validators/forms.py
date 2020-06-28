@@ -5,10 +5,12 @@
 """
 
 from flask import request
+# from flask_wtf import FlaskForm
 from wtforms import BooleanField, StringField, IntegerField, PasswordField, FileField, FieldList
 from wtforms.validators import DataRequired, ValidationError, length, Email, Regexp, EqualTo, Optional, \
-    NumberRange
+    NumberRange, InputRequired
 
+from app.core.error import ParameterException
 from app.libs.enums import ClientTypeEnum
 from app.core.validator import BaseValidator
 
@@ -19,7 +21,7 @@ __author__ = 'Allen7D'
 # id必须为正整数
 class IDMustBePositiveIntValidator(BaseValidator):
     id = IntegerField(validators=[DataRequired()])
-
+    
     def validate_id(self, value):
         id = value.data
         if not self.isPositiveInteger(id):
@@ -30,7 +32,7 @@ class IDMustBePositiveIntValidator(BaseValidator):
 # id必须为非负整数
 class IDMustBeNaturalNumValidator(BaseValidator):
     id = IntegerField(validators=[DataRequired()])
-
+    
     def validate_id(self, value):
         id = value.data
         if not self.isNaturalNumber(id):
@@ -41,7 +43,7 @@ class IDMustBeNaturalNumValidator(BaseValidator):
 # id序列的校验
 class IDCollectionValidator(BaseValidator):
     ids = StringField(validators=[DataRequired()])
-
+    
     def validate_ids(self, value):
         ids = value.data.split(',')
         for id in ids:
@@ -53,10 +55,10 @@ class IDCollectionValidator(BaseValidator):
 class PaginateValidator(BaseValidator):
     page = IntegerField(default=1)  # 当前页
     size = IntegerField(NumberRange(min=1, max=100), default=10)  # 每页条目个数
-
+    
     def validate_page(self, value):
         self.page.data = int(value.data)
-
+    
     def validate_size(self, value):
         self.size.data = int(value.data)
 
@@ -64,10 +66,10 @@ class PaginateValidator(BaseValidator):
 class TimeIntervalValidator(BaseValidator):
     start = IntegerField(validators=[DataRequired(message='开始时间不能为空'), length(min=10, max=10, message='时间戳长度必须为10')])
     end = IntegerField(validators=[DataRequired(message='结束时间不能为空'), length(min=10, max=10, message='时间戳长度必须为10')])
-
+    
     def validate_start(self, value):
         self.start.data = int(value.data)
-
+    
     def validate_end(self, value):
         self.end.data = int(value.data)
 
@@ -78,7 +80,7 @@ class ClientValidator(BaseValidator):
                                       length(min=4, max=32)])
     secret = StringField()
     type = IntegerField(validators=[DataRequired()])
-
+    
     def validate_type(self, value):
         try:
             client = ClientTypeEnum(value.data)
@@ -131,7 +133,7 @@ class UserEmailValidator(ClientValidator):
 
 class UpdateUserValidator(BaseValidator):
     username = StringField(validators=[length(min=2, max=10, message='用户名长度必须在2~10之间'), Optional()])
-
+    
     email = StringField(validators=[Email(message='无效email'), Optional()])
     mobile = StringField(validators=[
         length(min=11, max=11, message='手机号为11个数字'),
@@ -158,7 +160,7 @@ class UpdateAvatarValidator(BaseValidator):
 class CreateAdminValidator(CreatePasswordValidator):
     nickname = StringField(validators=[DataRequired(message='用户名不可为空'),
                                        length(min=2, max=10, message='用户名长度必须在2~10之间')])
-
+    
     group_id = IntegerField('分组id', validators=[
         DataRequired(message='请输入分组id'),
         NumberRange(message='分组id必须大于0', min=1)
@@ -217,7 +219,7 @@ class CreateOrUpdateAddressValidator(BaseValidator):
 ########## 商品相关 ##########
 class CountValidator(BaseValidator):
     count = IntegerField(default='15')  # 默认为15，可以省略 DataRequired()
-
+    
     def validate_count(self, value):
         count = value.data
         if not self.isPositiveInteger(count) or not (1 <= int(count) <= 15):
@@ -227,7 +229,7 @@ class CountValidator(BaseValidator):
 
 class CategoryIDValidator(BaseValidator):
     category_id = IntegerField(validators=[DataRequired()])
-
+    
     def validate_category_id(self, value):
         id = value.data
         if not self.isPositiveInteger(id):
@@ -238,13 +240,13 @@ class CategoryIDValidator(BaseValidator):
 class ReorderValidator(BaseValidator):
     src_order = IntegerField(validators=[DataRequired()])
     dest_order = IntegerField(validators=[DataRequired()])
-
+    
     def validate_src_order(self, value):
         id = value.data
         if not self.isPositiveInteger(id):
             raise ValidationError(message='ID 必须为正整数')
         self.src_order.data = int(id)
-
+    
     def validate_dest_order(self, value):
         id = value.data
         if not self.isPositiveInteger(id):
@@ -255,7 +257,7 @@ class ReorderValidator(BaseValidator):
 ########## 订单相关 ##########
 class OrderPlaceValidator(BaseValidator):
     products = StringField()
-
+    
     def validate_products(self, value):
         '''
         数据格式: [{'product_id': 1, 'count': 10}, ...]
@@ -269,13 +271,13 @@ class OrderPlaceValidator(BaseValidator):
             if not self.isPositiveInteger(product['product_id']) \
                     or not self.isPositiveInteger(product['count']):
                 raise ValidationError(message='商品列表参数错误')
-
+        
         self.products.data = products
 
 
 class OrderIDValidator(BaseValidator):
     order_id = IntegerField(validators=[DataRequired()])
-
+    
     def validate_order_id(self, value):
         id = value.data
         if not self.isPositiveInteger(id):
@@ -288,7 +290,7 @@ class OrderIDValidator(BaseValidator):
 class UploadFileValidator(BaseValidator):
     # ref==> https://wtforms.readthedocs.io/en/latest/fields.html
     file = FileField()
-
+    
     def validate_file(self, value):
         self.file.data = request.files[value.name]
 
@@ -303,7 +305,7 @@ class FileParentIDValidator(BaseValidator):
     parent_id = IntegerField('父级目录ID', validators=[
         NumberRange(message='id必须非负', min=0)
     ], default=0)
-
+    
     def validate_parent_id(self, value):
         id = value.data
         if not self.isNaturalNumber(id):
@@ -313,7 +315,7 @@ class FileParentIDValidator(BaseValidator):
 
 class FileIDValidator(BaseValidator):
     file_id = IntegerField(validators=[DataRequired()])
-
+    
     def validate_order_id(self, value):
         id = value.data
         if not self.isPositiveInteger(id):
@@ -392,3 +394,29 @@ class ArticleValidator(BaseValidator):
     img = StringField()
     theme = IntegerField()
     views = IntegerField()
+
+
+# 测试验证
+from wtforms import Form as WTForm2
+class TestVAlidator(WTForm2):
+    def __init__(self):
+        data = request.get_json(silent=True)  # body中
+        # view_args = _request_ctx_stack.top.request.view_args  # path中，获取view中(path路径里)的args
+        args = request.args.to_dict()  # query中
+        
+        print('data:',data)
+        print('args:',args)
+        super(TestVAlidator, self).__init__(data=data, **args)
+    
+    id = IntegerField(validators=[DataRequired()])
+    name = StringField(validators=[DataRequired(), ])
+    
+    # def validate_name(form, field):
+    #     if len(field.data) < 50:
+    #         raise ValidationError('Name must be less than 50 characters')
+
+    def validate_for_api(self):
+        valid = super(TestVAlidator, self).validate()
+        if not valid:
+            raise ParameterException(msg=self.errors)
+        return self
