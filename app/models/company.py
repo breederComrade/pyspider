@@ -13,15 +13,10 @@ from app.core.db import EntityModel as Base, db
 
 
 class Company(Base):
-    __tablename__ ='company'
+    __tablename__ = 'company'
     id = Column(Integer, primary_key=True, autoincrement=True)
     nickname = Column(String(24), comment='昵称')
     avatar = Column(String(123), comment='头像')
     mobile = Column(String(24), comment='手机号')
-    # admin = Column(String(24),comment='管理员id')
-    # 关联用户 企业成员
-    # users = relationship('User',backref = backref('company',lazy='dynamic'))
-    # customer = relationship('Customer',backref='customer.id')
-    # # 管理员
-    # admins = relationship('User',backref=backref('company_admin',lazy = 'dynamic'))
-
+    # 关联角色表 一个企业多个角色 一对多
+    role = relationship('Role', backref=backref('role'))

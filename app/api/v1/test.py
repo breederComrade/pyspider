@@ -20,6 +20,8 @@ from app.models.customer import Customer
 # from app.models.m2m import user_company
 from app.models.m2m import user_company
 from app.models.order import Order
+from app.models.permission import Permission
+from app.models.role import Role
 from app.models.test import Test
 from app.models.user import User
 from app.validators.forms import TestVAlidator
@@ -30,6 +32,10 @@ api = Redprint(name='test', description='测试用', api_doc=api_doc)
 @api.route('', methods=['GET'])
 @api.doc(args=['g.query.id'])
 def get():
+    
+    perm = Permission.get(1)
+    role = Role.get(1)
+    
     '''获取'''
     # 正向 一查多 通过用户查找该用户所属客户
     id = request.args.get('id')

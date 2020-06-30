@@ -25,6 +25,9 @@ formatter = logging.Formatter('%(levelname)s %(filename)s :%(lineno)d %(message)
 file_log_handler.setFormatter(formatter)
 logging.getLogger().addHandler(file_log_handler)
 
+
+
+
 def create_app():
     # app.app
     app = Flask(__name__, static_folder="./static", template_folder="./templates")
@@ -136,9 +139,9 @@ def connect_db(app):
     # 迁移数据库≤
     migrate = Migrate(app,db)
     migrate.init_app(app)
-    # #  初始化使用
-    with app.app_context():  # 手动将app推入栈
-        db.create_all()  # 首次模型映射(ORM ==> SQL),若无则建表
+    # # #  初始化使用
+    # with app.app_context():  # 手动将app推入栈
+    #     db.create_all()  # 首次模型映射(ORM ==> SQL),若无则建表
 
 
 # 绑定错误

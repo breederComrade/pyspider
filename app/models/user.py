@@ -32,15 +32,17 @@ class User(Base):
     # 一对多 客户信息
     customer = relationship('Customer', backref=backref('user'))
     
-    # 对多对 所属企业
+    # 对多对 所属企业/组织
     company = relationship('Company', secondary='user_company', backref=backref('user', lazy='dynamic'))
     
-    # 订单
-    # order = relationship('Order', backref=backref('user'))
-    # 所属公司
-    # company_id = Column(Integer, ForeignKey('company.id'), nullable=False, comment='外键公司id')  # 下单用户ID
-    # 管理员id
-    # company_admin_id = Column(Integer, ForeignKey('company.id'), nullable=False, comment='外键公司管理员id')  # 下单用户ID
+    # 多对多 角色
+    role = relationship('Role', secondary='user_role', backref=backref('user', lazy='dynamic'))
+    
+    # 多对多 用户组
+    role = relationship('Role', secondary='user_group', backref=backref('user', lazy='dynamic'))
+    
+    # 关联权限表
+    permission = relationship('Permission', secondary='user_permisson', backref=backref('user', lazy='dynamic'))
     
     def __repr__(self):
         return 'id:{} ====  账号:{}====昵称:{}'.format(self.id, self.account, self.nickname)

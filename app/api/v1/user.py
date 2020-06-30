@@ -116,3 +116,6 @@ def update_avatar():
 def unbind():
     '''解绑账号'''
     return '解绑帐号'
+
+
+

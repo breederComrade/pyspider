@@ -41,7 +41,6 @@ user_company = db.Table(
     'user_company',
     Column('user_id', Integer, ForeignKey('user.id'), primary_key=True, comment='用户外键'),
     Column('company_id', Integer, ForeignKey('company.id'), primary_key=True, comment='企业外键'),
-    Column('fuck', Integer, comment='ces ')
 )
 
 # 用户组表
@@ -58,16 +57,23 @@ user_role = db.Table(
     Column('role_id', Integer, ForeignKey('role.id'), primary_key=True, comment='角色外键')
 )
 
-# 用户权限表
-user_role = db.Table(
-    'user_role',
-    Column('user_id', Integer, ForeignKey('user.id'), primary_key=True, comment='用户外键'),
-    Column('role_id', Integer, ForeignKey('role.id'), primary_key=True, comment='角色外键')
-)
 # 组权限表
-group_power = db.Table(
-    'user_role',
+group_permission = db.Table(
+    'group_permission',
     Column('group_id', Integer, ForeignKey('group.id'), primary_key=True, comment='组外键'),
-    Column('power_id', Integer, ForeignKey('power.id'), primary_key=True, comment='权限外键')
+    Column('permission_id', Integer, ForeignKey('permission.id'), primary_key=True, comment='权限外键')
 )
-#
+# 角色权限表
+role_permission = db.Table(
+    'role_permission',
+    Column('role_id', Integer, ForeignKey('role.id'), primary_key=True, comment='角色外键'),
+    Column('permission_id', Integer, ForeignKey('permission.id'), primary_key=True, comment='权限外键')
+)
+
+
+# 用户权限表
+user_permission = db.Table(
+    'user_permission',
+    Column('user_id', Integer, ForeignKey('user.id'), primary_key=True, comment='角色外键'),
+    Column('permission_id', Integer, ForeignKey('permission.id'), primary_key=True, comment='权限外键')
+)

@@ -18,4 +18,6 @@ class Group(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(60), unique=True, comment='权限组名称')
     info = Column(String(255), comment='权限组描述')
-    user = relationship('Uer', second='user_group', backref=backref('user', lazy='dynamic'))
+    user = relationship('Uer', secondary='user_group', backref=backref('user', lazy='dynamic'))
+    # 关联权限表
+    permission = relationship('Permission',secondary = 'user_permisson',backref=backref('user',lazy = 'dynamic'))
