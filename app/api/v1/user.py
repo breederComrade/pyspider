@@ -49,21 +49,13 @@ def user_list():
 
 # post
 # 创建用户
-@api.route('/create', methods=['POST'])
+@api.route('', methods=['POST'])
 @api.doc(args=['g.body.username', 'g.body.email', 'g.body.mobile', 'g.body.nickname', 'g.body.password',
                'g.body.confirm_password'])
 def create_user():
     '''创建用户'''
-    # 验证用户数据
-    # 通过自定义的验证器验证用户输入数据
-    # baseValvidator 继承form form会把request的josn和args对象作为验证器来保存到_field内
-    # 通过验证则会使用_data函数生成一个nameTuple 命名元祖
-    # nameTuple = nameTuple('name',['age','aliz'...]
-    # f = nameTuple(11,12..)
-    # f.age ===> 11
-    # f.aliz ===>12
-    # ...
-    
+    # 验证数据是否正确 通过wtform
+    #
     form = CreateUserValidator().nt_data
     # 验证完成后调用Dao操作创建用户
     UserDao.create_user(form)

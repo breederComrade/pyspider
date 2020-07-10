@@ -18,7 +18,7 @@ class Role(Base):
     company_id  = Column(Integer, ForeignKey('company.id'), comment='所属公司')
     
     # 关联权限表
-    permission = relationship('Permission',secondary = 'role_permisson',backref=backref('role',lazy = 'dynamic'))
+    permission = relationship('Permission',secondary = 'role_permission',backref=backref('role',lazy = 'dynamic'))
     
     def __repr__(self):
         return '角色：{}'.format(self.name)

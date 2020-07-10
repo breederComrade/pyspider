@@ -21,16 +21,10 @@ class UserDao():
     @staticmethod
     def reset_password(uid,password):
         pass
-    # 站内注册
-    @staticmethod
-    def create_user(form):
-        pass
-    
     # 小程序注册
     @staticmethod
     def register_by_wx_mina(openid:str):
         pass
-    
     
     # 微信第三方注册
     @staticmethod
@@ -70,12 +64,7 @@ class UserDao():
     def change_group(uid, group_id):
         pass
     
-    
-    
-    
-    
-    
-    # 创建
+    # 创建/注册用户
     @staticmethod
     def create_user(form):
         # 主动提交
@@ -104,6 +93,8 @@ class UserDao():
                 Identity.abort_repeat(identifier=form.email, msg='邮箱已被使用，请重新输入新的邮箱号')
                 Identity.create(commit=False, user_id=user.id, type=ClientTypeEnum.EMAIL.value,
                                 identifier=form.email, password=form.password)
-      #   修改密码
-      
-      
+
+
+# 修改密码
+def update_password():
+    pass

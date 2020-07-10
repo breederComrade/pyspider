@@ -26,8 +26,6 @@ file_log_handler.setFormatter(formatter)
 logging.getLogger().addHandler(file_log_handler)
 
 
-
-
 def create_app():
     # app.app
     app = Flask(__name__, static_folder="./static", template_folder="./templates")
@@ -115,16 +113,24 @@ def mount_route_meta_to_endpoint(app):
 
 def register_plugin(app):
     apply_json_encoder(app)  # JSON序列化
-    # apply_cors(app)  # 应用跨域扩展，使项目支持请求跨域
+    apply_cors(app)  # 应用跨域扩展，使项目支持请求跨域
     connect_db(app)  # 连接数据库
     handle_error(app)  # 统一处理异常
-
+    
     if app.config['DEBUG']:
         # Debug模式(以下为非必选应用，且用户不可见)
         apply_default_view(app)  # 应用默认路由
         apply_orm_admin(app)  # 应用flask-admin, 可以进行简易的 ORM 管理
         apply_request_log(app)  # 打印请求日志
         apply_swagger(app)  # 应用flassger, 可以查阅Swagger风格的 API文档
+
+
+# 跨域处理
+def apply_cors(app):
+    from flask_cors import CORS
+    cors = CORS()
+    #
+    cors.init_app(app, resources={"/*": {"origins": "*"}})
 
 
 # 替换flask原序列化
@@ -137,7 +143,7 @@ def apply_json_encoder(app):
 def connect_db(app):
     db.init_app(app)
     # 迁移数据库≤
-    migrate = Migrate(app,db)
+    migrate = Migrate(app, db)
     migrate.init_app(app)
     # # #  初始化使用
     # with app.app_context():  # 手动将app推入栈
@@ -186,8 +192,6 @@ def apply_default_view(app):
 # admin
 def apply_orm_admin(app):
     pass
-
-
 
 
 # 打印日志
