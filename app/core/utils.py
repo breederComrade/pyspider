@@ -6,7 +6,7 @@
 
 
 
-from json import dumps
+from flask.json import dumps
 
 from flask import current_app
 
@@ -25,6 +25,10 @@ def jsonify(*args, **kwargs):
         data = args[0]
     else:
         data = args or kwargs
+        
+    print(type(data))
+    print( dumps(data))
+    
     return current_app.response_class(
         dumps(data, indent=indent, separators=separators) + '\n',
         mimetype=current_app.config['JSONIFY_MIMETYPE']

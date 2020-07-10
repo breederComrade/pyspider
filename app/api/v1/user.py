@@ -7,7 +7,9 @@
   
 """
 #
-from flask import g
+from json import dump
+
+from flask import g, request, json
 
 from app.core.error import Success
 from app.core.token_auth import auth
@@ -23,13 +25,21 @@ api = Redprint(name='user', description='用户', api_doc=api_doc)
 #
 @api.route('', methods=['GET'])
 @api.doc(args=['g.query.id'])
-@auth.login_required
+# @auth.login_required
 def get_user():
     '''查询单个用户信息'''
     # get是我们自定义的方法本意是调用了fliterby
-    user = User.get(id=g.user.id)
-    
-    return Success()
+    user = User.query.get(2)
+    print(user.permission)
+    return Success(user)
+
+# id = request.args.get('id')
+    # print(id)
+    # user = User.get(id=id)
+    # user2 = User.get_or_404(id=id)
+    # print('user',type(user))
+    # print('user',type(user2))
+    # return Success(data=user,error_code=1)
 
 
 # 更改密码

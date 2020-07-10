@@ -32,16 +32,11 @@ api = Redprint(name='test', description='测试用', api_doc=api_doc)
 @api.route('', methods=['GET'])
 @api.doc(args=['g.query.id'])
 def get():
-    
-    perm = Permission.get(1)
-    role = Role.get(1)
-    
-    '''获取'''
-    # 正向 一查多 通过用户查找该用户所属客户
     id = request.args.get('id')
-    user = User.get_or_404(id=id).customer
-    # 反向 多查一
-    customer = Customer.get_or_404(id=3)
+    user = User.get_or_404(id=id)
+    print('user',user)
+    return Success(user)
+ 
 
 
 @api.route('/m2m', methods=['GET'])
