@@ -43,8 +43,8 @@ class User(Base):
     # 关联权限表
     permission = relationship('Permission', secondary='user_permission', backref=backref('user_p', lazy='dynamic'))
     
-    # def __repr__(self):
-    #     return 'id:{} ====  账号:{}====昵称:{}'.format(self.id, self.account, self.nickname)
+    def __repr__(self):
+        return 'id:{} ====  账号:{}====昵称:{}'.format(self.id, self.account, self.nickname)
     
     # 序列化返回数据
     def keys(self):
