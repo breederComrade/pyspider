@@ -30,7 +30,6 @@ def get_user():
     '''查询单个用户信息'''
     # get是我们自定义的方法本意是调用了fliterby
     user = User.query.get(2)
-    print(user.permission)
     return Success(user)
 
 # id = request.args.get('id')

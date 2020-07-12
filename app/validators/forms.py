@@ -6,7 +6,7 @@
 
 from flask import request
 # from flask_wtf import FlaskForm
-from wtforms import BooleanField, StringField, IntegerField, PasswordField, FileField, FieldList
+from wtforms import BooleanField, StringField, IntegerField, PasswordField, FileField, FieldList, Form, FormField
 from wtforms.validators import DataRequired, ValidationError, length, Email, Regexp, EqualTo, Optional, \
     NumberRange, InputRequired
 
@@ -72,6 +72,10 @@ class TimeIntervalValidator(BaseValidator):
     
     def validate_end(self, value):
         self.end.data = int(value.data)
+
+
+class RemarkValidator(BaseValidator):
+    remark = StringField()
 
 
 ########## 登录相关 ##########
@@ -237,6 +241,39 @@ class CategoryIDValidator(BaseValidator):
         self.category_id.data = int(id)
 
 
+# 排序
+class ReorderValidator(BaseValidator):
+    src_order = IntegerField('原先的顺序', validators=[DataRequired()])
+    dest_order = IntegerField('目标的顺序', validators=[DataRequired()])
+    
+    def validate_src_order(self, value):
+        id = value.data
+        if not self.isPositiveInteger(id):
+            raise ValidationError(message='ID 必须为正整数')
+        self.src_order.data = int(id)
+    
+    def validate_dest_order(self, value):
+        id = value.data
+        if not self.isPositiveInteger(id):
+            raise ValidationError(message='ID 必须为正整数')
+        self.dest_order.data = int(id)
+
+
+class ProductImages(Form):
+    filename = StringField()
+    filepath = StringField()
+    fileUrl = StringField()
+
+
+#  新增商品验证
+class CreateProductValidator(RemarkValidator, BaseValidator):
+    #     货品的验证字段
+    name = StringField()
+    price = IntegerField()
+    stocknum = IntegerField()
+   
+
+
 class ReorderValidator(BaseValidator):
     src_order = IntegerField(validators=[DataRequired()])
     dest_order = IntegerField(validators=[DataRequired()])
@@ -398,23 +435,25 @@ class ArticleValidator(BaseValidator):
 
 # 测试验证
 from wtforms import Form as WTForm2
+
+
 class TestVAlidator(WTForm2):
     def __init__(self):
         data = request.get_json(silent=True)  # body中
         # view_args = _request_ctx_stack.top.request.view_args  # path中，获取view中(path路径里)的args
         args = request.args.to_dict()  # query中
         
-        print('data:',type(data))
-        print('args:',args)
+        print('data:', type(data))
+        print('args:', args)
         super(TestVAlidator, self).__init__(data=data, **args)
     
-    id = IntegerField(label='id',validators=[DataRequired()])
+    id = IntegerField(label='id', validators=[DataRequired()])
     name = StringField(validators=[DataRequired(), ])
     
     # def validate_name(form, field):
     #     if len(field.data) < 50:
     #         raise ValidationError('Name must be less than 50 characters')
-
+    
     def validate_for_api(self):
         valid = super(TestVAlidator, self).validate()
         if not valid:

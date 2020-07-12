@@ -13,9 +13,7 @@ order_id_in_query = IntegerQueryFiled(name='id', description='订单id')
 order_id_in_body = BodyField(name='id', type='integer', description='订单id')
 order_code = BodyField(name='code', type='string', description='订单编码')
 
-order_product = BodyField(name='productArr', type='array', description='订单货品', default={
-
-})
+order_product = BodyField(name='productArr', type='array', description='订单货品', default={})
 
 order_status_id = BodyField(name='status_id', type='integer', description='订单状态')
 

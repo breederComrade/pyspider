@@ -155,9 +155,12 @@ class CRUDMixin(object):
     def create(cls, commit: bool = True, **kwargs):
         '''新增'''
         instance = cls()
+        # 遍历所有的表单字段的字与属性
         for attr, value in kwargs.items():
+            # 如果指定的值在model有 那么久赋值
             if hasattr(instance, attr):
                 setattr(instance, attr, value)
+        #         最好将值保存
         return instance.save(commit)
 
     def update(self, commit: bool = True, **kwargs):
