@@ -57,7 +57,12 @@ def get():
 @api.doc(args=['product_id', 'name', 'price', 'stocknum', 'remark'])
 def update():
     '''修改商品'''
-    return '修改商品'
+    # 验证表单
+    form = CreateProductValidator().nt_data
+    # 操作更新
+    ProductDao.update_product(form)
+    
+    return Success(error_code=1)
 
 
 @api.route('/list', methods=['GET'])
