@@ -55,6 +55,8 @@ class ProductDao(object):
         # 3.判断是否是激活的 默认激活
         #  获取数据
         #  分页数据
+        pass
+        
     
     
     # 查询某类别商品列表
