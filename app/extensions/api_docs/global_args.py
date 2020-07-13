@@ -72,7 +72,7 @@ product_id_in_body = BodyField(
     name='product_id', type='integer', description="商品ID")
 
 # 是否停用
-status_id_in_body  = BodyField(name='active',type='boolean',description='是否启用')
+status_in_body = BodyField(name='active',type='boolean',description='是否启用')
 
 # 重新排序
 src_order_in_body = BodyField(

@@ -20,7 +20,7 @@ api = Redprint(name='product', description='商品', api_doc=api_doc)
 
 
 @api.route('', methods=['POST'])
-@api.doc(args=['name', 'price', 'stocknum', 'remark', ],auth=True)
+@api.doc(args=['name', 'price', 'stocknum', 'remark', ], auth=True)
 @auth.login_required
 def create():
     '''创建商品'''
@@ -68,18 +68,18 @@ def update():
 @api.route('/list', methods=['GET'])
 # 参数分类id 是否停用 创建日期
 # TODO：热销--滞销
-@api.doc(args=['category_id','g.body.status','g.body.create_date'])
-@auth.login_requireds
+@api.doc(args=['category_id', 'g.body.status', 'g.body.start','g.body.end','g.body.p'], auth=True)
+@auth.login_required
 def list():
     '''查询所有「商品信息」'''
-    # 获取分类下的商品
-    # 获取用户所属商品列表
-   # 分页
-    # 更新货品
     # 1.验证表单
+    #  验证实付激活
+    #  验证分类id
+    #  默认是当前用户的
+    #  创建时间
     form = ListProductValidator().nt_data
     # 2.查询
-    product = ProductDao.get_product_list(form);
+    product = ProductDao.get_product_list(form)
     return Success(product)
 
 

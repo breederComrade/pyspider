@@ -50,7 +50,11 @@ class ProductDao(object):
     
     @staticmethod
     def get_product_list(form):
-        pass
+        # 1.判断是否传入分类id
+        # 2.判断实付查看创建时间
+        # 3.判断是否是激活的 默认激活
+        #  获取数据
+        #  分页数据
     
     
     # 查询某类别商品列表
