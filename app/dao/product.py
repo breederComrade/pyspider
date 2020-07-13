@@ -48,6 +48,11 @@ class ProductDao(object):
         product = Product.get_or_404(id=id)
         return product.hide('category_id')
     
+    @staticmethod
+    def get_product_list(form):
+        pass
+    
+    
     # 查询某类别商品列表
     @staticmethod
     def get_list_by_category(c_id, page, size):

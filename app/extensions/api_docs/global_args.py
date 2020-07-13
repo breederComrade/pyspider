@@ -18,6 +18,18 @@ id_in_body = BodyField(name='id', type='integer', description='id')
 id_in_query = IntegerQueryFiled(name='id',description='id')
 name_in_body = BodyField(name='id', type='string', description='名称')
 
+date_time_in_body = BodyField(name='dateTime',type='string',description='时间')
+# 创建日期
+create_date_in_body = BodyField(name='createDate',type='string',description='创建日期时间')
+# 修改时间
+update_date_in_body = BodyField(name='updateDateTime',type='string',description='修改日期时间')
+# 删除时间
+delete_date_in_body = BodyField(name='deleteDateTime',type='string',description='删除日期时间')
+
+#
+
+
+
 # Token登录相关
 token_in_body = BodyField(name='token', type='string', description='Token', enum=[
     'eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4NjM2ODEzMCwiZXhwIjoxNTg4OTYwMTMwfQ.eyJ1aWQiOjEsInR5cGUiOjEwMCwic2NvcGUiOiLns7vnu5_nrqHnkIblkZgifQ.ovFuc5Ti5zGm5B7JS7AGOBBmrYHGCRsVk9OFAWb88LhY7v9Ubw4c_3xGik7K8Emd6_fz4Ho6Hk3GI1_fjcSIww'])
@@ -35,6 +47,16 @@ start = IntegerQueryFiled(name='start', description="开始时间(时间戳)",
 end = IntegerQueryFiled(name='end', description="结束时间(时间戳)",
                         enum=[1588135000, 1588136000, 1588137000, 1588138000, 1588139000, ])
 
+# 开始时间
+start_in_body = BodyField(name='start',type='integer',description='开始时间')
+# 结束时间
+end_in_body = BodyField(name='end',type='integer',description='结束时间')
+
+
+
+
+
+
 uid_in_path = IntegerPathFiled(
     name='uid', description="用户ID", enum=[1, 2, 3, 4, 5, 10, 100], default=1, required=True)
 uid_in_query = IntegerQueryFiled(
@@ -48,6 +70,9 @@ product_id_in_query = IntegerQueryFiled(
     name='product_id', description="商品ID", required=True)
 product_id_in_body = BodyField(
     name='product_id', type='integer', description="商品ID")
+
+# 是否停用
+status_id_in_body  = BodyField(name='active',type='boolean',description='是否启用')
 
 # 重新排序
 src_order_in_body = BodyField(

@@ -14,7 +14,7 @@ from app.dao.product import ProductDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import product as api_doc
 from app.models.product import Product
-from app.validators.forms import CreateProductValidator
+from app.validators.forms import CreateProductValidator, ListProductValidator
 
 api = Redprint(name='product', description='商品', api_doc=api_doc)
 
@@ -66,12 +66,21 @@ def update():
 
 
 @api.route('/list', methods=['GET'])
-@api.doc()
+# 参数分类id 是否停用 创建日期
+# TODO：热销--滞销
+@api.doc(args=['category_id','g.body.status','g.body.create_date'])
+@auth.login_requireds
 def list():
     '''查询所有「商品信息」'''
-    customer_list = Product.query.filter_by(user_id=g.user.id).all_by_wrap()
-    
-    return Success(customer_list)
+    # 获取分类下的商品
+    # 获取用户所属商品列表
+   # 分页
+    # 更新货品
+    # 1.验证表单
+    form = ListProductValidator().nt_data
+    # 2.查询
+    product = ProductDao.get_product_list(form);
+    return Success(product)
 
 
 @api.route('/product_category', methods=['GET'])

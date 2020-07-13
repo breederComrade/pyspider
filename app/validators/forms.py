@@ -271,9 +271,20 @@ class CreateProductValidator(RemarkValidator, BaseValidator):
     name = StringField()
     price = IntegerField()
     stocknum = IntegerField()
-   
 
-
+#  验证列表商品
+class ListProductValidator(BaseValidator):
+    # 状态验证
+    status = BooleanField()
+    # 分类id
+    category_id = IntegerField()
+    # 创建时间
+    createTime = StringField()
+    #
+    
+    
+    
+    
 class ReorderValidator(BaseValidator):
     src_order = IntegerField(validators=[DataRequired()])
     dest_order = IntegerField(validators=[DataRequired()])
