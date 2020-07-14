@@ -8,7 +8,7 @@
 """
 from app.core.swagger_filed import IntegerQueryFiled, IntegerPathFiled, \
     StringPathFiled, StringQueryFiled, ArrayQueryField, \
-    BodyField
+    BodyField, BooleanQueryFiled
 
 # test
 test_in_body = BodyField(name='test', type='string', description='test', enum=['t', 'v'])
@@ -38,8 +38,8 @@ secret_in_body = BodyField(name='secret', type='string', description='密码', e
 type_in_body = BodyField(name='type', type='integer', description='登录方式', enum=[ 100,101])
 
 # 分页相关
-page = IntegerQueryFiled(name='page', description="第几页", enum=[1, 2, 3, 4, 5], default=1)
-size = IntegerQueryFiled(name='size', description="每页大小", enum=[10, 20, 30, 40, 50, 100], default=10)
+page = IntegerQueryFiled(name='page', description="第几页",default=1)
+size = IntegerQueryFiled(name='size', description="每页大小",  default=20)
 
 pageIndex = BodyField(name='pageIndex', description='第几页', type='integer',default=1)
 pageSize = BodyField(name='pageSize',description='每页条数', type='integer',default=20)
@@ -74,10 +74,13 @@ product_id_in_query = IntegerQueryFiled(
 product_id_in_body = BodyField(
     name='product_id', type='integer', description="商品ID")
 
+
 # 是否停用
 status_in_body = BodyField(name='active',type='boolean',description='是否启用')
+status_in_query = BooleanQueryFiled(name='status',description='是否启用',default=True,enum=[True,False])
 
 # 重新排序
+
 src_order_in_body = BodyField(
     name='src_order', type='integer', description="原顺序", enum=[1, 2, 3, 4, 5, 10, 15, 20])
 dest_order_in_body = BodyField(

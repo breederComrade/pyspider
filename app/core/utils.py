@@ -47,6 +47,32 @@ def paginate():
     
     return page, size
 
+def pageinateByBody():
+    '''从body数据中获取查询分页参数
+    :return : pageIndex 第几页; PageSize 每页显示数据规模
+    '''
+    from app.validators.forms import  PaginateValidatorByBody
+    # 验证数据
+    #
+    validator = PaginateValidatorByBody().dt_data
+    page_default = current_app.config.get('PAGE_DEFAULT')
+    size_default = current_app.config.get('SIZE_DEFAULT')
+    
+    pageIndex = validator.get('pageIndex',page_default if page_default else 1)
+    pageSize = validator.get('pageSize',size_default if size_default else 20)
+    
+    return pageIndex,pageSize
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 
 def time_interval():
     '''

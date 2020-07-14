@@ -61,6 +61,19 @@ class PaginateValidator(BaseValidator):
     
     def validate_size(self, value):
         self.size.data = int(value.data)
+        
+        
+class PaginateValidatorByBody(BaseValidator):
+    pageIndex = IntegerField(default=1)  # 当前页
+    pageSize = IntegerField(NumberRange(min=1, max=1000), default=20)  # 每页条目个数
+    
+    def validate_page(self, value):
+        self.pageIndex.data = int(value.data)
+    
+    def validate_size(self, value):
+        self.pageSize.data = int(value.data)
+        
+        
 
 
 class TimeIntervalValidator(BaseValidator):
@@ -275,7 +288,7 @@ class CreateProductValidator(RemarkValidator, BaseValidator):
 
 
 #  验证列表商品
-class ListProductValidator(TimeIntervalValidator,BaseValidator):
+class ListProductValidator(BaseValidator):
     # 状态验证
     status = BooleanField()
     # 分类id
