@@ -10,6 +10,7 @@ from flask import g, request
 
 from app.core.error import Success, NotFound
 from app.core.token_auth import auth
+from app.core.utils import paginate
 from app.dao.product import ProductDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import product as api_doc
@@ -68,7 +69,7 @@ def update():
 @api.route('/list', methods=['GET'])
 # 参数分类id 是否停用 创建日期
 # TODO：热销--滞销
-@api.doc(args=['category_id', 'g.body.status', 'g.body.start','g.body.end','g.body.p'], auth=True)
+@api.doc(args=['category_id', 'g.body.status', 'g.body.start', 'g.body.end','g.body.page','g.body.page','g.body.size'], auth=True)
 @auth.login_required
 def list():
     '''查询所有「商品信息」'''
@@ -77,7 +78,11 @@ def list():
     #  验证分类id
     #  默认是当前用户的
     #  创建时间
-    form = ListProductValidator().nt_data
+    # 创建分页
+    # pageinate函数通过验证request内的page size设置页码和数量
+    page, size = paginate()
+    
+    #
     # 2.查询
     product = ProductDao.get_product_list(form)
     return Success(product)

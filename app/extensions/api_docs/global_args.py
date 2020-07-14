@@ -41,6 +41,9 @@ type_in_body = BodyField(name='type', type='integer', description='登录方式'
 page = IntegerQueryFiled(name='page', description="第几页", enum=[1, 2, 3, 4, 5], default=1)
 size = IntegerQueryFiled(name='size', description="每页大小", enum=[10, 20, 30, 40, 50, 100], default=10)
 
+
+
+
 # 时间区间
 start = IntegerQueryFiled(name='start', description="开始时间(时间戳)",
                           enum=[1588130000, 1588131000, 1588132000, 1588133000, 1588134000, ])
