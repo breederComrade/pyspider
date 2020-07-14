@@ -69,7 +69,7 @@ def update():
 @api.route('/list', methods=['GET'])
 # 参数分类id 是否停用 创建日期
 # TODO：热销--滞销
-@api.doc(args=['category_id', 'g.body.status', 'g.body.start', 'g.body.end','g.body.page','g.body.page','g.body.size'], auth=True)
+@api.doc(args=['category_id', 'g.body.status', 'g.body.start','g.body.end','g.pageIndex','g.pageSize'], auth=True)
 @auth.login_required
 def list():
     '''查询所有「商品信息」'''
