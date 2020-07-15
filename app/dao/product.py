@@ -6,8 +6,10 @@
   description:  商品操作Dao
   
 """
+from flask import g
 from sqlalchemy import desc
 from app.core.db import db
+from app.core.error import Success
 from app.models.product import Product
 
 
@@ -49,30 +51,17 @@ class ProductDao(object):
         return product.hide('category_id')
     
     @staticmethod
-    def get_product_list(caretorid,createTime,actives):
-        # 1.判断是否传入分类id
-        # 2.判断实付查看创建时间
-        # 3.判断是否是激活的 默认激活
-        #  获取数据
-        #  分页数据
-        #
-        
-        
-        products = Product.query.filter_by()
-        
-        '''
-          paginator = User.query \
-            .filter_by(**sql_query) \
-            .paginate(page=page, per_page=size, error_out=False)
-        paginator.hide('address')
-        '''
-    
-        pass
-    
-    
-    
-    
-    
+    def get_product_list(categoryid, createTime, actives, page, size):
+        # 分类不存在默认所有
+        sql_query = {
+            "category_id": categoryid
+        } if categoryid else {}
+        paginator = Product.query.filter_by(user_id=g.user.id, **sql_query).paginate(page=page, per_page=size, error_out=False)
+        return {
+            'total': paginator.total,
+            'current_page': paginator.page,
+            'items': paginator.items
+        }
     
     # 查询某类别商品列表
     @staticmethod

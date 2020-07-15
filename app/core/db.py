@@ -311,5 +311,5 @@ class EntityModel(CRUDMixin, AbortMixin, JSONSerializerMixin, db.Model):
             host_url = request.host_url
             host_url = host_url.split(',')[-1] if ',' in host_url else host_url
             img_url_prefix = host_url + current_app.config['IMG_FOLDER']
-            return img_url_prefix + url
+            return img_url_prefix + url if url else ''
         return url

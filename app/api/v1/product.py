@@ -69,34 +69,16 @@ def update():
 @api.route('/list', methods=['GET'])
 # 参数分类id 是否停用 创建日期
 # TODO：热销--滞销
-@api.doc(args=['category_id', 'g.query.status', 'g.query.start','g.query.end','g.query.page', 'g.query.size',], auth=True)
-# @auth.login_required
+@api.doc(args=['category_id', 'g.query.status', 'g.query.start', 'g.query.end', 'g.query.page', 'g.query.size', ],
+         auth=True)
+@auth.login_required
 def list():
     '''查询所有「商品信息」'''
-    # 1.验证表单
-    #  验证实付激活
-    #  验证分类id
-    #  默认是当前用户的
-    #  创建时间
-    # 创建分页
-    # pageinate函数通过验证request内的page size设置页码和数量
     page, size = paginate()
     start, end = time_interval()
-    validator =  ListProductValidator().dt_data
-    caretoryid = validator.get('caretory_id', None)
+    validator = ListProductValidator().dt_data
+    categoryid = validator.get('category_id', None)
     status = validator.get('status', None)
-    print(status,caretoryid,start,end,page,size)
-    # 2.查询
-    # caretorid,createTime,actives
-    # product = ProductDao.get_product_list(caretorid=form.caretorid,createTime='',actives=form.)
-    return Success()
-
-
-@api.route('/product_category', methods=['GET'])
-@api.doc(args=['g.query.id'])
-def product_by_category():
-    '''查询类别下的产品'''
-    #  1.获取id
-    #  2.查找分类id下的商品
-    #  3.返回商品
-    return Success()
+    # 2.查询 查询符合条件的所有数据列表
+    product = ProductDao.get_product_list(categoryid=categoryid, createTime=start, actives=status,page=page,size=size)
+    return Success(product)

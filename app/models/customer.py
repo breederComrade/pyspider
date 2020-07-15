@@ -6,7 +6,7 @@
 
 # 客户表
 
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey,Boolean
 from sqlalchemy.orm import relationship, backref
 
 from app.core.db import EntityModel as Base, db
@@ -19,6 +19,9 @@ class Customer(Base):
     avatar = Column(String(123), comment='头像')
     mobile = Column(String(24), comment='手机号')
     wechat = Column(String(124), comment='微信号')
+
+    # 状态
+    status = Column(Boolean,default=False, nullable=False, comment='是否启用')
     # 一对多
     user_id = Column(Integer, ForeignKey('user.id'), comment='所属用户')
     

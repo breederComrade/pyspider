@@ -31,6 +31,10 @@ class User(Base):
     order = relationship('Order', backref=backref('user', uselist=False))
     # 一对多 客户信息
     customer = relationship('Customer', backref=backref('user'))
+    
+    # 一对多 货品信息
+    product = relationship('Product',backref = backref('user',))
+    
     # 对多对 所属企业/组织
     company = relationship('Company', secondary='user_company', backref=backref('user', lazy='dynamic'))
     
