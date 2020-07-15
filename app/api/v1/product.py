@@ -80,17 +80,15 @@ def list():
     #  创建时间
     # 创建分页
     # pageinate函数通过验证request内的page size设置页码和数量
-    # page, size = pageinateByBody()
-    # #
-    # print(page,size)
-    #
-    # f =  ListProductValidator().nt_data
+    page, size = paginate()
     start, end = time_interval()
-    # createTime = '222'
-    # print(start,end)
-    actives = False
+    validator =  ListProductValidator().dt_data
+    caretoryid = validator.get('caretory_id', None)
+    status = validator.get('status', None)
+    print(status,caretoryid,start,end,page,size)
     # 2.查询
-    # product = ProductDao.get_product_list(f,createTime,actives)
+    # caretorid,createTime,actives
+    # product = ProductDao.get_product_list(caretorid=form.caretorid,createTime='',actives=form.)
     return Success()
 
 
