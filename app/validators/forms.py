@@ -243,6 +243,15 @@ class CountValidator(BaseValidator):
             raise ValidationError(message='count必须是[1, 15]区间内 的正整数')
         self.count.data = int(count)
 
+class ProductIDValidator(BaseValidator):
+    product_id = IntegerField(validators=[DataRequired()])
+    
+    def validate_category_id(self, value):
+        id = value.data
+        if not self.isPositiveInteger(id):
+            raise ValidationError(message='ID 必须为正整数')
+        self.product_id.data = int(id)
+
 
 class CategoryIDValidator(BaseValidator):
     category_id = IntegerField(validators=[DataRequired()])

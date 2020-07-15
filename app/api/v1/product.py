@@ -15,7 +15,8 @@ from app.dao.product import ProductDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import product as api_doc
 from app.models.product import Product
-from app.validators.forms import CreateProductValidator, ListProductValidator
+from app.validators.forms import CreateProductValidator, ListProductValidator, IDMustBeNaturalNumValidator, \
+    IDMustBePositiveIntValidator, ProductIDValidator
 
 api = Redprint(name='product', description='商品', api_doc=api_doc)
 
@@ -48,11 +49,13 @@ def delete():
 
 
 @api.route('', methods=['GET'])
-@api.doc(args=['g.query.product_id'])
+@api.doc(args=['g.query.product_id'], auth=True)
+@auth.login_required
 def get():
     ''' 获取单个商品 '''
-    return Success()
-
+    id = ProductIDValidator().nt_data.product_id
+    product = Product.query.filter_by(id=id, user_id=g.user.id).first()
+    return Success(product)
 
 @api.route('', methods=['PUT'])
 @api.doc(args=['product_id', 'name', 'price', 'stocknum', 'remark'])
@@ -80,5 +83,5 @@ def list():
     categoryid = validator.get('category_id', None)
     status = validator.get('status', None)
     # 2.查询 查询符合条件的所有数据列表
-    product = ProductDao.get_product_list(categoryid=categoryid, createTime=start, actives=status,page=page,size=size)
+    product = ProductDao.get_product_list(categoryid=categoryid, createTime=start, actives=status, page=page, size=size)
     return Success(product)
