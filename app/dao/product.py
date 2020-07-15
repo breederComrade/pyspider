@@ -28,7 +28,7 @@ class ProductDao(object):
     def update_product(id,**form):
         # 找到货品
         product = Product.get_or_404(id=id,user_id=g.user.id)
-        product.update(**form)
+        product.update(**form) 
     @staticmethod
     def delete_product(id):
         # 获取id 是否存在
