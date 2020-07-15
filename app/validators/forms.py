@@ -251,6 +251,31 @@ class ProductIDValidator(BaseValidator):
         if not self.isPositiveInteger(id):
             raise ValidationError(message='ID 必须为正整数')
         self.product_id.data = int(id)
+        
+
+
+class ProductImages(Form):
+    filename = StringField()
+    filepath = StringField()
+    fileUrl = StringField()
+
+
+#  新增商品验证
+class CreateProductValidator(RemarkValidator, BaseValidator):
+    #     货品的验证字段
+    name = StringField()
+    price = IntegerField()
+    stocknum = IntegerField()
+
+
+
+#  验证列表商品
+class ListProductValidator(BaseValidator):
+    # 状态验证
+    status = BooleanField()
+    # 分类id
+    category_id = IntegerField()
+
 
 
 class CategoryIDValidator(BaseValidator):
@@ -281,28 +306,6 @@ class ReorderValidator(BaseValidator):
         self.dest_order.data = int(id)
 
 
-class ProductImages(Form):
-    filename = StringField()
-    filepath = StringField()
-    fileUrl = StringField()
-
-
-#  新增商品验证
-class CreateProductValidator(RemarkValidator, BaseValidator):
-    #     货品的验证字段
-    name = StringField()
-    price = IntegerField()
-    stocknum = IntegerField()
-
-
-
-#  验证列表商品
-class ListProductValidator(BaseValidator):
-    # 状态验证
-    status = BooleanField()
-    # 分类id
-    category_id = IntegerField()
-    
     
 class ReorderValidator(BaseValidator):
     src_order = IntegerField(validators=[DataRequired()])

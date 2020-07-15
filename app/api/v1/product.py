@@ -58,13 +58,16 @@ def get():
     return Success(product)
 
 @api.route('', methods=['PUT'])
-@api.doc(args=['product_id', 'name', 'price', 'stocknum', 'remark'])
+@api.doc(args=['product_id', 'name', 'price', 'stocknum', 'remark'],auth=True)
+@auth.login_required
 def update():
     '''修改商品'''
     # 验证表单
-    form = CreateProductValidator().nt_data
+    id = IDMustBePositiveIntValidator().nt_data.id
+    form = CreateProductValidator().dt_data
     # 操作更新
-    ProductDao.update_product(form)
+    # form 是dict数据
+    ProductDao.update_product(id ,**form)
     
     return Success(error_code=1)
 
