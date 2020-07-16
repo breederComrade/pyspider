@@ -41,7 +41,6 @@ def delete():
     '''删除商品'''
     # 1。获取id
     id = request.args.get('product_id')
-    print('xxx', id)
     if not id:
         raise NotFound(msg='请查看id是否填写')
     ProductDao.delete_product(id)
@@ -68,7 +67,6 @@ def update():
     # 操作更新
     # form 是dict数据
     ProductDao.update_product(id ,**form)
-    
     return Success(error_code=1)
 
 

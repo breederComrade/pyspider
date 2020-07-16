@@ -286,7 +286,21 @@ class CategoryIDValidator(BaseValidator):
         if not self.isPositiveInteger(id):
             raise ValidationError(message='ID 必须为正整数')
         self.category_id.data = int(id)
+        
+# 分类
+class CategoryValidator(BaseValidator):
+    name = StringField(validators=[DataRequired(message='name为必填项')])
+    parent_id = IntegerField()
+    remark = StringField()
 
+    def validate_parent_id(self, value):
+        id = value.data
+        if not id:
+            self.parent_id.data = None
+            return
+        if not self.isNaturalNumber(id):
+            raise ValidationError(message='父ID必须为非负整数')
+        self.parent_id.data = int(id)
 
 # 排序
 class ReorderValidator(BaseValidator):
@@ -304,8 +318,6 @@ class ReorderValidator(BaseValidator):
         if not self.isPositiveInteger(id):
             raise ValidationError(message='ID 必须为正整数')
         self.dest_order.data = int(id)
-
-
     
 class ReorderValidator(BaseValidator):
     src_order = IntegerField(validators=[DataRequired()])
