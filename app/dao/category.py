@@ -7,6 +7,7 @@
   
 """
 from app.core.db import db
+from app.core.error import Failed
 from app.models.category import Category
 
 
@@ -37,6 +38,10 @@ class CategoryDao(object):
         # 删除分类并删除其子分类或修改或修改其子分类
         # 判断分类id是否存在
         category = Category.get_or_404(id=id)
+        # 查询是否有子类
+        print(category)
+        if category.child is not None:
+            raise Failed(msg='有子级分类存在 请先删除子级分类')
         # 删除相关的所有子外键
         category.delete()
     
