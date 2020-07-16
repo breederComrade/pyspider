@@ -17,18 +17,19 @@ from app.models.order import Order
 
 api = Redprint(name='order', description='订单', api_doc=api_doc)
 
-
 @api.route('', methods=['GET'])
-@api.doc(args=['query.order_id'])
+@api.doc(args=['query.order_id'],auth=True)
 @auth.login_required
 def get():
     ''' 获取单个订单 '''
     company = Order.get_or_404(id=1)
+    
     return 'diz '
 
 
 @api.route('/list', methods=['GET'])
-@api.doc()
+@api.doc(args=[],auth=True)
+@auth.login_required
 def list():
     '''查询所有「订单信息」'''
     customer_list = Order.query.filter_by(user_id=g.user.id).all_by_wrap()
@@ -37,27 +38,32 @@ def list():
 
 @api.route('', methods=['PUT'])
 @api.doc(args=['body.order_id', 'order_code', 'order_product', 'order_status_id', 'order_remark', 'order_total_count',
-               'order_total_price', 'order_pay_id'])
+               'order_total_price', 'order_pay_id'],auth=True)
+@auth.login_required
 def update():
     '''修改订单'''
+    #
     return '修改订单'
 
 @api.route('', methods=['DELETE'])
-@api.doc(args=['query.order_id'])
+@api.doc(args=['query.order_id'],auth=True)
+@auth.login_required
 def delete():
     '''删除订单'''
     return '删除订单'
 
 @api.route('/create', methods=['POST'])
 @api.doc(args=['order_code', 'order_product', 'order_status_id', 'order_remark', 'order_total_count',
-               'order_total_price', 'order_pay_id'])
+               'order_total_price', 'order_pay_id'],auth=True)
+@auth.login_required
 def create():
     '''创建订单'''
     return '创建成功'
 
 # 退货
 @api.route('/return',methods=['PUT'])
-@api.doc(args=['body.order_id', 'order_product'])
+@api.doc(args=['body.order_id', 'order_product'],auth=True)
+@auth.login_required
 def return_product():
     '''退货'''
     return  '退货成功'
