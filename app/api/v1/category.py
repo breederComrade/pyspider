@@ -19,11 +19,12 @@ api = Redprint(name='category', description='分类', api_doc=api_doc)
 
 
 @api.route('', methods=['GET'])
-@api.doc(args=['g.query.category_id'])
+@api.doc(args=['g.query.id'])
 def get_category():
     '''获取分类'''
-    category = Category.get_or_404(id=1)
-    return Success(error_code=2)
+    id= IDMustBePositiveIntValidator().nt_data.id
+    category = Category.get_or_404(id=id)
+    return Success(category)
 
 
 # 创建分类
@@ -48,7 +49,6 @@ def delete():
         raise NotFound(msg='请查看id是否填写正确')
     CategoryDao.delete(id)
     return Success(error_code=2)
-
 
 @api.route('', methods=['PUT'])
 @api.doc(args=['category_id','category_name', 'category_parent_id'])
