@@ -68,7 +68,6 @@ def update():
     # 操作更新
     # form 是dict数据
     ProductDao.update_product(id ,**form)
-    
     return Success(error_code=1)
 
 

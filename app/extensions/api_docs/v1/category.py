@@ -10,5 +10,5 @@ from app.core.swagger_filed import BodyField
 
 # id
 category_id = BodyField(name='category_id', type='integer', description='商品分类id')
-category_parent_id = BodyField(name='category_parent_id', type='string', description='商品分类上级id')
+category_parent_id = BodyField(name='category_parent_id', type='integer', description='商品分类上级id')
 category_name = BodyField(name='category_name', type='string', description='商品分类名称')

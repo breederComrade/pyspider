@@ -27,7 +27,8 @@ update_date_in_body = BodyField(name='updateDateTime',type='string',description=
 delete_date_in_body = BodyField(name='deleteDateTime',type='string',description='删除日期时间')
 
 #
-
+# 描述
+remark_in_body = BodyField(name='remark',type='string',description='备注')
 
 
 # Token登录相关
