@@ -289,18 +289,18 @@ class CategoryIDValidator(BaseValidator):
         
 # 分类
 class CategoryValidator(BaseValidator):
-    category_name = StringField(validators=[DataRequired(message='name为必填项')])
-    category_parent_id = IntegerField()
+    name = StringField(validators=[DataRequired(message='name为必填项')])
+    parent_id = IntegerField()
     remark = StringField()
 
-    def validate_category_parent_id(self, value):
+    def validate_parent_id(self, value):
         id = value.data
         if not id:
-            self.category_parent_id.data = None
+            self.parent_id.data = None
             return
         if not self.isNaturalNumber(id):
             raise ValidationError(message='父ID必须为非负整数')
-        self.category_parent_id.data = int(id)
+        self.parent_id.data = int(id)
 
 # 排序
 class ReorderValidator(BaseValidator):

@@ -6,10 +6,13 @@
   description: 
   
 """
-from flask import request
+
+
+from flask import request, json
 
 from app.core.error import Success, NotFound
 from app.dao.category import  CategoryDao
+from app.core.token_auth import auth
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import category as api_doc
 from app.models.category import Category
@@ -19,13 +22,18 @@ api = Redprint(name='category', description='分类', api_doc=api_doc)
 
 
 @api.route('', methods=['GET'])
-@api.doc(args=['g.query.id'])
+@api.doc(args=['query.category_id'])
 def get_category():
     '''获取分类'''
     id= IDMustBePositiveIntValidator().nt_data.id
     category = Category.get_or_404(id=id)
+    
+    
+    
+    
+    
+    # TODO:如何返回数据父类或者子类的数据
     return Success(category)
-
 
 # 创建分类
 @api.route('', methods=['POST'])
@@ -51,11 +59,15 @@ def delete():
     return Success(error_code=2)
 
 @api.route('', methods=['PUT'])
-@api.doc(args=['category_id','category_name', 'category_parent_id'])
+@api.doc(args=['category_id','category_name', 'category_parent_id'],auth=True)
+@auth.login_required
 def update():
     '''修改分类信息'''
-    category = Category.get_or_404(id=1)
-    return '修改分类信息'
+    # 验证id
+    id = IDMustBePositiveIntValidator().nt_data.id
+    form = CategoryValidator().dt_data
+    CategoryDao.update(id,**form)
+    return Success(error_code=1)
 
 @api.route('/list', methods=['GET'])
 @api.doc()
