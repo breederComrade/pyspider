@@ -28,7 +28,7 @@ SWAGGER_TAGS = []  # 在'/app/__init__.py'的register_blueprint函数中设置
 SWAGGER = {
     'swagger_version': '2.0',
     'info': {
-        'title': '华人社区 API',
+        'title': '有单生意 API',
         'version': '0.1.0', # 项目版本
         'description': description,
         # 'contact': {
@@ -39,6 +39,7 @@ SWAGGER = {
         # },
         # 'termsOfService': 'http://ivinetrue.com'
     },
+    'title':'有单生意 API',
     'host': '',
     'basePath': '/',  # base bash for blueprint registration
     'tags': SWAGGER_TAGS, # 接口在文档中的类别和顺序
