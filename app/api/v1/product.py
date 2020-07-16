@@ -41,7 +41,6 @@ def delete():
     '''删除商品'''
     # 1。获取id
     id = request.args.get('product_id')
-    print('xxx', id)
     if not id:
         raise NotFound(msg='请查看id是否填写')
     ProductDao.delete_product(id)

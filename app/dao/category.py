@@ -16,11 +16,12 @@ class CategoryDao(object):
     def create(form):
         # 自动提交并保持
         with db.auto_commit():
-   
-            
             # 判断重复
             if hasattr(form, 'category_name'):
                 Category.abort_repeat(name=form.category_name, msg='该分类已被使用，请重新输入新的分类')
+            if hasattr(form, 'category_parent_id'):
+            #     判断父类是否存在
+                Category.get_or_404(id = form.category_parent_id,msg='父id不存在,请检查category_parent_id值')
             # 判断是否存在
             Category.create(
                 commit=False,
@@ -30,8 +31,14 @@ class CategoryDao(object):
             )
     
     # 删除
-    def delete(self):
-        pass
+    @staticmethod
+    def delete(id):
+        '''删除分类'''
+        # 删除分类并删除其子分类或修改或修改其子分类
+        # 判断分类id是否存在
+        category = Category.get_or_404(id=id)
+        # 删除相关的所有子外键
+        category.delete()
     
     # 更新
     def update(self):

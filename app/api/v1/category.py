@@ -6,12 +6,14 @@
   description: 
   
 """
-from app.core.error import Success
+from flask import request
+
+from app.core.error import Success, NotFound
 from app.dao.category import  CategoryDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import category as api_doc
 from app.models.category import Category
-from app.validators.forms import CategoryValidator
+from app.validators.forms import CategoryValidator, IDMustBePositiveIntValidator
 
 api = Redprint(name='category', description='分类', api_doc=api_doc)
 
@@ -32,17 +34,20 @@ def create():
     # 创建
     # 验证表单
     form = CategoryValidator().nt_data
-    # 更新数据
+    # 创建数据
     category = CategoryDao.create(form);
     return Success(category,error_code=1)
     
 
 @api.route('/delete', methods=['DELETE'])
-@api.doc(args=['category_id'])
+@api.doc(args=['query.category_id'])
 def delete():
     '''删除分类'''
-    category = Category.get_or_404(id=1)
-    return '删除分类'
+    id = IDMustBePositiveIntValidator().nt_data.id
+    if not id:
+        raise NotFound(msg='请查看id是否填写正确')
+    CategoryDao.delete(id)
+    return Success(error_code=2)
 
 
 @api.route('', methods=['PUT'])
