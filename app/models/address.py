@@ -27,6 +27,9 @@ class Address(Base):
     country = Column(String(20), comment='县区')
     detail = Column(String(100), comment='详细地址')
     
+    # 客户列表
+    customer_id = Column(Integer,ForeignKey('customer.id'), comment='外键:关联客户id')
+    
     def keys(self):
         self.hide('id', 'user_id')
         return self.fields

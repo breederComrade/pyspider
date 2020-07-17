@@ -9,11 +9,24 @@
 from flask import g
 
 from app.core.error import Success
+from app.core.token_auth import auth
+from app.dao.customer import CustomerDao
 from app.extensions.api_docs.redprint import Redprint
-from app.extensions.api_docs.v1 import user as api_doc
 from app.models.customer import Customer
+from app.validators.forms import CustomerValidator
+from app.extensions.api_docs.v1 import customer as api_doc
+api = Redprint(name='customer', description='客户',api_doc=api_doc )
 
-api = Redprint(name='customer', description='客户', )
+@api.route('', methods=['POST'])
+@api.doc(args=['g.body.nickname', 'g.body.avatar', 'g.body.mobile', 'g.body.wechat','g.body.status'],auth=True)
+@auth.login_required
+def create():
+    '''创建客户'''
+    # 验证表单
+    form = CustomerValidator().nt_data
+    # dao操作
+    CustomerDao.create(form)
+    return Success()
 
 
 @api.route('', methods=['GET'])
@@ -47,10 +60,3 @@ def delete_customer():
     '''删除客户'''
     return '删除客户'
 
-
-@api.route('', methods=['POST'])
-@api.doc(args=['g.body.customer_name', 'g.body.avatar', 'g.body.mobile', 'g.body.wechat', 'g.body.uid',
-               'g.body.customer_company_id'])
-def create():
-    '''创建客户'''
-    return '创建成功'

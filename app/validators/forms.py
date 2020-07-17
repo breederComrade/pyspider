@@ -73,9 +73,6 @@ class PaginateValidatorByBody(BaseValidator):
     def validate_size(self, value):
         self.pageSize.data = int(value.data)
         
-        
-
-
 class TimeIntervalValidator(BaseValidator):
     start = StringField(validators=[Optional(), length(min=10, max=10, message='时间戳长度必须为10')])
     end = StringField(validators=[Optional(), length(min=10, max=10, message='时间戳长度必须为10')])
@@ -85,8 +82,7 @@ def validate_start(self, value):
 
 def validate_end(self, value):
     self.end.data = int(value.data) if value.data else None
-
-
+    
 class RemarkValidator(BaseValidator):
     remark = StringField()
 
@@ -134,7 +130,7 @@ class ResetPasswordValidator(BaseValidator):
 class ChangePasswordValidator(ResetPasswordValidator):
     old_password = PasswordField('原密码', validators=[DataRequired(message='不可为空')])
 
-
+########## 用户相关 ##########
 class UserEmailValidator(ClientValidator):
     account = StringField(validators=[Email(message='无效email')])
     secret = StringField(validators=[
@@ -252,13 +248,10 @@ class ProductIDValidator(BaseValidator):
             raise ValidationError(message='ID 必须为正整数')
         self.product_id.data = int(id)
         
-
-
 class ProductImages(Form):
     filename = StringField()
     filepath = StringField()
     fileUrl = StringField()
-
 
 #  新增商品验证
 class CreateProductValidator(RemarkValidator, BaseValidator):
@@ -267,16 +260,12 @@ class CreateProductValidator(RemarkValidator, BaseValidator):
     price = IntegerField()
     stocknum = IntegerField()
 
-
-
 #  验证列表商品
 class ListProductValidator(BaseValidator):
     # 状态验证
     status = BooleanField()
     # 分类id
     category_id = IntegerField()
-
-
 
 class CategoryIDValidator(BaseValidator):
     category_id = IntegerField(validators=[DataRequired()])
@@ -318,22 +307,20 @@ class ReorderValidator(BaseValidator):
         if not self.isPositiveInteger(id):
             raise ValidationError(message='ID 必须为正整数')
         self.dest_order.data = int(id)
-    
-class ReorderValidator(BaseValidator):
-    src_order = IntegerField(validators=[DataRequired()])
-    dest_order = IntegerField(validators=[DataRequired()])
-    
-    def validate_src_order(self, value):
-        id = value.data
-        if not self.isPositiveInteger(id):
-            raise ValidationError(message='ID 必须为正整数')
-        self.src_order.data = int(id)
-    
-    def validate_dest_order(self, value):
-        id = value.data
-        if not self.isPositiveInteger(id):
-            raise ValidationError(message='ID 必须为正整数')
-        self.dest_order.data = int(id)
+
+
+########## 客户相关 ##########
+class CustomerValidator(BaseValidator):
+    name = StringField(validators=[DataRequired(),length(min=2,)])
+    mobile = StringField()
+    wechat = StringField()
+    avatar = StringField()
+    active = BooleanField()
+
+
+########## 地址相关 ##########
+class addressValidator(BaseValidator):
+    pass
 
 
 ########## 订单相关 ##########

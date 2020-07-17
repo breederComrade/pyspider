@@ -77,7 +77,7 @@ product_id_in_body = BodyField(
 
 
 # 是否停用
-status_in_body = BodyField(name='active',type='boolean',description='是否启用')
+status_in_body = BodyField(name='active',type='boolean',description='是否启用',default=True,enum=[True,False])
 status_in_query = BooleanQueryFiled(name='status',description='是否启用',default=True,enum=[True,False])
 
 # 重新排序
@@ -125,8 +125,9 @@ confirm_password_in_body = BodyField(name='confirm_password', type='string', des
 # User
 nickname_in_body = BodyField(name='nickname', type='string', description='昵称', )
 username_in_body = BodyField(name='username', type='string', description='用户名', default='user')
+wechat_in_body = BodyField(name='wechatNo', type='string', description='微信号', )
 email_in_body = BodyField(name='email', type='string', description='邮箱', default='123@qq.com')
-mobile_in_body = BodyField(name='mobile', type='string', description='手机',  default='182')
+mobile_in_body = BodyField(name='mobile', type='string', description='手机号',  default='18202185753')
 avatar_in_body = BodyField(name='avatar', type='string', description='头像url', )
 userId_in_query = StringQueryFiled(name='userId', description='用户id', default='1', required=True)
 
