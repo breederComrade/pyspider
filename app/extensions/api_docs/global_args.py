@@ -142,6 +142,15 @@ address_id_in_path = IntegerPathFiled(
 address_id_in_query = IntegerPathFiled(
     name='id', description="地址ID", required=True)
 
+
+geender_in_body = BodyField(
+    name='geender',
+    type = 'boolean',
+    description='性别'
+)
+
+
+
 # customer
 customer_id_in_query= IntegerQueryFiled(
     name='id', description='客户id', required=True

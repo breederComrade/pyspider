@@ -319,9 +319,37 @@ class CustomerValidator(BaseValidator):
 
 
 ########## 地址相关 ##########
-class addressValidator(BaseValidator):
-    pass
+class AddressValidator(BaseValidator):
+    country = StringField(validators=[DataRequired()])
+    province = StringField(validators=[DataRequired()])
+    city = StringField(validators=[DataRequired()])
+    detail = StringField(validators=[DataRequired()])
+    name = StringField()
+    mobile = StringField(validators=[length(max=11,message='请正确输入手机号')])
+    customer = IntegerField()
+    geender = BooleanField()
 
+  
+    
+    # 验证系别
+    def validate_geender(self,value):
+        geender = value.data
+        # 空
+        if not geender:
+            self.geender.data = None
+            return
+        self.geender.data = geender
+    
+    # 验证id
+    def validate_customer(self, value):
+        id = value.data
+        if not id:
+            self.customer.data = None
+            return
+        # 判断正整数
+        if not self.isPositiveInteger(id):
+            raise ValidationError(message='ID 必须为正整数')
+        self.customer.data = int(id)
 
 ########## 订单相关 ##########
 class OrderPlaceValidator(BaseValidator):

@@ -18,7 +18,6 @@ class Address(Base):
     '''配送信息'''
     __tablename__ = 'address'
     id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, ForeignKey('user.id'), nullable=False, comment='外键: 下单的用户id')
     default = Column(Boolean,default=False,comment='是否默认地址')
     name = Column(String(30), nullable=False, comment='收货人姓名')
     mobile = Column(String(20), nullable=False, comment='手机')
@@ -26,6 +25,7 @@ class Address(Base):
     city = Column(String(20), comment='城市')
     country = Column(String(20), comment='县区')
     detail = Column(String(100), comment='详细地址')
+    geender = Column(Boolean,comment='性别')
     
     # 客户列表
     customer_id = Column(Integer,ForeignKey('customer.id'), comment='外键:关联客户id')
