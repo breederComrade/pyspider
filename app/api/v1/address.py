@@ -45,13 +45,17 @@ def delete_address():
     return Success()
 
 
-
-
 @api.route('', methods=['GET'])
-@api.doc(args=['g.query.address_id'])
+@api.doc(args=['g.query.id'],auth=True)
+@auth.login_required
 def get_address():
     ''' 获取单个地址 '''
-    address = Address.get_or_404(id=1)
+    id = IDMustBePositiveIntValidator().nt_data.id
+   
+    address = Address.get_or_404(id=id)
+    # 判断是否是执行自己
+    if not address.customer  or address.customer.user_id !=g.user.id:
+        raise NotFound()
     return Success(address)
 
 
