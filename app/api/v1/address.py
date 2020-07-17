@@ -6,13 +6,15 @@
   description: 
   
 """
-from flask import g
-from app.core.error import Success
+from flask import g, json
+from app.core.error import Success, ParameterException, NotFound
+from app.core.token_auth import auth
 from app.dao.address import AddressDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import address as api_doc
 from app.models.address import Address
-from app.validators.forms import AddressValidator
+from app.models.customer import Customer
+from app.validators.forms import AddressValidator, IDMustBePositiveIntValidator
 
 api = Redprint(name='address', description='配送地址', api_doc=api_doc)
 
@@ -26,6 +28,23 @@ def create():
     # 开始
     AddressDao.create(form)
     return Success(error_code=1)
+
+
+@api.route('', methods=['DELETE'])
+@api.doc(args=['g.query.id'],auth=True)
+@auth.login_required
+def delete_address():
+    '''删除地址'''
+    # 比对用户信息
+    # 连表查询
+    id = IDMustBePositiveIntValidator().nt_data.id
+    address = Address.get_or_404(id=id)
+    if address.customer and address.customer.user_id !=g.user.id:
+        raise NotFound()
+    address.delete()
+    return Success()
+
+
 
 
 @api.route('', methods=['GET'])
@@ -57,9 +76,3 @@ def set_default():
     '''设置默认地址'''
     return '设置默认地址'
 
-
-@api.route('/delete', methods=['DELETE'])
-@api.doc(args=['g.path.address_id'])
-def delete_address():
-    '''删除地址'''
-    return '删除地址'
