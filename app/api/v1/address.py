@@ -7,8 +7,11 @@
   
 """
 from flask import g, json
+from sqlalchemy import exists
+
 from app.core.error import Success, ParameterException, NotFound
 from app.core.token_auth import auth
+from app.core.utils import paginate
 from app.dao.address import AddressDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import address as api_doc
@@ -72,11 +75,37 @@ def update_address():
 
 
 @api.route('/list', methods=['GET'])
-@api.doc()
+@api.doc(args=['query.customer', 'g.query.page', 'g.query.size'], auth=True)
+@auth.login_required
 def list():
     '''查询所有「配送信息」'''
-    address_list = Address.query.filter_by(user_id=g.user.id).all_by_wrap()
-    return Success(address_list)
+    # 分页
+    # 获取指定客户的地址
+    # 必须是这个用户的客户
+    #
+    
+    # 1.找到
+    page, size = paginate()
+    #
+    customerId = IDMustBePositiveIntValidator().nt_data.id
+    #
+    customer = Customer.query.filter_by(id=customerId, user_id=g.user.id).first()
+    
+    if not customer:
+        raise NotFound()
+    
+    # 当前用户手下的客户的地址
+    address = Address.query.filter_by(customer_id=customerId).paginate(
+        page=page,
+        per_page=size,
+        error_out=False
+    )
+    
+    return Success({
+        'total': address.total,
+        'current_page': address.page,
+        'items': address.items
+    })
 
 
 @api.route('/setDefault', methods=['GET'])

@@ -6,7 +6,7 @@
   description: 
   
 """
-from app.core.swagger_filed import BodyField
+from app.core.swagger_filed import BodyField, IntegerQueryFiled
 
 name = BodyField(name='name', type='string', description='姓名', )
 mobile = BodyField(name='mobile', type='string', description='手机号', )
@@ -16,4 +16,6 @@ city = BodyField(name='city', type='string', description='市', )
 country = BodyField(name='country', type='string', description='国家',default='中国' )
 detail = BodyField(name='detail', type='string', description='详细地址', )
 customer = BodyField(name='customer',type='integer',description='关联客户id')
+# 客户id
+customer_in_query = IntegerQueryFiled(name='id', description='客户id', default=0)
 
