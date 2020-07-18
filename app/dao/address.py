@@ -6,7 +6,10 @@
   description: 
   
 """
+from flask import g
+
 from app.core.db import db
+from app.core.error import NotFound
 from app.models.address import Address
 
 
@@ -30,7 +33,11 @@ class AddressDao():
     # 更新「配送信息」
     @staticmethod
     def update_address(id, user_id, **form):
-        address = Address.get_or_404(id=id, user_id=user_id)
+        #
+        # 查到地址修改
+        address = Address.get_or_404(id=id)
+        if not address.customer or address.customer.user_id != user_id:
+            raise NotFound()
         address.update(**form)
     
     # 删除「配送信息」
