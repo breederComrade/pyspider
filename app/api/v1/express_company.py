@@ -9,44 +9,61 @@
 from flask import g
 
 from app.core.error import Success
+from app.core.utils import paginate
+from app.dao.expresscompany import ExpCompanyDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import express_commany as api_doc
 from app.models.express_company import ExpressCompany
+from app.validators.forms import ExpressCompanyValidator, IDMustBePositiveIntValidator
 
 api = Redprint(name='express_company', description='物流公司', api_doc=api_doc)
 
-@api.route('', methods=['GET'])
-@api.doc(args=['express_company_id_in_query'])
-def get():
-    ''' 获取单个物流公司 '''
-    company = ExpressCompany.get_or_404(id=1)
-    return 'diz '
 
-
-@api.route('/list', methods=['GET'])
-@api.doc()
-def list():
-    '''查询所有「物流公司信息」'''
-    customer_list = ExpressCompany.query.filter_by(user_id=g.user.id).all_by_wrap()
-    return Success(customer_list)
-
-
-@api.route('', methods=['PUT'])
-@api.doc(args=['express_company_id','express_company_name','express_company_des'])
-def update():
-    '''修改物流公司'''
-    return '修改物流公司'
+@api.route('', methods=['POST'])
+@api.doc(args=['express_company_name'])
+def create():
+    '''创建物流公司'''
+    form = ExpressCompanyValidator().nt_data
+    ExpCompanyDao.create(form)
+    return Success(error_code=1)
 
 
 @api.route('', methods=['DELETE'])
 @api.doc(args=['express_company_id'])
 def delete():
     '''删除物流公司'''
-    return '删除物流公司'
+    id = IDMustBePositiveIntValidator().nt_data.id
+    ExpCompanyDao.delete(id)
+    return Success(error_code=2)
 
 
-@api.route('/create', methods=['POST'])
-@api.doc(args=['express_company_name','express_company_des'])
-def create():
-    '''创建物流公司'''
-    return '创建成功'
+@api.route('', methods=['PUT'])
+@api.doc(args=['express_company_id', 'express_company_name', ])
+def update():
+    '''修改物流公司'''
+    id = IDMustBePositiveIntValidator().nt_data.id
+    form = ExpressCompanyValidator().dt_data
+    ExpCompanyDao.update(id, **form)
+    return Success(error_code=1)
+
+
+@api.route('', methods=['GET'])
+@api.doc(args=['g.query.id'])
+def get():
+    ''' 获取单个物流公司 '''
+    id = IDMustBePositiveIntValidator().nt_data.id
+    expc = ExpressCompany.get_or_404(id=id)
+    return Success(expc)
+
+
+@api.route('/list', methods=['GET'])
+@api.doc(args=['g.query.page', 'g.query.size'])
+def list():
+    '''查询所有「物流公司信息」'''
+    page, size = paginate()
+    expcs = ExpressCompany.query.filter_by().paginate(page=page, per_page=size, error_out=False)
+    return Success({
+        'total': expcs.total,
+        'current_page': expcs.page,
+        'items': expcs.items
+    }, )

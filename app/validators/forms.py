@@ -516,6 +516,10 @@ class ArticleValidator(BaseValidator):
     theme = IntegerField()
     views = IntegerField()
 
+########## 物流公司相关 ##########
+class ExpressCompanyValidator(BaseValidator):
+    name = StringField()
+    remark = StringField()
 
 # 测试验证
 from wtforms import Form as WTForm2
