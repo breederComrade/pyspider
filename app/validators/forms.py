@@ -322,12 +322,17 @@ class ReorderValidator(BaseValidator):
 
 
 ########## 客户相关 ##########
-class CustomerValidator(BaseValidator):
-    name = StringField(validators=[DataRequired(), length(min=2, )])
+
+class CustomerBaseValidator(BaseValidator):
+    nickname = StringField()
     mobile = StringField()
     wechat = StringField()
     avatar = StringField()
     active = BooleanField()
+
+
+class CustomerValidator(CustomerBaseValidator, BaseValidator):
+    nickname = StringField(validators=[DataRequired(), length(min=2, )])
 
 
 ########## 地址相关 ##########

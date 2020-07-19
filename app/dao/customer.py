@@ -6,7 +6,9 @@
   description: 客户
   
 """
-from app.core import db
+from flask import g
+
+from app.core.db import db
 from app.models.customer import Customer
 
 
@@ -19,19 +21,24 @@ class CustomerDao(object):
             if hasattr(form, 'name'):
                 Customer.abort_repeat(name=form.name, msg='该客户已被使用！')
             # 判断是否存在
-            Customer.create(
+            f = Customer.create(
                 commit=False,
-                name=getattr(form, 'name', None),
-                mobile =getattr(form, 'mobile', None),
-                wechat =getattr(form, 'wechat', None),
-                avatar =getattr(form, 'avatar', None),
-                status = getattr(form,'status',True)
+                user_id=g.user.id,
+                name=getattr(form, 'nickname', None),
+                mobile=getattr(form, 'mobile', None),
+                wechat=getattr(form, 'wechat', None),
+                avatar=getattr(form, 'avatar', None),
+                status=getattr(form, 'status', True)
             )
     
     @staticmethod
-    def update(id,form):
+    def update(id,userid, **form):
         '''修改'''
-        
+        # 1.验证id是否存在
+        customer = Customer.query.filter_by(id=id, user_id=userid).first()
+        # 2.更新数据
+        customer.update(**form)
+    
     @staticmethod
     def get(id):
         '''详情'''
@@ -41,5 +48,3 @@ class CustomerDao(object):
     def list(form):
         '''查询列表'''
         pass
-    
-
