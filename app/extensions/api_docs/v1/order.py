@@ -15,7 +15,7 @@ order_code = BodyField(name='code', type='string', description='订单编码')
 
 order_product = BodyField(name='productArr', type='array', description='订单货品')
 
-order_status_id = BodyField(name='status_id', type='integer', description='订单状态')
+order_status_id = BodyField(name='order_status', type='integer', description='订单状态')
 
 order_remark = BodyField(name='remark', type='string', description='订单备注')
 

@@ -412,7 +412,7 @@ class ItemForm(Form):
 
 class OrderVaidators(RemarkValidator,BaseValidator):
     discount = IntegerField()
-    status_id = BooleanField()
+    order_status = BooleanField()
     totalcount = IntegerField()
     totalprice = IntegerField()
     products = FieldList(FormField(ItemForm),min_entries=0)

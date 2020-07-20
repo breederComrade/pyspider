@@ -78,8 +78,8 @@ def create():
     # OrderDao.create(form)
     # 创建服务
     # place下单
-    status = OrderService().palce(uid=g.user.id, o_products=products)
-    return Success(error_code=1)
+    status = OrderService().palce(uid=g.user.id,form=form)
+    return Success(status,error_code=1)
 
 
 # 退货
