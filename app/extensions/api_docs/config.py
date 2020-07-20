@@ -7,7 +7,6 @@
   
 """
 
-
 # Swagger相关配置
 description = '''
 👑标注的接口，只有超级管理员(admin)的权限才能访问；
@@ -29,7 +28,7 @@ SWAGGER = {
     'swagger_version': '2.0',
     'info': {
         'title': '有单生意 API',
-        'version': '0.1.0', # 项目版本
+        'version': '0.1.0',  # 项目版本
         'description': description,
         # 'contact': {
         #     'responsibleOrganization': 'Shema(聆听)',
@@ -39,11 +38,11 @@ SWAGGER = {
         # },
         # 'termsOfService': 'http://ivinetrue.com'
     },
-    'title':'有单生意 API',
+    'title': '有单生意 API',
     'host': '',
     'basePath': '/',  # base bash for blueprint registration
-    'tags': SWAGGER_TAGS, # 接口在文档中的类别和顺序
-    'schemes': ['http','https'], # 通信协议: http或https或多个，默认http
+    'tags': SWAGGER_TAGS,  # 接口在文档中的类别和顺序
+    'schemes': ['http', 'https'],  # 通信协议: http或https或多个，默认http
     'operationId': 'getmyData',
     # token
     # 'securityDefinitions': {
@@ -65,5 +64,24 @@ SWAGGER = {
             "Bearer": []
         }
     ],
+    "definitions": {
+        "products": {
+            "properties": {
+                "id": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "price": {
+                    "description": "单价",
+                    "type": "integer"
+                },
+                "num":{
+                    "type":"integer",
+                    "format":'int32',
+                    "description": "数量",
+                }
+            },
+            "type": "object"
+        }
+    }
 }
-

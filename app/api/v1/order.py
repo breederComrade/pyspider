@@ -11,11 +11,12 @@ from flask import g
 from app.core.error import Success
 from app.core.token_auth import auth
 from app.core.utils import paginate
+from app.dao.order import OrderDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import order as api_doc
-from app.models.m2m import OrderProduct
 from app.models.order import Order
-from app.validators.forms import IDMustBePositiveIntValidator
+from app.service.order import OrderService
+from app.validators.forms import IDMustBePositiveIntValidator, OrderVaidators
 
 api = Redprint(name='order', description='订单', api_doc=api_doc)
 
@@ -65,14 +66,20 @@ def delete():
     return Success(error_code=2)
 
 
-@api.route('/create', methods=['POST'])
-@api.doc(args=['order_code', 'order_product', 'order_status_id', 'order_remark', 'order_total_count',
-               'order_total_price', 'order_pay_id'], auth=True)
+@api.route('', methods=['POST'])
+@api.doc(args=[ 'order_goods', 'order_status_id', 'order_remark', 'order_total_count',
+               'order_total_price','discount',], auth=True)
 @auth.login_required
 def create():
     '''创建订单'''
-    
-    return '创建成功'
+    # 验证数据
+    form = OrderVaidators().nt_data
+    # 创建数据
+    # OrderDao.create(form)
+    # 创建服务
+    # place下单
+    status = OrderService().palce(uid=g.user.id, o_products=products)
+    return Success(error_code=1)
 
 
 # 退货

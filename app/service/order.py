@@ -27,16 +27,21 @@ class OrderService():
     def palce(self, uid, o_products):
         '''下单方法'''
         self.o_products = o_products
+        # 获取货品列表中货品 在数据库中的货品信息列表
         self.s_products = self.__get_products_by_order(o_products)
         self.uid = uid
         # 校验库存
+        # 返回对象：库存是否允许
         status = self.__get_order_status()
         # 库存未通过
         if not status['pass']:
             status['order_id'] = -1  # 新增order_id属性
             return status
+        
         # 库存量通过，开始创建订单
+        
         order_snap = self.__snap_order(status)
+        # 创建订单 通过
         order = self.__create_order(order_snap)
         order['pass'] = True
 

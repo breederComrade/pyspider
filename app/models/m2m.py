@@ -6,10 +6,9 @@
   description:  关联表
   
 """
-from sqlalchemy import Integer, Column, ForeignKey
+from sqlalchemy import Integer, Column, ForeignKey, Float
 
 from app.core.db import BaseModel as Base, db
-
 
 # # 客户与用户关联
 # customer_user = db.Table('customer_user',
@@ -21,19 +20,6 @@ from app.core.db import BaseModel as Base, db
 #                             db.Column('customer_id', db.Integer, db.ForeignKey('customer.id')),
 #                             db.Column('company_id', db.Integer, db.ForeignKey('company.id'))
 #                             )
-
-
-# 订单和商品
-class OrderProduct(Base):
-    __tablename__ = 'order_product'
-    order_id = db.Column(Integer, primary_key=True, comment='联合外键,订单id')
-    product_id = db.Column(Integer, primary_key=True, comment='联合外键,商品id')
-    count = db.Column(Integer, nullable=False, comment='商品数量')
-    
-    def __init__(self, order_id=None, product_id=None, count=None):
-        self.order_id = order_id
-        self.product_id = product_id
-        self.count = count
 
 
 # 用户企业关联
@@ -70,10 +56,24 @@ role_permission = db.Table(
     Column('permission_id', Integer, ForeignKey('permission.id'), primary_key=True, comment='权限外键')
 )
 
-
 # 用户权限表
 user_permission = db.Table(
     'user_permission',
     Column('user_id', Integer, ForeignKey('user.id'), primary_key=True, comment='角色外键'),
     Column('permission_id', Integer, ForeignKey('permission.id'), primary_key=True, comment='权限外键')
 )
+
+
+# 订单货品表
+class Order2Product(Base):
+    __tablename__ = 'order2product'
+    order_id = Column(Integer, primary_key=True, comment='联合主键，订单id')
+    product_id = Column(Integer, primary_key=True, comment='联合主键，商品id')
+    count = Column(Integer, nullable=False, comment='商品数量')
+    price = Column(Float, nullable=False, comment='商品单价')
+    
+    def __init__(self, order_id=None, product_id=None, count=None, price=None):
+        self.order_id = order_id
+        self.product_id = product_id
+        self.count = count
+        self.price = price

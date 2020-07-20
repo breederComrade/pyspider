@@ -121,26 +121,39 @@ class RequestBody():
 class BodyField():
     '''Body中的参数'''
     
-    def __init__(self, name, type, description, enum=None, default=None):
+    def __init__(self, name, type, description, enum=None,ref=None, default=None):
         self.name = name
         self.site = 'body'
         self.type = type  # type的类型: string、integer、boolean, array
         self.description = description
         self.enum = enum
         self.default = default
+        self.ref = ref
     
     @property
     def data(self):
-        data_dict = {
-            "name": self.name,
-            "type": self.type,
-            "description": self.description,
-            "enum": self.enum,
-            "default": self.default
-        }
-        if self.type in ('array'):
-            data_dict['type'] = 'list'
-            data_dict['items'] = self.default
+        # 设置引用
+        if self.ref:
+            data_dict = {
+                "name": self.name,
+                "type": self.type,
+                "description": self.description,
+                "items":{
+                    "$ref":"#/definitions/{}".format(self.ref)
+                }
+            }
+        else:
+            data_dict = {
+                "name": self.name,
+                "type": self.type,
+                "description": self.description,
+                "enum": self.enum,
+                "default": self.default
+            }
+            if self.type in ('array'):
+                data_dict['type'] = 'list'
+                data_dict['items'] = self.default
+                
         return data_dict
 
 

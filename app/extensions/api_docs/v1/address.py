@@ -19,3 +19,6 @@ customer = BodyField(name='customer',type='integer',description='关联客户id'
 # 客户id
 customer_in_query = IntegerQueryFiled(name='id', description='客户id', default=0)
 
+
+
+

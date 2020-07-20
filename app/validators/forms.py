@@ -5,8 +5,9 @@
 """
 
 from flask import request
-# from flask_wtf import FlaskForm
-from wtforms import BooleanField, StringField, IntegerField, PasswordField, FileField, FieldList, Form, FormField
+
+from wtforms import BooleanField, StringField, IntegerField, PasswordField, FileField, FieldList, Form , FormField, \
+    FloatField
 from wtforms.validators import DataRequired, ValidationError, length, Email, Regexp, EqualTo, Optional, \
     NumberRange, InputRequired
 
@@ -14,7 +15,6 @@ from app.core.error import ParameterException
 from app.libs.enums import ClientTypeEnum
 from app.core.validator import BaseValidator
 
-__author__ = 'Allen7D'
 
 
 ########## 基础公用的参数校验器 ##########
@@ -405,6 +405,18 @@ class OrderIDValidator(BaseValidator):
             raise ValidationError(message='ID 必须为正整数')
         self.order_id.data = int(id)
 
+class ItemForm(Form):
+    id = IntegerField()
+    num = IntegerField()
+    price = FloatField()
+
+class OrderVaidators(RemarkValidator,BaseValidator):
+    discount = IntegerField()
+    status_id = BooleanField()
+    totalcount = IntegerField()
+    totalprice = IntegerField()
+    products = FieldList(FormField(ItemForm),min_entries=0)
+    
 
 ########## 文件相关 ##########
 # 上传文件的校验(单个文件)

@@ -13,7 +13,7 @@ order_id_in_query = IntegerQueryFiled(name='id', description='订单id')
 order_id_in_body = BodyField(name='id', type='integer', description='订单id')
 order_code = BodyField(name='code', type='string', description='订单编码')
 
-order_product = BodyField(name='productArr', type='array', description='订单货品', default={})
+order_product = BodyField(name='productArr', type='array', description='订单货品')
 
 order_status_id = BodyField(name='status_id', type='integer', description='订单状态')
 
@@ -22,3 +22,7 @@ order_remark = BodyField(name='remark', type='string', description='订单备注
 order_total_count = BodyField(name='totalcount', type='integer', description='订单货品数量')
 order_total_price = BodyField(name='totalprice', type='integer', description='订单总价')
 order_pay_id = BodyField(name='pay_id', type='integer', description='订单支付单号')
+
+# 订单货品操作
+order_goods = BodyField(name='products', type='array', ref='products', description='订单货品')
+discount = BodyField(name='discount', type='integer', description='整单折扣率')
