@@ -8,6 +8,8 @@ from datetime import datetime
 from random import randint
 from time import time
 
+from flask import g
+
 from app.libs.enums import OrderStatusEnum
 from app.libs.error_code import OrderException, UserException
 from app.core.utils import jsonify
@@ -25,6 +27,7 @@ class OrderService():
     s_products = None  # stock products (库存商品)缩写
     order = None
     uid = None
+    id = None
     
     def palce(self, uid, form):
         self.order = form
@@ -50,20 +53,71 @@ class OrderService():
         order['pass'] = True
         return order
     
+    # 更新订单
+    def update_order(self, id, uid, form):
+        self.order = form
+        '''下单方法'''
+        self.o_products = form.products
+        # 1.通过订单货品的id获取到具体货品的完整信息
+        self.s_products = self.__get_products_by_order(self.o_products)
+        self.uid = uid
+        self.id = id
+        # 2.获取订单状态:是否有库存 计算订单总价 计算订单总数 保存商品信息
+        # 这样获取到了订单数据 总价和总数量
+        status = self.__get_order_status()
+        # 库存未通过
+        if not status['pass']:
+            status['order_id'] = -1  # 新增order_id属性
+            return status
+        
+        # # 库存量通过，开始创建订单
+        # # 创建一个数据
+        order_snap = self.__snap_order(status)
+        # # 创建订单 通过
+        # # 开始创建数据
+        order = self._update_order(order_snap)
+        order['pass'] = True
+        return order
+    
+    def _update_order(self, snap):
+        print(snap)
+        with db.auto_commit():
+            order = Order.get_or_404(id=self.id)
+            order.discount = snap['discount'] or order.discount
+            order.total_price = snap['order_price'] or order.total_price
+            order.order_status = snap['order_status'] or order.order_status
+            # 更新货品
+            if self.o_products:
+                orderProduct = Order2Product.query.filter_by(order_id=self.id)
+                orderProduct.delete()
+                for p in self.o_products:
+                    p['order_id'] = self.id
+                #     删除所有货品数据融合重新更新
+                db.session.add_all(
+                    [Order2Product(p['order_id'], p['id'], p['num'], p['price']) for p in self.o_products]
+                )
+        return {
+            'order_no': order.order_no,
+            'order_id': self.id,
+            'create_time': order.create_time
+        }
+    
     def __create_order(self, snap):
         '''将订单写入到数据库'''
         order_no = OrderService.make_order_no()
         with db.auto_commit():
             order = Order()
-            order.user_id = 41
-            order.discount = getattr(snap, 'discount', None)
-            order.remark = getattr(snap, 'remark', None)
-            order.order_status = getattr(snap, 'order_status', None)
-            order.total_count = getattr(snap, 'total_count', None)
-            order.total_price = getattr(snap, 'total_price', None)
+            order.user_id = g.user.id
+            order.discount = snap['discount']
+            # order.discountAmount = snap['discountAmount']
+            order.remark = getattr(self.order, 'remark', None)
+            order.order_status = snap['order_status']
+            order.total_count = snap['total_count']
+            order.total_price = snap['order_price']
             order.order_no = order_no
             order.snap_img = snap['snap_img']
             order.snap_name = snap['snap_name']
+            # dumps 对象转换成字符串
             order.snap_items = json.dumps(snap['p_status'], ensure_ascii=False)
             db.session.add(order)
             db.session.flush()  # 刷新数据库缓存，不操作事务
@@ -72,7 +126,7 @@ class OrderService():
                 # 起初每个p的格式 {'product_id': x, 'count': y}
                 p['order_id'] = order_id
             db.session.add_all(
-                [Order2Product(p['order_id'], p['id'], p['num'],p['price']) for p in self.o_products]
+                [Order2Product(p['order_id'], p['id'], p['num'], p['price']) for p in self.o_products]
             )
         return {
             'order_no': order_no,
@@ -91,8 +145,8 @@ class OrderService():
             'snap_name': '',  # 订单缩略的名字(首个商品)
             'snap_img': ''  # 订单缩略的图片(首个商品)
         }
-        
         snap['discount'] = self.order.discount
+        # snap['discountAmount'] = self.order.discountAmount
         snap['order_status'] = self.order.order_status
         snap['order_price'] = status['order_price']
         snap['total_count'] = status['total_count']

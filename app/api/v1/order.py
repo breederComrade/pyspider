@@ -52,12 +52,16 @@ def list():
 
 
 @api.route('', methods=['PUT'])
-@api.doc(args=['body.order_id','order_goods', 'order_status_id', 'order_remark', 'discount'], auth=True)
+@api.doc(args=['body.order_id', 'order_goods', 'order_status_id', 'order_remark', 'discount'], auth=True)
 @auth.login_required
 def update():
     '''修改订单'''
     #
-    return '修改订单'
+    id = IDMustBePositiveIntValidator().nt_data.id
+    # 验证数据
+    form = OrderVaidators().nt_data
+    OrderService().update_order(id,g.user.id,form)
+    return Success(error_code=2)
 
 
 @api.route('', methods=['DELETE'])
@@ -76,7 +80,7 @@ def delete():
 
 
 @api.route('', methods=['POST'])
-@api.doc(args=[ 'order_goods', 'order_status_id', 'order_remark', 'discount',], auth=True)
+@api.doc(args=['order_goods', 'order_status_id', 'order_remark', 'discount', ], auth=True)
 @auth.login_required
 def create():
     '''创建订单'''
@@ -86,8 +90,8 @@ def create():
     # OrderDao.create(form)
     # 创建服务
     # place下单
-    status = OrderService().palce(uid=g.user.id,form=form)
-    return Success(status,error_code=1)
+    status = OrderService().palce(uid=g.user.id, form=form)
+    return Success(status, error_code=1)
 
 
 # 退货
