@@ -3,6 +3,7 @@
   Created by Allen7D on 2018/7/5.
 """
 import json
+import uuid
 from datetime import datetime
 from random import randint
 from time import time
@@ -47,7 +48,6 @@ class OrderService():
         # # 开始创建数据
         order = self.__create_order(order_snap)
         order['pass'] = True
-        
         return order
     
     def __create_order(self, snap):
@@ -61,6 +61,7 @@ class OrderService():
             order.order_status = getattr(snap, 'order_status', None)
             order.total_count = getattr(snap, 'total_count', None)
             order.total_price = getattr(snap, 'total_price', None)
+            order.order_no = order_no
             order.snap_img = snap['snap_img']
             order.snap_name = snap['snap_name']
             order.snap_items = json.dumps(snap['p_status'], ensure_ascii=False)
@@ -71,9 +72,8 @@ class OrderService():
                 # 起初每个p的格式 {'product_id': x, 'count': y}
                 p['order_id'] = order_id
             db.session.add_all(
-                [Order2Product(p['order_id'], p['product_id'], p['count'],p['price']) for p in self.o_products]
+                [Order2Product(p['order_id'], p['id'], p['num'],p['price']) for p in self.o_products]
             )
-        
         return {
             'order_no': order_no,
             'order_id': order_id,
@@ -228,6 +228,8 @@ class OrderService():
     def make_order_no():
         '''
         生成唯一的随机且递增的订单标号
+        #
+        ycode+月+日+时间戳后六位+时间戳第3个到第6+随机0-99整-
         :return: 订单标号
         '''
         now = datetime.now()

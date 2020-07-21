@@ -14,6 +14,7 @@ from app.core.utils import paginate
 from app.dao.order import OrderDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import order as api_doc
+from app.models.m2m import Order2Product
 from app.models.order import Order
 from app.service.order import OrderService
 from app.validators.forms import IDMustBePositiveIntValidator, OrderVaidators
@@ -27,7 +28,8 @@ api = Redprint(name='order', description='订单', api_doc=api_doc)
 def get():
     ''' 获取单个订单 '''
     id = IDMustBePositiveIntValidator().nt_data.id
-    order = Order.query.filter_by(id=id, user_id=g.user.id).first()
+    order = Order.query.filter_by(id=id, user_id=g.user.id).first_or_404()
+    
     return Success(order)
 
 
@@ -42,12 +44,15 @@ def list():
         per_page=size,
         error_out=False
     )
-    return Success()
+    return Success({
+        'total': orders.total,
+        'current_page': orders.page,
+        'items': orders.items
+    })
 
 
 @api.route('', methods=['PUT'])
-@api.doc(args=['body.order_id', 'order_code', 'order_product', 'order_status_id', 'order_remark', 'order_total_count',
-               'order_total_price', 'order_pay_id'], auth=True)
+@api.doc(args=['body.order_id','order_goods', 'order_status_id', 'order_remark', 'discount'], auth=True)
 @auth.login_required
 def update():
     '''修改订单'''
@@ -61,14 +66,17 @@ def update():
 def delete():
     '''删除订单'''
     id = IDMustBePositiveIntValidator().nt_data.id
-    order = Order.query.filter_by(id=id, user_id=g.user.id).first()
+    order = Order.query.filter_by(id=id, user_id=g.user.id).first_or_404()
+    # 删除相关货品
+    # 这是刹车
+    Order2Product.query.filter_by(order_id=order.id).delete()
     order.delete()
+    # 删除
     return Success(error_code=2)
 
 
 @api.route('', methods=['POST'])
-@api.doc(args=[ 'order_goods', 'order_status_id', 'order_remark', 'order_total_count',
-               'order_total_price','discount',], auth=True)
+@api.doc(args=[ 'order_goods', 'order_status_id', 'order_remark', 'discount',], auth=True)
 @auth.login_required
 def create():
     '''创建订单'''

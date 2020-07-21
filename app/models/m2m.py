@@ -6,9 +6,10 @@
   description:  关联表
   
 """
+from flask import json
 from sqlalchemy import Integer, Column, ForeignKey, Float
 
-from app.core.db import BaseModel as Base, db
+from app.core.db import EntityModel as Base, db
 
 # # 客户与用户关联
 # customer_user = db.Table('customer_user',
@@ -71,9 +72,23 @@ class Order2Product(Base):
     product_id = Column(Integer, primary_key=True, comment='联合主键，商品id')
     count = Column(Integer, nullable=False, comment='商品数量')
     price = Column(Float, nullable=False, comment='商品单价')
-    
+    #
+    _orderId = Column(Integer,ForeignKey('order.id'),comment='外键 订单')
+    #
+    _productId = Column(Integer,ForeignKey('product.id'),comment='外键 货品')
+    #
+    def keys(self):
+        self.hide('order_id','_orderId','product_id','_productId',).append('product')
+        return self.fields
+
+ 
     def __init__(self, order_id=None, product_id=None, count=None, price=None):
         self.order_id = order_id
         self.product_id = product_id
+        self._productId = product_id
         self.count = count
         self.price = price
+        self._orderId = order_id
+
+
+        

@@ -19,14 +19,14 @@ class Product(Base):
     stock = Column(Integer, comment='库存量')
     _main_img_url = Column('main_img_url', String(255), comment='主图id，这是一个反范式设计，有一定的冗余')
     _from = Column('from', SmallInteger, default=1, comment='主图来源:1 本地, 2公网')
-    
     # 状态
     status = Column(Boolean,default=True, nullable=False, comment='是否启用')
-    
     # _images = relationship('Image', secondary='product_image', order_by=Product2Image.order.asc(), backref=backref('product', lazy='dynamic'))
     remark = Column(String(50), comment='摘要')
     # 所属用户
     user_id = Column(Integer,ForeignKey('user.id'), comment='所属用户')
+    # 外键
+    orderProduct = relationship('Order2Product',backref = backref('product'))
     
     def keys(self):
         return self.fields

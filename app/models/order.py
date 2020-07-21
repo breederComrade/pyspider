@@ -21,10 +21,13 @@ class Order(Base):
     total_price = Column(Float, comment='订单总价')
     prepay_id = Column(String(100), unique=True, comment='预付款id')
     discount = Column(Float,comment='整单折扣率')
+    discountAmount = Column(Float,comment='折后金额')
     
     # 一对一
     user_id = Column(Integer, ForeignKey('user.id'), comment='用户id')
-    
+    # 一对多
+    products = relationship('Order2Product',backref=backref('order'))
     
     def keys(self):
+        self.append('products')
         return self.fields
