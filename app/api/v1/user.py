@@ -32,14 +32,15 @@ def get_user():
     user = User.query.get(2)
     return Success(user)
 
-# id = request.args.get('id')
-    # print(id)
-    # user = User.get(id=id)
-    # user2 = User.get_or_404(id=id)
-    # print('user',type(user))
-    # print('user',type(user2))
-    # return Success(data=user,error_code=1)
 
+#
+@api.route('/my', methods=['GET'])
+@api.doc(auth=True)
+@auth.login_required
+def get_my():
+    '''查询当前用户'''
+    user = User.get_or_404(id = g.user.id)
+    return Success(user)
 
 # 更改密码
 @api.route('/password', methods=['GET'])
@@ -47,14 +48,6 @@ def get_user():
 def update_password():
     '''更改密码'''
     return '密码'
-
-
-@api.route('/list', methods=['GET'])
-@api.doc()
-def user_list():
-    '''用户列表'''
-    return '用户列表'
-
 
 # post
 # 创建用户
@@ -64,26 +57,10 @@ def user_list():
 def create_user():
     '''创建用户'''
     # 验证数据是否正确 通过wtform
-    #
     form = CreateUserValidator().nt_data
     # 验证完成后调用Dao操作创建用户
     UserDao.create_user(form)
     return Success(error_code=1)
-
-# 删除用户
-@api.route('/batchDel', methods=['DELETE'])
-@api.doc(args=['g.body.id'])
-def barch_del_user():
-    '''删除用户'''
-    return '删除用户'
-
-
-# 批量删除用户
-@api.route('/BatchDelete', methods=['DELETE'])
-@api.doc(args=['g.body.user_ids'])
-def batch_del_user():
-    '''批量删除用户'''
-    return '批量删除用户'
 
 
 # 注销用户---退出用户
@@ -92,7 +69,6 @@ def batch_del_user():
 def layout():
     '''注销本人用户'''
     return '注销用户成功'
-
 
 # 修改用户
 @api.route('/update', methods=['POST'])
@@ -110,7 +86,6 @@ def update_avatar():
     '''更新头像'''
     return '更新用户头像'
 
-
 # 解绑账号
 @api.route('/unbind', methods=['PUT'])
 @api.doc(args=['g.body.id'])
@@ -118,5 +93,12 @@ def unbind():
     '''解绑账号'''
     return '解绑帐号'
 
+@api.route('/auths', methods=['GET'])
+@api.doc(auth=True)
+@auth.login_required
+def get_auths():
+    '''查询自己拥有的权限'''
+    return Success()
 
+#
 

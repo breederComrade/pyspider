@@ -9,6 +9,12 @@ from app.libs.httper import HTTP
 
 __author__ = 'Allen7D'
 
+'''
+ 1.微信app授权登录
+ 2.微信网页登录
+'''
+
+
 
 class WxToken():
     '''微信·小程序的Token查询(小程序登录)'''
