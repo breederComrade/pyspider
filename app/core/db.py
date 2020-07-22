@@ -139,6 +139,11 @@ class CRUDMixin(object):
         print(kwargs)
         u =cls.query.filter_by(**kwargs)
         return u.first()
+    
+    @classmethod
+    def isExits(cls):
+        '''是否存在'''
+        
 
     @classmethod
     def get_or_404(cls, e: Exception = None, error_code: int = None, msg: str = None, **kwargs):

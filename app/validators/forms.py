@@ -285,7 +285,24 @@ class CategoryIDValidator(BaseValidator):
         if not self.isPositiveInteger(id):
             raise ValidationError(message='ID 必须为正整数')
         self.category_id.data = int(id)
+        
+        
+########## 规格相关 ##########
 
+class SpecValidator(BaseValidator):
+    name = StringField(validators=[DataRequired(message='name为必填项')])
+    price = IntegerField(validators=[DataRequired(message='price为必填项')])
+    stock = IntegerField(validators=[DataRequired(message='stock为必填项')])
+    product_id = IntegerField(validators=[DataRequired(message='product_id为必填项')])
+
+class UpdateSpecValidator(BaseValidator):
+    name = StringField()
+    price = IntegerField()
+    stock = IntegerField()
+   
+
+    
+    
 
 # 分类
 class CategoryValidator(BaseValidator):
@@ -322,7 +339,6 @@ class ReorderValidator(BaseValidator):
 
 
 ########## 客户相关 ##########
-
 class CustomerBaseValidator(BaseValidator):
     nickname = StringField()
     mobile = StringField()
@@ -532,6 +548,9 @@ class ArticleValidator(BaseValidator):
 class ExpressCompanyValidator(BaseValidator):
     name = StringField()
     remark = StringField()
+
+
+
 
 # 测试验证
 from wtforms import Form as WTForm2

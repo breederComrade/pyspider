@@ -28,6 +28,9 @@ class Product(Base):
     # 外键
     orderProduct = relationship('Order2Product',backref = backref('product'))
     
+    # 规格
+    spec = relationship('Specifica',backref=backref('product'))
+    
     def keys(self):
         return self.fields
     
