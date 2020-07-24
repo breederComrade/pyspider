@@ -106,7 +106,7 @@ def unbind():
     '''解绑账号'''
     type = BaseValidator.get_args_json().type
     IdentityDao.unbind(user_id=g.user.id, type=type)
-    return Success(msg='解绑用户')
+    return Success(msg='解绑用户成功')
 
 @api.route('/auths', methods=['GET'])
 @api.doc(auth=True)

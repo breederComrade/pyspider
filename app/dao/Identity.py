@@ -7,6 +7,7 @@
   
 """
 from flask import current_app
+from sqlalchemy import func
 
 from app.core.db import db
 from app.libs.enums import AtLeastEnum, ClientTypeEnum
