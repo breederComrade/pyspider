@@ -19,7 +19,8 @@ from app.dao.user import UserDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import user as api_doc
 from app.models.user import User
-from app.validators.forms import CreateUserValidator, IDMustBePositiveIntValidator, UpdateAvatarValidator
+from app.validators.forms import CreateUserValidator, IDMustBePositiveIntValidator, UpdateAvatarValidator, \
+    ChangePasswordValidator
 
 api = Redprint(name='user', description='用户', api_doc=api_doc)
 
@@ -45,11 +46,18 @@ def get_my():
     return Success(user)
 
 # 更改密码
-@api.route('/password', methods=['GET'])
-@api.doc()
-def update_password():
+@api.route('/password', methods=['PUT'])
+@api.doc(args=['g.body.new_password', 'g.body.old_password', 'g.body.confirm_password'], auth=True)
+@auth.login_required
+def change_password():
     '''更改密码'''
-    return '密码'
+    validator = ChangePasswordValidator().nt_data
+    UserDao.change_password(
+        uid=g.user.id,
+        old_password=validator.old_password,
+        new_password=validator.new_password
+    )
+    return Success(error_code=1)
 
 # post
 # 创建用户
@@ -63,7 +71,6 @@ def create_user():
     # 验证完成后调用Dao操作创建用户
     UserDao.create_user(form)
     return Success(error_code=1)
-
 
 # 注销用户---退出用户
 @api.route('/layout', methods=['DELETE'])
@@ -106,8 +113,7 @@ def unbind():
 @auth.login_required
 def get_auths():
     '''查询自己拥有的权限'''
-    
     return Success()
 
-#
+
 
