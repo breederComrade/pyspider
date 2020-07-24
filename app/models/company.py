@@ -18,5 +18,4 @@ class Company(Base):
     nickname = Column(String(24), comment='昵称')
     avatar = Column(String(123), comment='头像')
     mobile = Column(String(24), comment='手机号')
-    # 关联角色表 一个企业多个角色 一对多
-    role = relationship('Role', backref=backref('role'))
+    

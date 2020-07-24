@@ -13,8 +13,12 @@ from app.core.db import EntityModel as Base, db
 
 
 class Permission(Base):
+    '''权限'''
+    __tablename__ = 'permission'
     id = Column(Integer, primary_key=True,autoincrement=True )
     name = Column(String(45),comment='权限名称')
+    desc = Column(String(45),comment = '操作权限名称')
     parent_id = Column(Integer,comment='父权限id')
+    
     
     

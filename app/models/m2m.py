@@ -37,6 +37,14 @@ user_group = db.Table(
     Column('group_id', Integer, ForeignKey('group.id'), primary_key=True, comment='组外键')
 )
 
+# 角色组表
+group_role = db.Table(
+    'group_role',
+    Column('role_id',Integer,ForeignKey('role.id'),primary_key=True),
+    Column('group_id',Integer,ForeignKey('group.id'),primary_key=True),
+)
+
+
 # 用户角色表
 user_role = db.Table(
     'user_role',

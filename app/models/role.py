@@ -15,9 +15,12 @@ from app.core.db import EntityModel as Base
 class Role(Base):
     id = Column(Integer,primary_key=True)
     name = Column(String(25),comment='角色名称')
-    company_id  = Column(Integer, ForeignKey('company.id'), comment='所属公司')
+    record = Column(String(45),comment='角色标识')
     
-    # 关联权限表
+    # 多对多关联用户 用户角色表
+    user =  relationship('User',secondary = 'user_role',backref= backref('role_user',lazy='dynamic'))
+    
+    # 多对多关联权限表 角色权限表
     permission = relationship('Permission',secondary = 'role_permission',backref=backref('role',lazy = 'dynamic'))
     
     def __repr__(self):

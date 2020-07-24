@@ -23,7 +23,9 @@ class User(Base):
     nickname = Column(String(24), comment='昵称')
     account = Column(String(45), comment='账号')
     auth_id = Column(Integer, comment='权限id')
-    #
+    _avatar = Column('avatar', String(255), comment='头像url')
+    
+    # 判断属于哪个组
     group_id = Column(Integer, comment='用户所属的权限组id',
                       default=0)
     # 一对一
@@ -33,13 +35,13 @@ class User(Base):
     customer = relationship('Customer', backref=backref('user'))
     
     # 一对多 货品信息
-    product = relationship('Product',backref = backref('user',))
+    product = relationship('Product', backref=backref('user', ))
     
     # 对多对 所属企业/组织
     company = relationship('Company', secondary='user_company', backref=backref('user', lazy='dynamic'))
     
     # 多对多 角色
-    role = relationship('Role', secondary='user_role', backref=backref('user', lazy='dynamic'))
+    role = relationship('Role', secondary='user_role', backref=backref('user_role', lazy='dynamic'))
     
     # 多对多 用户组
     group = relationship('Group', secondary='user_group', backref=backref('user_g', lazy='dynamic'))

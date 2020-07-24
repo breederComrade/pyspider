@@ -17,7 +17,7 @@ from app.dao.user import UserDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import user as api_doc
 from app.models.user import User
-from app.validators.forms import CreateUserValidator
+from app.validators.forms import CreateUserValidator, IDMustBePositiveIntValidator, UpdateAvatarValidator
 
 api = Redprint(name='user', description='用户', api_doc=api_doc)
 
@@ -76,15 +76,21 @@ def layout():
                'g.body.password', 'g.body.confirm_password'])
 def update_user():
     '''更新用户信息'''
+    
+    
+    
     return '修改用户'
 
 
 # 更新用户头像
-@api.route('/avatar', methods=['GET'])
-@api.doc(args=['g.body.id', 'g.body.avatar'])
+@api.route('/avatar', methods=['PUT'])
+@api.doc(args=[ 'g.body.avatar'],auth=True)
+@auth.login_required
 def update_avatar():
     '''更新头像'''
-    return '更新用户头像'
+    avatar  =UpdateAvatarValidator().nt_data.avatar
+    UserDao.set_avatar(g.user.id,avatar)
+    return Success(msg='更新成功')
 
 # 解绑账号
 @api.route('/unbind', methods=['PUT'])

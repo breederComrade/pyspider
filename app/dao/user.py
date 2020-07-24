@@ -44,14 +44,9 @@ class UserDao():
     # 设置头像
     @staticmethod
     def set_avatar(id,avatar):
-        '''
-        
-        :param id: 用户id
-        :param avatar: 头像url
-        :return:
-        '''
-        
-        pass
+        with db.auto_commit():
+            user = User.get(id=id)
+            user._avatar = avatar
     
     # 删除用户
     @staticmethod
