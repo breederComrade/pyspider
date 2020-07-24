@@ -13,6 +13,8 @@ from flask import g, request, json
 
 from app.core.error import Success
 from app.core.token_auth import auth
+from app.core.validator import BaseValidator
+from app.dao.Identity import IdentityDao
 from app.dao.user import UserDao
 from app.extensions.api_docs.redprint import Redprint
 from app.extensions.api_docs.v1 import user as api_doc
@@ -76,10 +78,7 @@ def layout():
                'g.body.password', 'g.body.confirm_password'])
 def update_user():
     '''更新用户信息'''
-    
-    
-    
-    return '修改用户'
+    return Success()
 
 
 # 更新用户头像
@@ -94,16 +93,20 @@ def update_avatar():
 
 # 解绑账号
 @api.route('/unbind', methods=['PUT'])
-@api.doc(args=['g.body.id'])
+@api.doc(args=['type'],auth=True)
+@auth.login_required
 def unbind():
     '''解绑账号'''
-    return '解绑帐号'
+    type = BaseValidator.get_args_json().type
+    IdentityDao.unbind(user_id=g.user.id, type=type)
+    return Success(msg='解绑用户')
 
 @api.route('/auths', methods=['GET'])
 @api.doc(auth=True)
 @auth.login_required
 def get_auths():
     '''查询自己拥有的权限'''
+    
     return Success()
 
 #
