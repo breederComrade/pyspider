@@ -38,3 +38,8 @@ ACCOUNT_APP_ID = 'wx7bc53e1ab38e9f92'
 ACCOUNT_APP_SECRET = 'c96c84b27ea4a353b10d7353b9cf5a09c'
 REDIRECT_URI = 'https%3a%2f%2fwww.ivinetrue.com'
 WTF_CSRF_EXEMPT_LIST = ["v1.order+create"]
+
+
+# 七牛
+QINIU_AK = 'apHSc232vHkJZhLTvwx5gS5g_lnx4S7NDgIcEZCY'
+QINIU_SK = 'TGBjB8sGrPVZpGrsTwJYSyAy8xmid3MPdSrY6npV'

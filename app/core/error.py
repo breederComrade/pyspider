@@ -136,6 +136,11 @@ class TokenException(APIException):
 
 
 ########## 文件相关(10300~10400) ##########
+class FileUploadFailException(APIException):
+    code = 500
+    msg = '文件上传失败'
+    error_code = 10311
+
 class FileTooLargeException(APIException):
     code = 413
     msg = '文件体积过大'
@@ -152,3 +157,4 @@ class FileExtensionException(APIException):
     code = 401
     msg = '文件扩展名不符合规范'
     error_code = 10330
+    
