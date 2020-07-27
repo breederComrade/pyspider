@@ -21,8 +21,6 @@ api = Redprint(name='file', description='文件', api_doc=api_doc)
 def upload_img():
     '''上传图片'''
     try:
-        
-        print(request.files)
         data = []
         if request.files:
             for file in request.files:
