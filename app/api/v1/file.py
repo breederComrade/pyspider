@@ -21,15 +21,24 @@ api = Redprint(name='file', description='文件', api_doc=api_doc)
 def upload_img():
     '''上传图片'''
     try:
-        data = request.files.get('file').read()
-        print(data)
+        
+        print(request.files)
+        data = []
+        if request.files:
+            for file in request.files:
+                print(file,type(file))
+                data.append(request.files.get(file).read())
     except Exception as e:
         print('3',e)
         return jsonify(errmsg='数据错误')
     
     try:
-        filename = QiNiu.uploadFile(data)
+        # 遍历
+        files = []
+        for item in data:
+            file = QiNiu.uploadFile(item)
+            files.append(file)
     except Exception as e:
         print('e',e)
         return jsonify(errmsg='上传失败', errcode=500)
-    return Success()
+    return Success(files,msg='上传成功')

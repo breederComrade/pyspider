@@ -43,3 +43,4 @@ WTF_CSRF_EXEMPT_LIST = ["v1.order+create"]
 # 七牛
 QINIU_AK = 'apHSc232vHkJZhLTvwx5gS5g_lnx4S7NDgIcEZCY'
 QINIU_SK = 'TGBjB8sGrPVZpGrsTwJYSyAy8xmid3MPdSrY6npV'
+QINIU_GOODS_URL= 'http://qn.sasstool.com/'

@@ -33,18 +33,22 @@ class QiNiu(object):
         bucket_name = 'goods'
         # 生成token
         # 上传文件到七牛后， 七牛将文件名和文件大小回调给业务服务器。
-     
-        # 如果需要对上传的图片命名，就把第二个参数改为需要的名字
-        key = 'screen03.png'
         
+        # 如果需要对上传的图片命名，就把第二个参数改为需要的名字
+        key = 'IMG'+ str(time.time())
+        # 上传文件到七牛后， 七牛将文件名和文件大小回调给业务服务器。
         token = auth.upload_token(bucket_name, key, 3600, )
         
+        
         ret1, ret2 = put_data(token, key, data=inputdata)
-        print('ret1:', ret1)
-        print('ret2:', ret2)
         if ret2.status_code != 200:
             raise FileUploadFailException()
-        return ret1.get('key')
+        name = ret1.get('key')
+        url = current_app.config['QINIU_GOODS_URL'] + name
+        return {
+            "img_url": url,
+            "name":name,
+        }
     
     # 下载文件
     @staticmethod
