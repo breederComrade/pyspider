@@ -10,7 +10,7 @@ dependencies:
   - apispec=3.3.0=py_0
   - ca-certificates=2020.6.24=0
   - certifi=2020.6.20=py37_0
-  - click=7.1.2=py_0
+  - click=7.1.2=py_0readline
   - enum34=1.1.10=py37hc8dfbb8_1
   - flasgger=0.9.4=py_0
   - flask=1.1.2=py_0
@@ -18,7 +18,7 @@ dependencies:
   - flask-restplus=0.13.0=py37_0
   - flask-restx=0.1.1=py_0
   - flask-script=2.0.6=py_0
-  - flask-sqlalchemy=2.4.3=pyh9f0ad1d_0
+  - flask-sqlalchemy=2.4.3=pyh9f0ad1d_0mistune
   - flask-wtf=0.14.3=py_0
   - gunicorn=20.0.4=py37_0
   - itsdangerous=1.1.0=py37_0
