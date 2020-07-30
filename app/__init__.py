@@ -50,7 +50,8 @@ def load_config(app):
         app.config.from_object('app.config.setting')
     #
     app.config.from_object('app.extensions.file.config')
-
+    
+    print(app.config['SQLALCHEMY_DATABASE_URI'])
 
 #    注册蓝图
 def register_blueprint(app):

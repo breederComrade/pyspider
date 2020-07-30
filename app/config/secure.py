@@ -12,7 +12,8 @@ SECRET_KEY = 'But you, Lord , are a shield around me, my glory, the One who lift
 TOKEN_EXPIRATION = 30 * 24 * 3600  # 有效期: 30天
 
 # MySQL 数据库配置
-SQLALCHEMY_DATABASE_URI = 'mysql+cymysql://root:wangjun2013@localhost:3306/flask_ydsy?charset=utf8'
+SQLALCHEMY_DATABASE_URI = 'mysql+cymysql://{root}:{password}@localhost:3306/flask_ydsy?charset=utf8'.format(root='root'if DEBUG else 'zhangsongyun',password='wangjun2013'if DEBUG else'Zhangsongyun2019')
+
 SQLALCHEMY_ENCODING = 'utf-8'
 SQLALCHEMY_TRACK_MODIFICATIONS = False  # 屏蔽 sql alchemy 的 FSADeprecationWarning
 
