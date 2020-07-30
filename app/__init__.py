@@ -154,15 +154,11 @@ def handle_error(app):
     # flask的错误绑定装饰器
     @app.errorhandler(Exception)
     def framework_error(e):
-        print('xxx',e)
-        print(e)
-
         if isinstance(e, APIException):
             return e
         elif isinstance(e, HTTPException):
             return APIException(code=e.code, error_code=1007, msg=e.description)
         else:
-            print('xxxx',e)
             # 非测试模式
             if not app.config['DEBUG']:
                 # TODO：记录异常
