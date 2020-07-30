@@ -5,7 +5,7 @@
 """
 
 
-DEBUG = True
+DEBUG = False
 
 # Token 配置
 SECRET_KEY = 'But you, Lord , are a shield around me, my glory, the One who lifts my head high.'  # 加密

@@ -116,13 +116,11 @@ def register_plugin(app):
     apply_cors(app)  # 应用跨域扩展，使项目支持请求跨域
     connect_db(app)  # 连接数据库
     handle_error(app)  # 统一处理异常
-    
-    if app.config['DEBUG']:
-        # Debug模式(以下为非必选应用，且用户不可见)
-        apply_default_view(app)  # 应用默认路由
-        apply_orm_admin(app)  # 应用flask-admin, 可以进行简易的 ORM 管理
-        apply_request_log(app)  # 打印请求日志
-        apply_swagger(app)  # 应用flassger, 可以查阅Swagger风格的 API文档
+    # Debug模式(以下为非必选应用，且用户不可见)
+    apply_default_view(app)  # 应用默认路由
+    apply_orm_admin(app)  # 应用flask-admin, 可以进行简易的 ORM 管理
+    apply_request_log(app)  # 打印请求日志
+    apply_swagger(app)  # 应用flassger, 可以查阅Swagger风格的 API文档
 
 
 # 跨域处理
@@ -156,11 +154,15 @@ def handle_error(app):
     # flask的错误绑定装饰器
     @app.errorhandler(Exception)
     def framework_error(e):
+        print('xxx',e)
+        print(e)
+
         if isinstance(e, APIException):
             return e
         elif isinstance(e, HTTPException):
             return APIException(code=e.code, error_code=1007, msg=e.description)
         else:
+            print('xxxx',e)
             # 非测试模式
             if not app.config['DEBUG']:
                 # TODO：记录异常
@@ -172,16 +174,16 @@ def handle_error(app):
 
 # 默认路由
 def apply_default_view(app):
+    # @app.route('/')
+    # def index():
+    #     '''跳转到「首页」'''
+    #     url = {
+    #         'github': current_app.config['GITHUB_URL'],
+    #         'doc': current_app.config['DOC_URL'],
+    #     }
+    #     return render_template("index.html", url=url)
+    #
     @app.route('/')
-    def index():
-        '''跳转到「首页」'''
-        url = {
-            'github': current_app.config['GITHUB_URL'],
-            'doc': current_app.config['DOC_URL'],
-        }
-        return render_template("index.html", url=url)
-    
-    @app.route('/doc')
     def doc():
         '''跳转到「api文档」'''
         return redirect('/apidocs/#/')
